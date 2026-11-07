@@ -1,0 +1,6 @@
+node_modules/
+out/
+public/*.wav
+public/bridge/
+src/videos/bridge/
+final/chunks/
