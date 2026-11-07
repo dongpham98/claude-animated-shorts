@@ -1,0 +1,76 @@
+# Titanic's Lifeboats: 7 Myths That Sank the Truth — SCRIPT (draft 1, for approval)
+
+**1,840 words, about 11.2 min of voice at 2.75 words/s.** With the serious pauses, title card and chapter flashes it comes to about 11.5-12 min.
+Voice: Kokoro am_puck. Captions: word by word. Frame: 1920x1080. Facts: see `RESEARCH.md` (every number in the script comes from that sheet).
+
+## Beat table
+| Time (approx.) | Beat | Key line | Stamp (Clipboard) |
+|---|---|---|---|
+| 0:00 | Cold open / hook | "Forty seats. Twelve people." | — |
+| 0:30 | Central question + title | "why did so many of them leave half empty?" | — |
+| 0:40 | Ch1, the old law (humour at the rulebook) | "That's it. That's the whole rule." | FALSE |
+| 1:55 | Ch2, the 64 boats | "Carpets, cabins, staircases." | HALF TRUE |
+| 3:05 | Ch3, the cancelled drill | "They were unrehearsed." | MOSTLY FALSE |
+| 4:00 | Ch4, empty boats | "Too much calm, far too early." | FALSE |
+| 5:05 | Ch5, two officers, two rules | "a few dozen steps apart" | FALSE |
+| 6:10 | Ch6, third class (**played straight**, no stamp gag, no music) | "distance, language, and time" | (quiet verdict card) |
+| 7:15 | Ch7, the £5 and the **answer to the question** (~62 %) | "they waited in the dark, and listened" | FALSE |
+| 8:35 | Ch8, Boat 14 (**serious**: music drops out, camera holds still, no faces in the water) | "Eighteen boats were lowered from Titanic. One went back." | — |
+| 9:30 | Ch9, Carpathia (golden dawn, hope) | "seven hundred and five survivors" | — |
+| 10:20 | Ch10, the new rule + callback | "a mistake made eighteen years earlier, on paper." | — |
+| 11:05 | Teaser for the next video + end screen (20 s clear space) | Tacoma Narrows | — |
+
+## Visual plan
+The whole video stays on the night boat deck, under electric deck lamps and bright stars, and cuts away to inserts.
+- **Ch1:** an 1894 London office with a giant ledger whose column ends at "10,000 tons", plus a size chart of ships growing past the table.
+- **Ch2:** a Belfast drafting room with the davit drawing, and a clock showing the boat talk is short.
+- **Ch3:** Southampton harbour in daylight, with crewmen rowing for the inspector.
+- **Ch4-5:** a split view of the ship from above, starboard vs port, with seat counters on each boat.
+- **Ch6:** a cutaway diagram of the decks, with a lit route from the lower ends to the boat deck and English-only signs. The camera is slow and the light dim.
+- **Ch7-8:** the open sea at night: lifeboats on still black water, ice, and the ship's lights going out off-screen. We never show people in the water, only the boats and the silence.
+- **Ch9:** Carpathia's black hull and red funnel at a pink-gold sunrise among icebergs, with rope ladders.
+- **Ch10:** a modern ferry muster drill under bright daylight, then a callback wide shot of the 20 boats.
+- **Guide:** "Clipboard", a young purser who is original to us, stamps each verdict. That's the pattern interrupt every chapter.
+
+## Tone note
+About 1,500 people died. The humour goes only at the 1894 rule table and the bureaucracy. Real people (Smith, Murdoch, Lightoller, Lowe, Rostron, Carlisle, the Duff-Gordons) are shown respectfully, with no jokes about them. Chapters 6 and 8 are played completely straight.
+
+## TTS spelling (spoken form → shown caption)
+"eighteen ninety-four" → 1894 · "nineteen twelve" → 1912 · "nineteen fourteen" → 1914 · "eleven hundred and seventy-eight" → 1,178 · "twenty-two hundred" → 2,200
+
+## Script
+[COLD OPEN]
+Ten past one in the morning, April fifteenth, 1912. A small wooden boat is being lowered from the biggest ship in the world. It has forty seats. Twelve people are sitting in them. Up on deck, more than a thousand people are still waiting for a boat. You know the famous part of this story. Titanic didn't carry enough lifeboats. But here's the part that makes no sense. If there weren't enough boats, why did so many of them leave half empty? Today we're testing seven lifeboat myths, one by one. Some are true. Some are false. And one of them changed the law of the sea forever.
+
+[CHAPTER 1: THEY BROKE THE LAW]
+Myth number one. Titanic broke the law. In 1912, the headlines were furious. Not enough lifeboats! Somebody broke the rules! Here's the awkward truth. Titanic followed the rules perfectly. The rules were just ancient. Britain's lifeboat table was written in 1894. Back then, the biggest ships weighed about ten thousand tons. So the table simply stopped there. Over ten thousand tons? Sixteen boats. That's it. That's the whole rule. Titanic weighed about forty-six thousand tons. That's four and a half times bigger than the largest ship the rule imagined. The rule didn't care. It still said sixteen. Titanic carried twenty. Fourteen big wooden lifeboats. Two smaller emergency cutters. And four folding boats with canvas sides. Together, they had seats for 1,178 people. There were about 2,200 people on board. So Titanic carried more boats than the law asked for. And it still had seats for barely half the people. The British inquiry said the ship had far more boats than the rules required. Then it scolded the Board of Trade for not updating those rules for eighteen years. Verdict: false. Titanic didn't break the law. The law was broken long before Titanic sailed. But if the rules were that old, didn't anyone notice? Someone did.
+
+[CHAPTER 2: THE DESIGNER WANTED 64 BOATS]
+Myth number two. The designer wanted sixty-four lifeboats, and the owners cut them so the deck would look pretty. The real story is messier. Alexander Carlisle ran the design team at the Harland and Wolff shipyard in Belfast. He picked a new kind of davit. Davits are the small cranes that swing a lifeboat out over the side. These ones could handle up to four boats each. Sixteen sets of davits, four boats each. That's room for sixty-four. Carlisle expected the rules to change. He wanted the ship ready when they did. Later, at the inquiry, he was asked how many boats he thought she needed. His answer was forty-eight. But there was never a deck plan showing sixty-four boats. Carlisle mostly showed his bosses a drawing of the davit itself. By most accounts, the boat question took a few minutes of those meetings. The rest was about the interior. Carpets, cabins, staircases. Verdict: half true. Space for more boats was built into the ship. Nobody fought very hard to fill it. So the boats were short. But surely the crew knew how to use the ones they had?
+
+[CHAPTER 3: THE CREW NEVER PRACTISED]
+Myth number three. The crew never practised. This one shows up in almost every documentary. On the day of the sinking, a lifeboat drill was cancelled. That part is true. It was planned for eleven on Sunday morning, April fourteenth. It never happened, and nobody knows exactly why. One lookout later said the wind was too strong. Others point out that the captain led a church service that morning. But no drill doesn't mean no practice. Four days earlier, in Southampton, a government inspector came aboard. Crewmen lowered lifeboats into the harbour and rowed them around while he watched. Many of the sailors had spent years on other ships. They knew boats. What they didn't have was a plan for this ship, on this night. Who goes to which boat. How full is full. Who decides. Verdict: mostly false. The crew wasn't untrained. They were unrehearsed. And that gap showed up with the very first boat.
+
+[CHAPTER 4: PANIC EMPTIED THE BOATS]
+Myth number four. The boats left empty because of panic. Picture the boat deck at twenty to one in the morning. The ship is lit up like a city. The band is playing. The deck barely tilts. Now look over the rail. A long drop into black, freezing water. Would you climb into a little rowing boat? Most people said no thanks. Lifeboat seven went first, from the starboard side. It could hold sixty-five people. It left with about twenty-eight. Passengers thought this was just a precaution. Titanic was unsinkable, wasn't it? Better to stay warm inside. There was a second problem. Some officers weren't sure a full boat could be lowered safely. They feared the falls or the boat itself might give way. So they sent boats down light, planning to top them up from lower doors. That plan mostly never happened. By the end, the boats that got away still had room for over four hundred more people. Verdict: false. It wasn't panic. It was the opposite. Too much calm, far too early.
+
+[CHAPTER 5: WOMEN AND CHILDREN FIRST WAS THE RULE]
+Myth number five. Women and children first was the rule. Captain Smith gave an order that sounds simple. Put the women and children in, and lower away. Two officers heard it. They heard two different things. On the starboard side, First Officer William Murdoch heard women and children first. Load them first, then let men fill the empty seats. On the port side, Second Officer Charles Lightoller heard women and children only. If no women were waiting, the boat went down with empty seats. Same ship. Same order. Opposite rules, a few dozen steps apart. So if you were a man, your chances depended on which side of the deck you walked to. In the end, about three quarters of the women survived. About half of the children. And only one man in five. And here's the surprise. Women and children first was never maritime law. It was a custom. Titanic is the reason most of us think it's a rule. Verdict: false. It was two rules, on one ship, at the same time.
+
+[CHAPTER 6: THIRD CLASS WAS LOCKED BELOW]
+The next myth is the darkest one, so we'll take it slowly. Myth number six. Third class passengers were locked below decks. There were gates on Titanic. That part is real. American immigration rules required third class to be kept apart from the other classes. But the British inquiry found no evidence that anyone was kept below on purpose. Stewards went through third class, waking people and sending them up. So why did so many not make it? Because the real barrier was the ship itself. Third class lived low down, at the far ends of the ship. The boats were high up, in the middle. Between them was a maze of corridors and stairs. Many passengers spoke little English. The signs were all in English. Some reached the deck when most boats were already gone. Others waited where they'd been told to wait. About one in four third class passengers survived. Verdict: the locked gates are mostly myth. The barriers were distance, language, and time. And they were just as deadly.
+
+[CHAPTER 7: BOAT ONE WAS BRIBED]
+Back to that little boat from the start. Lifeboat one. Forty seats, twelve people. Seven of them were crew. Among the passengers were a wealthy baronet, Sir Cosmo Duff-Gordon, and his wife. After the ship sank, a fireman asked if they should go back for the people in the water. Lady Duff-Gordon warned they could be swamped. The boat stayed where it was. Later, Sir Cosmo gave each crewman five pounds. The newspapers went wild. A rich man had paid the sailors not to go back! At the inquiry, he explained. The crew had just lost their belongings and their wages. The money was a gift to replace their kit. The inquiry accepted that. Myth number seven, boat one was bribed. Verdict: false. There's no proof it was a bribe. But that story hides the real problem. Boat one didn't go back. And neither did almost any of the others. Every boat had the same fear. If hundreds of desperate people reach one small boat, everyone drowns. So they waited in the dark, and listened. And that's the answer to our question. The boats left half empty because people didn't believe the ship would sink. Because officers didn't trust the boats. Because one deck followed two rules. And once they were in the water, they stayed away.
+
+[CHAPTER 8: THE BOAT THAT WENT BACK]
+Only one boat turned around on purpose. Lifeboat fourteen, under Fifth Officer Harold Lowe. Titanic sank at about twenty past two. Lowe tied several boats together. He moved his passengers into the others, until he had an almost empty boat and a crew of volunteers. Then he rowed back. By the time he got there, it was quiet. In water that cold, almost no one could last for long. Lowe found four people alive. One of them died soon after. Lifeboat four, close by, pulled a few more from the water. At first light, Lowe found the folding boat, Collapsible A. It was swamped, full of icy water. About a dozen people were still alive on it. He took them aboard. Not far away, Collapsible B had floated off upside down. About twenty-eight men stood balanced on its hull through the night. Lightoller was one of them. Eighteen boats were lowered from Titanic. One went back.
+
+[CHAPTER 9: CARPATHIA]
+Fifty-eight miles away, a young wireless operator named Harold Cottam was getting ready for bed. At about twenty-five past twelve, he heard Titanic calling for help. He woke his captain, Arthur Rostron. Rostron turned the ship around before he'd even finished asking questions. He cut the heating and the hot water, so every bit of steam went to the engines. Then he raced into the same ice that had just sunk the biggest ship in the world. Carpathia arrived just after four in the morning. Titanic had been gone for almost two hours. Spread across miles of sea, there were only lifeboats. One by one, survivors climbed rope ladders, or were hauled up in slings. By half past eight, Carpathia had seven hundred and five survivors aboard. Out of about two thousand two hundred.
+
+[CHAPTER 10: THE RULE]
+Fixing this took more than extra boats. In January 1914, nations met in London and signed the first Safety of Life at Sea treaty. Every ship had to carry lifeboats for everyone aboard. Crews had to drill. Radios had to be listened to all day and all night. And an ice patrol began watching the North Atlantic. It still does today. So next time a ferry makes you stand at your boat station before it leaves port, that's Titanic. One last thing. Remember those 1,178 seats? Even if every single one had been filled, more than a thousand people would still have had nowhere to sit. The half-empty boats were a mistake made in one night. The missing boats were a mistake made eighteen years earlier, on paper.
+
+[TEASER]
+Next time, a bridge that danced in the wind until it tore itself apart. And the tiny design choice nobody saw coming. Subscribe, so you don't miss it.
