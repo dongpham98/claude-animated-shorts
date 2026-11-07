@@ -139,6 +139,16 @@ const Tags: React.FC<{ f: number }> = ({ f }) => {
   );
 };
 
+/** channel handle, always on screen: small, top-right, semi-transparent (clear of the tags top-left and the captions) */
+export const HANDLE = "@LeoKnowledgeSharing";
+const Watermark: React.FC = () => (
+  <AbsoluteFill style={{ pointerEvents: "none" }}>
+    <div style={{ position: "absolute", top: 34, right: 44, fontFamily: "CapBlack, sans-serif", fontWeight: 900, fontSize: 30, color: "#ffffff", opacity: 0.72,
+      letterSpacing: 0.5, WebkitTextStroke: "5px rgba(20,14,30,0.85)", paintOrder: "stroke fill" }}>{HANDLE}</div>
+  </AbsoluteFill>
+);
+const watermarkOn = () => (getInputProps() as { watermark?: boolean }).watermark !== false;
+
 export const TitanicPilot: React.FC = () => {
   const f = useCurrentFrame();
   const kit = useKit();
@@ -150,6 +160,7 @@ export const TitanicPilot: React.FC = () => {
       {s.kind === "board" ? <Board id={s.board!} f={f} /> : <ShotView key={s.id} id={s.id} kit={kit} />}
       {flash > 0 && <AbsoluteFill style={{ background: "#ffffff", opacity: flash }} />}
       <Tags f={f} />
+      {watermarkOn() && <Watermark />}
       {captionsOn() && <Caption f={f} />}
       {noAudio ? null : <Audio src={staticFile("titanic_pilot_mix.wav")} />}
     </AbsoluteFill>
