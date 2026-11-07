@@ -26,7 +26,7 @@ npm run test-still
 ```
 Open `C:\YouTube\titanic-pilot\out\test_frame.png`. You should see **Clipboard** (the young purser with the red
 cap band) on the night boat deck, holding his clipboard. A card at the top left reads **"MYTH #1 · Titanic broke the
-law"** and the caption at the bottom reads **"Titanic"**. Your channel handle **@LeoKnowledgeSharing** sits small in the top-right corner (it is on every frame of the video).
+law"** and the caption at the bottom reads **"Titanic"**. Your channel handle **@LeoKnowledgeSharing** sits small in the bottom-right corner (it is on every frame of the video).
 
 ## 4. Render the pilot
 Plug in the charger, set Sleep to "Never", and close browsers, Teams and Outlook. Then:

@@ -83,7 +83,7 @@ const loadFont = () => {
 const useFont = () => {
   const [ok, setOk] = useState(false);
   const [h] = useState(() => delayRender("font"));
-  useEffect(() => { loadFont().then(() => { setOk(true); continueRender(h); }); }, [h]);
+  useEffect(() => { Promise.all([loadFont(), loadWm()]).then(() => { setOk(true); continueRender(h); }); }, [h]);
   return ok;
 };
 const Caption: React.FC<{ f: number }> = ({ f }) => {
@@ -139,12 +139,16 @@ const Tags: React.FC<{ f: number }> = ({ f }) => {
   );
 };
 
-/** channel handle, always on screen: small, top-right, semi-transparent (clear of the tags top-left and the captions) */
+/** channel handle on every frame (channel-plan.md spec, long videos): bottom right ~40 px from the edges, Montserrat Bold
+ *  ~32 px, white ~65 %, soft dark shadow, no box; above the picture and tags, below the captions */
 export const HANDLE = "@LeoKnowledgeSharing";
+let wmP: Promise<void> | null = null;
+const loadWm = () => (wmP ??= new FontFace("WmBold", `url(${staticFile("fonts/montserrat-latin-700-normal.woff2")})`, { weight: "700" }).load()
+  .then((ff) => { (document.fonts as unknown as { add: (f: FontFace) => void }).add(ff); }).catch(() => undefined));
 const Watermark: React.FC = () => (
   <AbsoluteFill style={{ pointerEvents: "none" }}>
-    <div style={{ position: "absolute", top: 34, right: 44, fontFamily: "CapBlack, sans-serif", fontWeight: 900, fontSize: 30, color: "#ffffff", opacity: 0.72,
-      letterSpacing: 0.5, WebkitTextStroke: "5px rgba(20,14,30,0.85)", paintOrder: "stroke fill" }}>{HANDLE}</div>
+    <div style={{ position: "absolute", right: 40, bottom: 34, fontFamily: "WmBold, Montserrat, sans-serif", fontWeight: 700, fontSize: 32, color: "rgba(255,255,255,0.66)",
+      letterSpacing: 0.3, textShadow: "0 2px 6px rgba(0,0,0,0.75), 0 0 2px rgba(0,0,0,0.6)" }}>{HANDLE}</div>
   </AbsoluteFill>
 );
 const watermarkOn = () => (getInputProps() as { watermark?: boolean }).watermark !== false;
