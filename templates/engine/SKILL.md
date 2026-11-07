@@ -19,7 +19,7 @@ ready-to-paste commands (PowerShell), say what they should see, and ask for a sc
   Creation" project, branch main). In a session: attach it with `add_repo` (owner dongpham98, repo
   claude-animated-shorts; `push` access only when saving changes back), then
   `git clone --depth 1 https://github.com/dongpham98/claude-animated-shorts.git`.
-  - `templates/engine/` = this engine: `SKILL.md` (this file), `README.md` (folder map), `setup.sh`,
+  - `templates/engine/` = this engine: `SKILL.md` (canonical copy of this file), `README.md` (folder map), `setup.sh`,
     `project/` (full working Remotion project with the molasses example: story.ts, world.ts, cast.ts, lights2.ts,
     captions.ts, Molasses.tsx; scripts/stills.mjs; tts/ get_models.sh, say.py, tts_timed.py; tools/ gen_captions.py,
     analyze_video.py; audio/sound.py; final/ render_chunks.sh, finish.sh; README_RENDER.md; pinned package.json +
@@ -28,10 +28,10 @@ ready-to-paste commands (PowerShell), say what they should see, and ask for a sc
     build) and `templates/audio/` = synth libraries (dsp, instruments, sfx_gen).
 - Start a new video: `bash templates/engine/setup.sh ~/work/<slug> --install` (copies the project, the shared
   modules into src/videos/bridge and the synths into audio/lib, runs npm install), then copy
-  `src/videos/molasses` to `src/videos/<slug>` and adapt. Without repo access, the project docs `kit/engine/` hold the
-  key engine files and the user keeps `molasses-short-code-v4.zip`.
-- Save improvements back: branch, commit, push, open a PR to main (merge when the user asks); new videos go to
-  `templates/engine/examples/<slug>/` (docs) and, if reusable, new modules into `project/src/videos/<slug>/`.
+  `src/videos/molasses` to `src/videos/<slug>` and adapt. Fallbacks without repo access: project docs `kit/engine/`
+  and the user's `molasses-short-code-v4.zip`.
+- Save improvements back to the repo: branch, commit, push, open a PR to main (merge when the user asks); per-video
+  docs go to `templates/engine/examples/<slug>/`; new lessons go into `templates/engine/SKILL.md` and this skill.
 
 ## 1. Intake (always first, one AskUserQuestion)
 Ask together:
@@ -88,16 +88,15 @@ plan, tone note. Wait for approval ("the script is fine") before voicing.
   shot.
 
 ## 6. Voice and word timing
-**Kokoro (default, free, local):** models from GitHub releases (Hugging Face is blocked in the cloud):
-`https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/{kokoro-v1.0.onnx,voices-v1.0.bin}`,
-`pip install kokoro-onnx soundfile onnx`.
-- Render 4 candidate voices of the full script (am_puck, am_fenrir, am_michael, bm_george; female: af_heart,
-  af_bella, bf_emma) at the target pace and send MP3s. Pace is not linear in `speed`: measure words/s and retune.
-  Short target 3.6-3.9 w/s (Puck 1.2 gave 3.69); Long target 2.6-2.9 w/s.
-- **Exact word timings without ASR:** patch the ONNX graph to also output `/encoder/Round_output_0` (per-phoneme
-  frame durations), synthesize sentence by sentence, map phoneme words to text words, split espeak's fused function
-  words ("from the", "out of"), join sentences with 0.12 s gaps (`kit/engine/tts_timed.py`). Check every sentence
-  onset against the waveform (all within 30 ms on the molasses voice).
+**Kokoro (default, free, local):** `bash tts/get_models.sh` downloads the models from GitHub releases (Hugging Face is
+blocked in the cloud) and builds the duration-patched `kokoro-dur.onnx`.
+- Render 4 candidate voices of the full script with `tts/say.py` (am_puck, am_fenrir, am_michael, bm_george; female:
+  af_heart, af_bella, bf_emma) at the target pace and send MP3s. Pace is not linear in `speed`: measure words/s and
+  retune. Short target 3.6-3.9 w/s (Puck 1.2 gave 3.69); Long target 2.6-2.9 w/s.
+- **Exact word timings without ASR:** `tts/tts_timed.py` synthesizes sentence by sentence with the patched model
+  (per-phoneme frame durations from `/encoder/Round_output_0`), maps phoneme words to text words, splits espeak's
+  fused function words ("from the", "out of") and joins sentences with 0.12 s gaps. Check every sentence onset
+  against the waveform (all within 30 ms on the molasses voice).
 - **User's own recording / ElevenLabs:** ask for the final script text; align with Whisper on the laptop or
   silence-segment + syllable alignment; hand-check sentence starts.
 - Deliver `voice.wav` + `words.json`. Never edit or re-time the voice afterwards; any word change means regenerate
@@ -148,8 +147,9 @@ per still). Make side-by-side sheets with PIL, look at them, fix, re-render. Kno
 - Intermittent stills hang ("delayRender ... not cleared") in the cloud: rerun that frame alone.
 
 ## 10. Captions
-- Build `captions.ts` from words.json: [text, firstFrame, endFrame); start 1 f before the word; hold until 1 f before
-  the next word if the gap < 0.35 s, else end + 0.25 s. Merge spoken-number words into their written form.
+- `python3 tools/gen_captions.py voice/words.json src/videos/<slug>/captions.ts --merge "nineteen nineteen,=1919,"`
+  builds [text, firstFrame, endFrame): start 1 f before the word; hold until 1 f before the next word if the gap <
+  0.35 s, else end + 0.25 s; --merge turns spoken-number words into their written form.
 - Short style: one word at a time, Montserrat Black (npm `@fontsource/montserrat`, latin-900 woff2 in public/fonts,
   loaded with FontFace + delayRender), 114 px (100 px if > 9 chars), white, 14 px black stroke with paint-order
   stroke, drop shadow, centre at y 1300/1920 (~67 %), 1.14 -> 1.06 -> 1.0 pop on each swap.
@@ -157,7 +157,7 @@ per still). Make side-by-side sheets with PIL, look at them, fix, re-render. Kno
 - Captions are a DOM overlay in the composition (crisp text, toggle with inputProps captions:false).
 
 ## 11. Sound and mix
-`sound.py` (rewrite the cue table per story; synths from templates/audio stay):
+`audio/sound.py` (rewrite the cue tables per story; synths from templates/audio stay, copied to audio/lib):
 - Score: original synthesized cues per beat (setup motif, tension build, chaos, silence for serious lines, curious
   explanation, rule/resolve, twist hit + drone). Composed silence is part of the score, not a duck.
 - SFX on picture events (frames/30): whooshes on big moves, impacts, splash, creaks, crowd whoas/oofs, ambiences.
@@ -236,8 +236,8 @@ ffmpeg -vf blackdetect=d=0.05:pix_th=0.08 -> none
 ffmpeg -af ebur128=peak=true            -> I about -14 LUFS, peak <= -1 dBFS
 ffmpeg -vf "fps=1,scale=150:-1,tile=11x6" contact sheet -> look at it
 ```
-Also measure per-frame motion (mean abs diff at 90x160) to find near-still spans >= 4 frames and record the pacing
-numbers; turn every problem found into a new trap rule in this skill.
+Also run `python3 tools/analyze_video.py <file>` (near-still spans >= 4 frames, hard picture changes, frame-diff
+stats) and record the pacing numbers; turn every problem found into a new trap rule in this skill.
 
 ## 17. Upload package
 Research at upload time with web search (never invent trends or numbers): current search interest for the topic,
@@ -253,5 +253,6 @@ Deliver:
 
 ## 18. Tracking and handoff
 - Task list for every build stage; send the stills sheet before the long render; send previews early.
-- Save SCRIPT.md, SHOTPLAN.md, words.json to project docs `shorts/<nn>-<slug>/` (or `long/<nn>-<slug>/`) and update
-  `claude/channel-plan.md` (status, lessons). Package code as `<slug>-code-vN.zip` and send it.
+- Save SCRIPT.md, SHOTPLAN.md, words.json to project docs `shorts/<nn>-<slug>/` (or `long/<nn>-<slug>/`) and to
+  `templates/engine/examples/<slug>/` in the repo; update `claude/channel-plan.md` (status, lessons). Package code as
+  `<slug>-code-vN.zip` and send it.
