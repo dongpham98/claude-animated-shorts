@@ -256,3 +256,9 @@ Deliver:
 - Save SCRIPT.md, SHOTPLAN.md, words.json to project docs `shorts/<nn>-<slug>/` (or `long/<nn>-<slug>/`) and to
   `templates/engine/examples/<slug>/` in the repo; update `claude/channel-plan.md` (status, lessons). Package code as
   `<slug>-code-vN.zip` and send it.
+
+## Lessons from the Titanic long video (2026-11-08)
+- Laptop render of a long video: split into ~1,000-frame parts, `--concurrency=2`, `--timeout=600000`, each part retried up to 3 times by the .bat, progress in `out\render_log.txt`, then concat the parts and mux the final AAC mix with `-c:a copy`. With 4 tabs (default) one tab hung on its first frame ("delayRender ... not cleared") and the part died; with 2 tabs + small parts the 20,091-frame Titanic render took 4 h 14 min (~0.76 s/frame on the UHD 620) and 5 transient part failures were all recovered by the retry.
+- Claude starts laptop renders through `tools/windows/render_watcher.ps1` (user installs it once in the Startup folder): Claude drops `C:\YouTube\queue\<name>.run` containing the .bat path; only .bat files inside C:\YouTube are run; actions logged in queue\watcher.log. File Explorer via computer use is click-only and unreliable.
+- The device bridge cannot stage files > 400 MB and kills background jobs when a device_bash call ends: stage the render parts (each < 35 MB) into the cloud and run freezedetect/blackdetect/contact sheet there.
+- Freezedetect on long videos with 2D boards (n=0.002, d=0.6) flags many 0.6-0.8 s spans on boards with only caption changes and on the end screen; review them by eye instead of treating them as failures.

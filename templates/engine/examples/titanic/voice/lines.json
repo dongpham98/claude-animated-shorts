@@ -132,14 +132,14 @@
   "ch": "CHAPTER 1: THEY BROKE THE LAW"
  },
  {
-  "tts": "Back then, the biggest ships weighed about ten thousand tons.",
-  "shown": "Back then, the biggest ships weighed about ten thousand tons.",
+  "tts": "Back then, the biggest liners were about thirteen thousand tons.",
+  "shown": "Back then, the biggest liners were about thirteen thousand tons.",
   "gap": 0.3,
   "ch": "CHAPTER 1: THEY BROKE THE LAW"
  },
  {
-  "tts": "So the table simply stopped there.",
-  "shown": "So the table simply stopped there.",
+  "tts": "But the table simply stopped at ten thousand.",
+  "shown": "But the table simply stopped at ten thousand.",
   "gap": 0.3,
   "ch": "CHAPTER 1: THEY BROKE THE LAW"
  },
@@ -162,20 +162,20 @@
   "ch": "CHAPTER 1: THEY BROKE THE LAW"
  },
  {
-  "tts": "That's the whole rule.",
-  "shown": "That's the whole rule.",
+  "tts": "That was basically the rule.",
+  "shown": "That was basically the rule.",
   "gap": 0.3,
   "ch": "CHAPTER 1: THEY BROKE THE LAW"
  },
  {
-  "tts": "Titanic weighed about forty-six thousand tons.",
-  "shown": "Titanic weighed about forty-six thousand tons.",
+  "tts": "Titanic measured about forty-six thousand tons.",
+  "shown": "Titanic measured about forty-six thousand tons.",
   "gap": 0.3,
   "ch": "CHAPTER 1: THEY BROKE THE LAW"
  },
  {
-  "tts": "That's four and a half times bigger than the largest ship the rule imagined.",
-  "shown": "That's four and a half times bigger than the largest ship the rule imagined.",
+  "tts": "That's more than four times the top line of the table.",
+  "shown": "That's more than four times the top line of the table.",
   "gap": 0.3,
   "ch": "CHAPTER 1: THEY BROKE THE LAW"
  },
@@ -300,8 +300,8 @@
   "ch": "CHAPTER 2: THE DESIGNER WANTED 64 BOATS"
  },
  {
-  "tts": "Alexander Carlisle ran the design team at the Harland and Wolff shipyard in Belfast.",
-  "shown": "Alexander Carlisle ran the design team at the Harland and Wolff shipyard in Belfast.",
+  "tts": "Alexander Carlisle was a top manager at the Harland and Wolff shipyard in Belfast.",
+  "shown": "Alexander Carlisle was a top manager at the Harland and Wolff shipyard in Belfast.",
   "gap": 0.3,
   "ch": "CHAPTER 2: THE DESIGNER WANTED 64 BOATS"
  },
@@ -360,32 +360,32 @@
   "ch": "CHAPTER 2: THE DESIGNER WANTED 64 BOATS"
  },
  {
-  "tts": "But there was never a deck plan showing sixty-four boats.",
-  "shown": "But there was never a deck plan showing sixty-four boats.",
+  "tts": "His plans did show room for up to sixty-four boats.",
+  "shown": "His plans did show room for up to sixty-four boats.",
   "gap": 0.3,
   "ch": "CHAPTER 2: THE DESIGNER WANTED 64 BOATS"
  },
  {
-  "tts": "Carlisle mostly showed his bosses a drawing of the davit itself.",
-  "shown": "Carlisle mostly showed his bosses a drawing of the davit itself.",
+  "tts": "But he never told the owners that she needed them.",
+  "shown": "But he never told the owners that she needed them.",
   "gap": 0.3,
   "ch": "CHAPTER 2: THE DESIGNER WANTED 64 BOATS"
  },
  {
-  "tts": "By most accounts, the boat question took a few minutes of those meetings.",
-  "shown": "By most accounts, the boat question took a few minutes of those meetings.",
+  "tts": "By most accounts, the boat question took a few minutes of a four-hour meeting.",
+  "shown": "By most accounts, the boat question took a few minutes of a four-hour meeting.",
   "gap": 0.3,
   "ch": "CHAPTER 2: THE DESIGNER WANTED 64 BOATS"
  },
  {
-  "tts": "The rest was about the interior.",
-  "shown": "The rest was about the interior.",
+  "tts": "The rest went to everything else.",
+  "shown": "The rest went to everything else.",
   "gap": 0.3,
   "ch": "CHAPTER 2: THE DESIGNER WANTED 64 BOATS"
  },
  {
-  "tts": "Carpets, cabins, staircases.",
-  "shown": "Carpets, cabins, staircases.",
+  "tts": "Boats were a footnote.",
+  "shown": "Boats were a footnote.",
   "gap": 0.75,
   "ch": "CHAPTER 2: THE DESIGNER WANTED 64 BOATS"
  },
@@ -450,8 +450,8 @@
   "ch": "CHAPTER 3: THE CREW NEVER PRACTISED"
  },
  {
-  "tts": "It was planned for eleven on Sunday morning, April fourteenth.",
-  "shown": "It was planned for eleven on Sunday morning, April fourteenth.",
+  "tts": "It was planned for late Sunday morning, April fourteenth.",
+  "shown": "It was planned for late Sunday morning, April fourteenth.",
   "gap": 0.3,
   "ch": "CHAPTER 3: THE CREW NEVER PRACTISED"
  },
@@ -486,8 +486,8 @@
   "ch": "CHAPTER 3: THE CREW NEVER PRACTISED"
  },
  {
-  "tts": "Crewmen lowered lifeboats into the harbour and rowed them around while he watched.",
-  "shown": "Crewmen lowered lifeboats into the harbour and rowed them around while he watched.",
+  "tts": "Crewmen lowered two lifeboats into the harbour and rowed them around while he watched.",
+  "shown": "Crewmen lowered two lifeboats into the harbour and rowed them around while he watched.",
   "gap": 0.3,
   "ch": "CHAPTER 3: THE CREW NEVER PRACTISED"
  },
@@ -882,14 +882,14 @@
   "ch": "CHAPTER 6: THIRD CLASS WAS LOCKED BELOW"
  },
  {
-  "tts": "But the British inquiry found no evidence that anyone was kept below on purpose.",
-  "shown": "But the British inquiry found no evidence that anyone was kept below on purpose.",
+  "tts": "But the British inquiry, which heard no third class passengers, found no evidence that anyone was kept below on purpose.",
+  "shown": "But the British inquiry, which heard no third class passengers, found no evidence that anyone was kept below on purpose.",
   "gap": 0.42,
   "ch": "CHAPTER 6: THIRD CLASS WAS LOCKED BELOW"
  },
  {
-  "tts": "Stewards went through third class, waking people and sending them up.",
-  "shown": "Stewards went through third class, waking people and sending them up.",
+  "tts": "One steward, John Hart, later said he led two groups of women and children up to the boats.",
+  "shown": "One steward, John Hart, later said he led two groups of women and children up to the boats.",
   "gap": 0.42,
   "ch": "CHAPTER 6: THIRD CLASS WAS LOCKED BELOW"
  },
@@ -930,8 +930,8 @@
   "ch": "CHAPTER 6: THIRD CLASS WAS LOCKED BELOW"
  },
  {
-  "tts": "The signs were all in English.",
-  "shown": "The signs were all in English.",
+  "tts": "And the way up was hard to find.",
+  "shown": "And the way up was hard to find.",
   "gap": 0.42,
   "ch": "CHAPTER 6: THIRD CLASS WAS LOCKED BELOW"
  },
@@ -1008,8 +1008,8 @@
   "ch": "CHAPTER 7: BOAT ONE WAS BRIBED"
  },
  {
-  "tts": "Lady Duff-Gordon warned they could be swamped.",
-  "shown": "Lady Duff-Gordon warned they could be swamped.",
+  "tts": "Crewmen said Lady Duff-Gordon feared they'd be swamped. She denied it.",
+  "shown": "Crewmen said Lady Duff-Gordon feared they'd be swamped. She denied it.",
   "gap": 0.3,
   "ch": "CHAPTER 7: BOAT ONE WAS BRIBED"
  },
@@ -1206,8 +1206,8 @@
   "ch": "CHAPTER 8: THE BOAT THAT WENT BACK"
  },
  {
-  "tts": "Lifeboat four, close by, pulled a few more from the water.",
-  "shown": "Lifeboat four, close by, pulled a few more from the water.",
+  "tts": "Lifeboat four, close by, pulled several more from the water.",
+  "shown": "Lifeboat four, close by, pulled several more from the water.",
   "gap": 0.42,
   "ch": "CHAPTER 8: THE BOAT THAT WENT BACK"
  },
@@ -1326,8 +1326,8 @@
   "ch": "CHAPTER 9: CARPATHIA"
  },
  {
-  "tts": "By half past eight, Carpathia had seven hundred and five survivors aboard.",
-  "shown": "By half past eight, Carpathia had seven hundred and five survivors aboard.",
+  "tts": "By about half past eight, Carpathia had seven hundred and five survivors aboard.",
+  "shown": "By about half past eight, Carpathia had seven hundred and five survivors aboard.",
   "gap": 0.3,
   "ch": "CHAPTER 9: CARPATHIA"
  },
@@ -1362,20 +1362,20 @@
   "ch": "CHAPTER 10: THE RULE"
  },
  {
-  "tts": "Radios had to be listened to all day and all night.",
-  "shown": "Radios had to be listened to all day and all night.",
+  "tts": "Big passenger ships had to keep their radios on, day and night.",
+  "shown": "Big passenger ships had to keep their radios on, day and night.",
   "gap": 0.3,
   "ch": "CHAPTER 10: THE RULE"
  },
  {
-  "tts": "And an ice patrol began watching the North Atlantic.",
-  "shown": "And an ice patrol began watching the North Atlantic.",
+  "tts": "And an international ice patrol was made official.",
+  "shown": "And an international ice patrol was made official.",
   "gap": 0.3,
   "ch": "CHAPTER 10: THE RULE"
  },
  {
-  "tts": "It still does today.",
-  "shown": "It still does today.",
+  "tts": "It still watches the North Atlantic today.",
+  "shown": "It still watches the North Atlantic today.",
   "gap": 0.3,
   "ch": "CHAPTER 10: THE RULE"
  },

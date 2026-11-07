@@ -12,12 +12,14 @@ import { InkPass, noInkFallback } from "../bridge/ink";
 import { LensBlur } from "../bridge/lensblur";
 import { GradeEffect, GRADES, GRADE_STRENGTH, gradeFor } from "../bridge/grade";
 import { Kit } from "../bridge/build";
-import { PILOT_END, SHOTS, shotAt, dofAt, flashAt } from "./story";
+import { PILOT_END, SHOTS, shotAt, dofAt, flashAt, TOTAL, PILOT_NEW, warpOld, A } from "./story";
+import { LE } from "./timing";
 import { GRADE_OF } from "./lights";
 import { CAPTIONS } from "./captions";
 import { Board } from "./Board";
 
 export const TITANIC_PILOT_FRAMES = PILOT_END;
+export const TITANIC_FRAMES = TOTAL;
 type PostToggles = { ink: boolean; lens: boolean; bloom: boolean; grade: boolean };
 const toggles = (): PostToggles => ({ ink: true, lens: true, bloom: true, grade: true, ...((getInputProps() as { post?: Partial<PostToggles> }).post ?? {}) });
 const makeBloom = () => {
@@ -34,8 +36,7 @@ const useKit = () => {
   return kit;
 };
 
-const Inner: React.FC<{ id: number; kit: Kit }> = ({ id, kit }) => {
-  const f = useCurrentFrame();
+const Inner: React.FC<{ id: number; kit: Kit; f: number }> = ({ id, kit, f }) => {
   const { camera, scene } = useThree();
   const world = useMemo(() => new World(kit), [kit]);
   const on = useMemo(toggles, []);
@@ -57,18 +58,18 @@ const Inner: React.FC<{ id: number; kit: Kit }> = ({ id, kit }) => {
   const cam = camera as THREE.PerspectiveCamera;
   const target = world.update(id, f, cam, scene);
   noInkFallback(world.root);
-  const d = dofAt(f);
+  const d = dofAt(id);
   cam.getWorldDirection(fwd); fpt.copy(target);
   fx.lens.focus = Math.max(0.3, fpt.sub(cam.position).dot(fwd)); fx.lens.cInf = d.cInf;
   gradeFor(fx.grade, GRADE_OF[SHOTS[id - 1].light]);
   return (<><primitive object={world.root} dispose={null} />{post}</>);
 };
 const dprOverride = () => (getInputProps() as { post?: { dpr?: number } }).post?.dpr;
-const ShotView: React.FC<{ id: number; kit: Kit }> = ({ id, kit }) => (
+const ShotView: React.FC<{ id: number; kit: Kit; f: number }> = ({ id, kit, f }) => (
   <AbsoluteFill>
     <ThreeCanvas width={1920} height={1080} {...(dprOverride() ? { dpr: dprOverride() } : {})} shadows gl={{ antialias: false, stencil: false, powerPreference: "high-performance", toneMappingExposure: 1.0 }}
       camera={{ fov: 38, near: 0.2, far: 3000 }}>
-      <Inner id={id} kit={kit} />
+      <Inner id={id} kit={kit} f={f} />
     </ThreeCanvas>
   </AbsoluteFill>
 );
@@ -102,6 +103,7 @@ const captionsOn = () => (getInputProps() as { captions?: boolean }).captions !=
 /** on-screen cards on top of 3D shots: [first frame, last frame, kind, text, sub] */
 type Tag = [number, number, "date" | "count" | "name" | "place" | "myth", string, string?];
 const TAGS: Tag[] = [
+  [0, 44, "myth", "40 SEATS. 12 PEOPLE.", "Why was the boat half empty?"],
   [47, 114, "date", "APRIL 15, 1912 · 1:10 A.M.", "North Atlantic"],
   [240, 326, "count", "40", "SEATS"], [273, 326, "count", "12", "PEOPLE"],
   [451, 545, "name", "CLIPBOARD", "your myth checker"],
@@ -111,13 +113,34 @@ const TAGS: Tag[] = [
   [2824, 2905, "place", "LONDON, 1912", "the British inquiry"],
   [3307, 3385, "place", "BELFAST", "Harland & Wolff"],
 ];
-const Tags: React.FC<{ f: number }> = ({ f }) => {
-  const live = TAGS.filter(([a, b]) => f >= a && f <= b);
+/** chapters 2-10 tags (v2 frames): names on first appearance, places/times on jumps, counters on numbers */
+const T = (a: number, len: number, kind: Tag[2], s: string, sub?: string): Tag => [a, a + len, kind, s, sub];
+const TAGS2: Tag[] = [
+  T(A(49) + 8, 100, "name", "ALEXANDER CARLISLE", "Harland & Wolff, Belfast"),
+  T(A(58) + 8, 90, "place", "BRITISH INQUIRY, 1912"), T(A(59, 3), 60, "count", "48", "BOATS, HE SAID"),
+  T(A(80) + 8, 110, "place", "SOUTHAMPTON, 10 APRIL 1912", "Board of Trade inspection"), T(A(81, 3), 80, "count", "2", "BOATS LOWERED"),
+  T(A(94) + 6, 100, "place", "BOAT DECK, 12:40 A.M.", "15 April 1912"),
+  T(A(102) + 6, 90, "name", "LIFEBOAT 7", "first boat lowered"), T(A(103, 3), A(105) - A(103, 3), "count", "65", "SEATS"), T(A(104, 4), A(105) - A(104, 4), "count", "28", "ABOARD"),
+  T(A(109), 80, "name", "FIRST OFFICER MURDOCH", "starboard side"),
+  T(A(120) + 6, 80, "name", "CAPTAIN EDWARD SMITH"), T(A(122), 80, "name", "MURDOCH & LIGHTOLLER", "starboard & port"),
+  T(A(124) + 4, 80, "place", "STARBOARD", "First Officer Murdoch"), T(A(126) + 4, 80, "place", "PORT", "Second Officer Lightoller"),
+  T(A(147) + 6, 90, "place", "BRITISH INQUIRY, 1912"),
+  T(A(162) + 6, 90, "place", "LIFEBOAT 1, 1:10 A.M."), T(A(164), 60, "count", "40", "SEATS"), T(A(164, 2), 60, "count", "12", "PEOPLE"),
+  T(A(166, 5), 90, "name", "SIR COSMO & LADY DUFF-GORDON"), T(A(167) + 4, 80, "place", "AFTER 2:20 A.M.", "Titanic has sunk"),
+  T(A(173) + 6, 90, "place", "BRITISH INQUIRY, 1912"),
+  T(A(192), 110, "name", "FIFTH OFFICER HAROLD LOWE", "Lifeboat 14"), T(A(193), 80, "place", "2:20 A.M.", "Titanic sinks"), T(A(199, 2), 70, "count", "4", "FOUND ALIVE"),
+  T(A(202) + 6, 100, "place", "FIRST LIGHT", "Collapsible A"), T(A(206) + 4, 100, "place", "COLLAPSIBLE B", "upside down"),
+  T(A(211, 3) + 6, 110, "name", "HAROLD COTTAM", "Carpathia's wireless operator"), T(A(213), 90, "name", "CAPTAIN ARTHUR ROSTRON", "RMS Carpathia"),
+  T(A(217) + 6, 90, "place", "JUST AFTER 4:00 A.M."), T(A(223) + 6, 100, "place", "LONDON, 1913-14", "Safety of Life at Sea"), T(A(235) + 6, 80, "place", "LONDON, 1894"),
+];
+void LE;
+const Tags: React.FC<{ f: number; pilot: boolean }> = ({ f, pilot }) => {
+  const live = (pilot ? TAGS : TAGS2).filter(([a, b]) => f >= a && f <= b);
   const counts = live.filter((t) => t[2] === "count");
   return (
     <AbsoluteFill style={{ pointerEvents: "none", fontFamily: "CapBlack, sans-serif", fontWeight: 900 }}>
       {live.filter((t) => t[2] !== "count").map(([a, , kind, s, sub], i) => {
-        const k = Math.min(1, (f - a) / 6), typed = kind === "date" ? s.slice(0, Math.ceil(s.length * Math.min(1, (f - a) / 30))) : s;
+        const k = a === 0 ? 1 : Math.min(1, (f - a) / 6), typed = kind === "date" ? s.slice(0, Math.ceil(s.length * Math.min(1, (f - a) / 30))) : s;
         const pos = { left: 80, top: 70, transform: `translateX(${(1 - k) * -40}px) scale(${kind === "myth" ? 0.85 + 0.15 * k : 1})` };
         return (
           <div key={i} style={{ position: "absolute", ...pos, opacity: k, background: kind === "myth" ? "#f4ecd6" : "rgba(244,236,214,0.94)", border: "8px solid #241726", borderRadius: 10, padding: "14px 30px",
@@ -147,26 +170,31 @@ const loadWm = () => (wmP ??= new FontFace("WmBold", `url(${staticFile("fonts/mo
   .then((ff) => { (document.fonts as unknown as { add: (f: FontFace) => void }).add(ff); }).catch(() => undefined));
 const Watermark: React.FC = () => (
   <AbsoluteFill style={{ pointerEvents: "none" }}>
-    <div style={{ position: "absolute", right: 40, bottom: 34, fontFamily: "WmBold, Montserrat, sans-serif", fontWeight: 700, fontSize: 32, color: "rgba(255,255,255,0.66)",
-      letterSpacing: 0.3, textShadow: "0 2px 6px rgba(0,0,0,0.75), 0 0 2px rgba(0,0,0,0.6)" }}>{HANDLE}</div>
+    <div style={{ position: "absolute", right: 40, bottom: 34, fontFamily: "WmBold, Montserrat, sans-serif", fontWeight: 700, fontSize: 32, color: "rgba(255,255,255,0.68)",
+      letterSpacing: 0.3, WebkitTextStroke: "1.5px rgba(10,8,20,0.55)", paintOrder: "stroke fill",
+      textShadow: "0 2px 4px rgba(0,0,0,0.85), 0 0 10px rgba(0,0,0,0.55), 0 0 2px rgba(0,0,0,0.9)" }}>{HANDLE}</div>
   </AbsoluteFill>
 );
 const watermarkOn = () => (getInputProps() as { watermark?: boolean }).watermark !== false;
 
+/** the whole video (pilot + chapters 2-10 + end screen) */
+export const TitanicFull: React.FC = () => <TitanicPilot />;
 export const TitanicPilot: React.FC = () => {
   const f = useCurrentFrame();
   const kit = useKit();
   const fontOk = useFont();
   if (!kit || !fontOk) return null;
-  const s = shotAt(f), flash = flashAt(f), noAudio = (getInputProps() as { audio?: boolean }).audio === false;
+  // the pilot's logic runs on v1 frames (warped), chapters 2-10 on the v2 voice frames
+  const pilot = f < PILOT_NEW, lf = pilot ? warpOld(f) : f;
+  const s = shotAt(lf, pilot), flash = flashAt(lf), noAudio = (getInputProps() as { audio?: boolean }).audio === false;
   return (
     <AbsoluteFill style={{ background: "#0b1430" }}>
-      {s.kind === "board" ? <Board id={s.board!} f={f} /> : <ShotView key={s.id} id={s.id} kit={kit} />}
+      {s.kind === "board" ? <Board id={s.board!} f={lf} shot={s.id} /> : <ShotView key={s.id} id={s.id} kit={kit} f={lf} />}
       {flash > 0 && <AbsoluteFill style={{ background: "#ffffff", opacity: flash }} />}
-      <Tags f={f} />
+      <Tags f={lf} pilot={pilot} />
       {watermarkOn() && <Watermark />}
       {captionsOn() && <Caption f={f} />}
-      {noAudio ? null : <Audio src={staticFile("titanic_pilot_mix.wav")} />}
+      {noAudio ? null : <Audio src={staticFile("titanic_full_mix.m4a")} />}
     </AbsoluteFill>
   );
 };

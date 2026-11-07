@@ -2,7 +2,8 @@
 import { Pen, Outfit, Expr, fxPuff, INK } from "./toon";
 import { person, blob, lidAt, hh, q, Stage, WallFx, CamInfo, setLight } from "./castcore";
 import { CAST } from "./castdefs";
-import { SHOTS, FPS, V3, at, ramp, BOAT_DECK, BOAT1, SEA_B1, OFFICE, boat1Y, SEA6 } from "./story";
+import { SHOTS, FPS, V3, at, ramp, BOAT_DECK, BOAT1, SEA_B1, OFFICE, boat1Y, SEA6, A } from "./story";
+import { boatsFor, seatsOf, CARP } from "./scenes";
 
 const C = (k: string) => CAST[k];
 const STOKER: Outfit = { jacket: "#3a3a44", pants: "#2a2a30", boots: "#17141c", hat: "flatcap", cap: "#2a2a30", skin: "#ecd0b6" };
@@ -13,9 +14,9 @@ const PAX: Outfit[] = [C("firstwoman").o, C("firstman").o, C("steward").o, { ...
   { ...C("firstman").o, hat: "bowler", jacket: "#3a3540", dress: "#3a3540" }, { ...C("firstwoman").o, dress: "#4a5a3a", jacket: "#5a6a4a", hat: "bonnet" },
   { ...C("thirdman").o, lifebelt: true }, { ...C("thirdwoman").o, lifebelt: true }];
 
-type P = { o: Outfit; okey: string; i: number; x: number; y: number; z: number; expr?: Expr; sit?: boolean; scale?: number; look?: number; prop?: string; seed?: number; facing?: -1 | 0 | 1; wave?: number; side?: boolean; tilt?: number };
+type P = { o: Outfit; okey: string; i: number; x: number; y: number; z: number; expr?: Expr; sit?: boolean; scale?: number; look?: number; prop?: string; seed?: number; facing?: -1 | 0 | 1; wave?: number; side?: boolean; tilt?: number; headTilt?: number; walk?: number };
 const put = (cam: CamInfo, t: number, out: Stage, p: P, swaps: number[] = []) => {
-  const fo = { mode: p.sit ? "sit" : "stand", expr: p.expr ?? "neutral", blink: lidAt(t, p.i, swaps), look: p.look ?? 0, seed: p.seed ?? ((p.i * 5 + 3) % 7) + 1,
+  const fo = { mode: p.sit ? "sit" : p.walk !== undefined ? "stroll" : "stand", phase: p.walk, headTilt: p.headTilt ?? 0, expr: p.expr ?? "neutral", blink: lidAt(t, p.i, swaps), look: p.look ?? 0, seed: p.seed ?? ((p.i * 5 + 3) % 7) + 1,
     facing: p.facing ?? 0, prop: (p.prop ?? null) as never, wave: p.wave, tilt: p.tilt ?? 0 } as const;
   out.places.push(person(cam, { i: p.i, o: p.o, okey: p.okey }, p.x, p.y, p.z, { side: !!p.side, mirror: false }, fo as never,
     { mode: "stand", expr: p.expr ?? "neutral", blink: lidAt(t, p.i) }, p.scale ?? 1));
@@ -110,6 +111,13 @@ const blueprint = (p: Pen, glow: number) => {
   if (glow > 0) { p.g.globalAlpha = 0.25 * glow; p.poly([[20, 20], [780, 20], [780, 560], [20, 560]], "#bfe0ff", 0); p.g.globalAlpha = 1; }
 };
 const xyz = (v: V3) => ({ x: v[0], y: v[1], z: v[2] });
+const radioSet = (p: Pen) => {
+  p.poly([[20, 60], [300, 60], [300, 280], [20, 280]], "#3a2a22", 10); p.poly([[330, 120], [480, 120], [480, 280], [330, 280]], "#2a2a30", 10);
+  for (let i = 0; i < 3; i++) p.ell(80 + i * 80, 140, 26, 26, "#c9a24a", 6);
+  p.poly([[60, 200], [260, 200], [260, 240], [60, 240]], "#151217", 5); p.stroke([[380, 120], [380, 30], [440, 10]], 8, INK); p.ell(405, 200, 30, 30, "#7a6a5a", 6);
+};
+const banner = (p: Pen) => { p.poly([[20, 30], [1180, 30], [1180, 270], [20, 270]], "#f4ecd6", 12); txt(p, "SAFETY OF LIFE AT SEA", 600, 110, 84, "#1d2a5e"); txt(p, "LONDON · 1913–1914", 600, 205, 56, "#c0353a"); };
+const ropeLadder = (p: Pen) => { for (const x of [40, 160]) p.stroke([[x, 0], [x, 1000]], 10, "#b9a27a"); for (let y = 30; y < 1000; y += 70) p.stroke([[40, y], [160, y]], 12, "#8a6a44"); };
 
 const officeScene = (cam: CamInfo, t: number, out: Stage, f: number, id: number) => {
   const O = OFFICE, dress = SHOTS[id - 1].dress;
@@ -138,6 +146,111 @@ const officeScene = (cam: CamInfo, t: number, out: Stage, f: number, id: number)
   }
 };
 
+// ---------------- chapters 2-10 ----------------
+const BLANKET: Outfit = { jacket: "#8a8478", dress: "#8a8478", pants: "#5a5650", boots: "#2a2420", hat: "hair", hair: "#5a4030", skin: "#ecd0b6" };
+const BOSS = (k: number): Outfit => ({ jacket: k ? "#2e2a36" : "#3a3540", dress: k ? "#2e2a36" : "#3a3540", coat: true, pants: "#22202a", boots: "#111", hat: "hair",
+  hair: k ? "#c9c6c0" : "#3a2a20", moustache: k ? "#e8e4dc" : "#3a2a20", build: "stout", buttons: "#222", skin: k ? "#ffe2c2" : "#f5c9a0" });
+const DELEGATE = (k: number): Outfit => ({ ...BOSS(k % 2), jacket: ["#2e2a36", "#3a3540", "#2a3040", "#3a2e2a", "#30302e"][k % 5], hair: ["#c9c6c0", "#3a2a20", "#6a4a30", "#2a201a", "#a8a49c"][k % 5], moustache: k % 3 ? "#3a2a20" : undefined });
+const WOMEN = [C("firstwoman").o, PAX[3], PAX[5], C("thirdwoman").o, { ...C("firstwoman").o, dress: "#5a3a6a", jacket: "#6a4a7a" }];
+const MEN = [C("firstman").o, PAX[4], C("thirdman").o, STOKER, C("steward").o];
+const lift = (cam: CamInfo, t: number, out: Stage, list: [Outfit, string, number, V3, Expr, Partial<P>?][]) =>
+  list.forEach(([o, okey, i, [x, y, z], expr, extra]) => put(cam, t, out, { o, okey, i, x, y, z, expr, ...(extra ?? {}) }));
+const seatBoats = (cam: CamInfo, t: number, out: Stage, scene: string, f: number, a: number) => {
+  boatsFor(scene, f, a).forEach((b, k) => {
+    const cap = b.who === "boat14" ? 18 : 16, n = Math.min(b.n, cap);
+    if (b.flip) { // collapsible B: men standing on the upturned hull, two rows
+      for (let i = 0; i < n; i++) { const r = i % 2, dx = -3.4 + (6.8 * Math.floor(i / 2)) / Math.max(1, Math.floor(n / 2) - 1), c = Math.cos(b.yaw), sn = Math.sin(b.yaw), dz = r ? 0.35 : -0.35;
+        put(cam, t, out, { o: i === n - 1 ? C("lightoller").o : MEN[i % MEN.length], okey: i === n - 1 ? "light" : `men${i % MEN.length}`, i: 700 + i, x: b.x + dx * c + dz * sn, y: b.y + 0.12, z: b.z - dx * sn + dz * c,
+          expr: i % 3 ? "stern" : "nervous", scale: 0.85, tilt: 0.04 * Math.sin(t * 1.3 + i), seed: i === n - 1 ? 23 : undefined }); }
+      return;
+    }
+    const seats = seatsOf(b, n);
+    seats.forEach(([x, y, z], i) => {
+      let o: Outfit, okey: string, expr: Expr = "neutral";
+      if (b.who === "seamen" || b.who === "rowers") { o = i % 2 ? SEAMAN : STOKER; okey = i % 2 ? "sea" : "stk"; expr = "stern"; }
+      else if (b.who === "boat1") { o = [STOKER, SEAMAN, C("cosmo").o, C("lucy").o, C("firstwoman").o][i % 5]; okey = `b1_${i % 5}`; }
+      else if (b.who === "collA") { o = i % 4 === 0 ? C("thirdwoman").o : MEN[i % MEN.length]; okey = `ca${i % 5}`; expr = i % 2 ? "pained" : "nervous"; }
+      else { const w = (i + k) % 3 !== 0; o = w ? WOMEN[(i + k) % WOMEN.length] : MEN[(i + k) % MEN.length]; okey = w ? `w${(i + k) % WOMEN.length}` : `m${(i + k) % MEN.length}`; expr = (["nervous", "neutral", "stern"] as Expr[])[i % 3]; }
+      const sunk = b.swamp ? -0.1 : 0;
+      put(cam, t, out, { o, okey, i: 600 + k * 40 + i, x, y: y + sunk - 0.12, z, expr, sit: true, scale: 0.82 });
+    });
+    if (b.who === "boat14" || b.who === "rowers") { // Lowe standing at the tiller (stern = -x in boat space)
+      const c = Math.cos(b.yaw), sn = Math.sin(b.yaw);
+      put(cam, t, out, { o: C("lowe").o, okey: "lowe", i: 690, x: b.x - 3.9 * c, y: b.y + 0.55, z: b.z + 3.9 * sn, expr: "stern", seed: 44, scale: 0.9 });
+      if (scene === "lantern") for (let i = 0; i < 3; i++)
+        put(cam, t, out, { o: BLANKET, okey: "blanket", i: 695 + i, x: b.x - (2.6 - 0.7 * i) * c + 0.5 * sn, y: b.y + 0.45, z: b.z + (2.6 - 0.7 * i) * sn + 0.5 * c, expr: i === 1 ? "dazed" : "pained", sit: true, scale: 0.82 });
+    }
+  });
+};
+const stage2 = (cam: CamInfo, t: number, out: Stage, f: number, id: number) => {
+  const sh = SHOTS[id - 1], sc = sh.scene ?? "", O = OFFICE, BD = BOAT_DECK;
+  seatBoats(cam, t, out, sc, f, sh.a);
+  switch (sc) {
+    case "belfastCarlisle": put(cam, t, out, { o: C("carlisle").o, okey: "carlisle", i: 140, x: O[0] - 0.9, y: 0, z: O[2] - 1.2, expr: "smile", seed: 72, facing: 1, prop: "scroll" });
+      out.fx.push({ key: "bp1", cw: 800, ch: 580, draw: (p) => blueprint(p, 1), ...xyz(at(O, 0.5, 1.1, -1.35)), w: 1.3, h: 0.94, wall: 0, tilt: Math.PI / 2 - 0.5 } as WallFx); break;
+    case "meeting":
+      put(cam, t, out, { o: C("carlisle").o, okey: "carlisle", i: 140, x: O[0] - 1.1, y: 0, z: O[2] - 1.0, expr: "smile", seed: 72, facing: 1, prop: "scroll" });
+      put(cam, t, out, { o: BOSS(0), okey: "boss0", i: 141, x: O[0] + 1.4, y: 0, z: O[2] - 1.5, expr: f > A(62, 4) ? "neutral" : "smile", seed: 3, facing: -1, look: -0.6 });
+      put(cam, t, out, { o: BOSS(1), okey: "boss1", i: 142, x: O[0] + 2.3, y: 0, z: O[2] - 0.9, expr: "smile_closed", seed: 5, facing: -1, look: -0.6 });
+      out.fx.push({ key: "bp0", cw: 800, ch: 580, draw: (p) => blueprint(p, 0), ...xyz(at(O, 0.5, 1.1, -1.35)), w: 1.3, h: 0.94, wall: 0, tilt: Math.PI / 2 - 0.5 } as WallFx); break;
+    case "inquiryCarlisle": case "inquiryEmpty": case "inquiryCosmo": {
+      put(cam, t, out, { o: COMMISSIONER, okey: "comm", i: 130, x: O[0] - 2.6, y: 0.9, z: O[2] - 2.4, expr: sc === "inquiryEmpty" ? "stern" : "neutral", seed: 12, prop: sc === "inquiryEmpty" ? "ledger" : undefined });
+      if (sc === "inquiryCarlisle") put(cam, t, out, { o: C("carlisle").o, okey: "carlisle", i: 140, x: O[0] + 0.9, y: 0, z: O[2] - 0.6, expr: f > A(59, 2) ? "smile" : "neutral", seed: 72, facing: -1, look: -0.7 });
+      if (sc === "inquiryCosmo") put(cam, t, out, { o: { ...C("cosmo").o, lifebelt: false }, okey: "cosmo", i: 150, x: O[0] + 0.9, y: 0, z: O[2] - 0.6, expr: f > A(176) ? "relief" : "nervous", seed: 91, facing: -1, look: -0.7 });
+      out.fx.push({ key: "cal1912", cw: 400, ch: 500, draw: (p) => calendar(p, "1912"), ...xyz(at(O, 1.3, 2.2, -2.88)), w: 0.7, h: 0.88, wall: 0 } as WallFx); break;
+    }
+    case "wireless": {
+      const heard = f >= A(212, 6);
+      put(cam, t, out, { o: C("cottam").o, okey: "cottam", i: 160, x: O[0] - 0.35, y: 0.05, z: O[2] - 1.85, expr: heard ? "shock" : "neutral", sit: true, seed: 61, look: heard ? 0.6 : -0.4 }, [A(212, 6) / FPS]);
+      if (f >= A(213)) put(cam, t, out, { o: C("rostron").o, okey: "rostron", i: 161, x: O[0] + 1.5 - 0.6 * ramp(f, A(213), A(213) + 25), y: 0, z: O[2] - 1.0, expr: "stern", seed: 57, facing: -1, walk: f < A(213) + 25 ? (f / 14) % 1 : undefined });
+      out.fx.push({ key: "radio", cw: 500, ch: 300, draw: radioSet, ...xyz(at(O, -0.35, 1.05, -2.42)), w: 1.1, h: 0.66, wall: 0 } as WallFx); break;
+    }
+    case "conference":
+      for (let k = 0; k < 6; k++) put(cam, t, out, { o: DELEGATE(k), okey: `del${k}`, i: 170 + k, x: O[0] - 3 + k * 1.2, y: 0, z: O[2] - 2.6, expr: (["neutral", "smile", "stern"] as Expr[])[k % 3], seed: 3 + k * 7, look: (k - 2.5) * -0.2 });
+      out.fx.push({ key: "banner", cw: 1200, ch: 300, draw: banner, ...xyz(at(O, 0, 2.75, -2.88)), w: 4.0, h: 1.0, wall: 0 } as WallFx); break;
+    case "ledgerAgain": out.fx.push({ key: "ledger10", cw: 1024, ch: 680, draw: (p) => ledger(p, true, 0), ...xyz(at(O, 0, 0.93, -0.5)), w: 1.1, h: 0.73, flat: true, rot: 0 }); break;
+    case "davitClose": put(cam, t, out, { o: SEAMAN, okey: "sea", i: 410, x: 57.6, y: BD, z: 12.4, expr: "stern", look: 0.8 }); break;
+    case "clipShort": case "clipPractice": {
+      const q2 = sc === "clipShort" ? f >= A(69) : f >= A(79, 4);
+      put(cam, t, out, { o: C("clipboard").o, okey: "clip", i: 100, x: CB[0], y: CB[1], z: CB[2], expr: q2 ? "smile" : "stern", seed: 31, facing: 1, prop: q2 ? undefined : "clipboard", wave: q2 ? 0.5 : undefined });
+      for (let i = 0; i < 3; i++) put(cam, t, out, { o: PAX[(i + 2) % PAX.length], okey: `pax${(i + 2) % PAX.length}`, i: 330 + i, x: 52 - i * 2.6, y: BD, z: 11.4 + (i % 2) * 0.9, expr: "neutral", look: 0.7 });
+      break;
+    }
+    case "sailors": lift(cam, t, out, [[SEAMAN, "sea", 420, [63, BD, 12.2], "grin"], [STOKER, "stk", 421, [64.8, BD, 11.8], "smile"], [SEAMAN, "sea", 422, [61.6, BD, 11.4], "smile_closed"]]); break;
+    case "deckCalm": for (let i = 0; i < 9; i++) put(cam, t, out, { o: PAX[i % PAX.length], okey: `pax${i % PAX.length}`, i: 440 + i, x: 46 + (i % 5) * 2.4 + hh(i, 2), y: BD, z: 6.4 + (i % 3) * 1.6, expr: (["smile", "laugh", "smile_closed", "neutral"] as Expr[])[i % 4], facing: i % 2 ? 1 : -1 }); break;
+    case "railPOV": for (let i = 0; i < 5; i++) put(cam, t, out, { o: PAX[i % PAX.length], okey: `pax${i % PAX.length}`, i: 455 + i, x: 45.5 + i * 1.3, y: BOAT_DECK, z: 12.7, expr: "nervous", look: 0.8, scale: 1 }); break;
+    case "deckNo": for (let i = 0; i < 4; i++) { const no = f >= A(101, 2); put(cam, t, out, { o: PAX[i * 2 % PAX.length], okey: `pax${i * 2 % PAX.length}`, i: 460 + i, x: 52 + i * 1.3, y: BD, z: 11.5 + (i % 2) * 0.5, expr: no ? "stern" : "nervous", headTilt: no ? 0.12 * Math.sin(f * 0.5 + i) : 0, look: no ? 0 : 0.8 }); } break;
+    case "deckInside": for (let i = 0; i < 6; i++) { const k = ramp(f, sh.a + i * 6, sh.b); put(cam, t, out, { o: PAX[(i + 1) % PAX.length], okey: `pax${(i + 1) % PAX.length}`, i: 470 + i, x: 45 - 4 * k - i * 0.6, y: BD, z: 8.5 - 3.6 * k + (i % 2) * 0.5, expr: f > A(106) ? "smile_closed" : "smile", walk: (f / 14 + i * 0.3) % 1 }); } break;
+    case "murdochDavit": lift(cam, t, out, [[C("murdoch").o, "murdoch", 480, [48.2, BD, 12.4], f > A(110) ? "nervous" : "stern", { seed: 12, look: 0.6 }], [SEAMAN, "sea", 481, [46.4, BD, 12.6], "stern"], [STOKER, "stk", 482, [50, BD, 12.9], "stern"]]); break;
+    case "orderTrio": lift(cam, t, out, [[C("smith").o, "smith", 490, [76.4, BD, 0.2], f > A(121) ? "stern" : "neutral", { seed: 4 }], [C("lightoller").o, "light", 491, [74.6, BD, 1.8], f > A(123) ? "nervous" : "stern", { seed: 23, facing: 1 }],
+      [C("murdoch").o, "murdoch", 492, [77.9, BD, 1.9], "stern", { seed: 12, facing: -1 }]]); break;
+    case "stbdLoad": case "portLoad": {
+      const s2 = sc === "stbdLoad" ? 1 : -1, menIn = sc === "stbdLoad" && f >= A(125, 4);
+      put(cam, t, out, { o: C(sc === "stbdLoad" ? "murdoch" : "lightoller").o, okey: sc === "stbdLoad" ? "murdoch" : "light", i: 500, x: 57.6, y: BD, z: s2 * 12.3, expr: "stern", seed: sc === "stbdLoad" ? 12 : 23, wave: sc === "portLoad" && f > A(127) ? 0.9 : undefined });
+      // the hung boat at station 56 with its people (women first; men fill starboard only)
+      const boat = { kind: "lifeboat" as const, x: 56, y: BD - 1.0, z: s2 * 15.5, yaw: 0, n: 0 };
+      const nw = sc === "stbdLoad" ? 7 : 6, seats = seatsOf(boat, 16);
+      for (let i = 0; i < nw + (menIn ? 6 : 0); i++) { const [x, y, z] = seats[i], man = i >= nw; put(cam, t, out, { o: man ? MEN[i % MEN.length] : WOMEN[i % WOMEN.length], okey: man ? `m${i % MEN.length}` : `w${i % WOMEN.length}`, i: 510 + i, x, y: y - 0.12, z, sit: true, scale: 0.82, expr: "nervous" }); }
+      // men waiting on deck
+      for (let i = 0; i < (menIn ? 1 : 4); i++) put(cam, t, out, { o: MEN[i % MEN.length], okey: `m${i % MEN.length}`, i: 530 + i, x: 53 + i * 1.2, y: BD, z: s2 * (10.6 - (i % 2) * 0.8), expr: sc === "portLoad" ? "pained" : "nervous" });
+      break;
+    }
+    case "boat1Ship": case "boat1Dark": {
+      const b = boatsFor(sc, f, sh.a)[0];
+      if (sc === "boat1Dark") { out.places.length = 0; boat1Crew(cam, t, out, [b.x, b.y, b.z], b.yaw); }
+      break;
+    }
+    case "ladder": {
+      out.fx.push({ key: "ropeLadder", cw: 200, ch: 1000, draw: ropeLadder, x: CARP[0] - 8, y: 4.6, z: CARP[2] + 9.85, w: 0.9, h: 9, wall: 0 } as WallFx);
+      const k = ramp(f, sh.a + 20, sh.b - 10);
+      put(cam, t, out, { o: C("firstwoman").o, okey: "w0", i: 560, x: CARP[0] - 8, y: 1.2 + 6 * k, z: CARP[2] + 10.3, expr: "relief", scale: 0.85, walk: (f / 10) % 1 });
+      for (let i = 0; i < 3; i++) put(cam, t, out, { o: SEAMAN, okey: "sea", i: 565 + i, x: CARP[0] - 11 + i * 2.6, y: 9.6, z: CARP[2] + 9.2, expr: "smile", scale: 0.9 });
+      break;
+    }
+  }
+  if (sc === "boat1Ship" || sc === "southBoat" || sc === "southWide") { /* seated by seatBoats */ }
+};
+
 export const stage = (id: number, f: number, cam: CamInfo): Stage => {
   const out: Stage = { places: [], fx: [] }, t = f / FPS, s = SHOTS[id - 1];
   setLight(s.light === "lamp" ? "golden" : "day", cam);
@@ -153,6 +266,7 @@ export const stage = (id: number, f: number, cam: CamInfo): Stage => {
   });
   if (id === 5 || id === 8 || id === 10) clipboardAt(cam, t, out, f, id);
   if (id === 15) for (let i = 0; i < 3; i++) put(cam, t, out, { o: SEAMAN, okey: "sea", i: 400 + i, x: 70 - i * 9, y: BOAT_DECK, z: 12.1, expr: "stern", look: 0.8 });
+  if (id > 20) { setLight(s.light === "lamp" || s.light === "dawn" ? "golden" : "day", cam); stage2(cam, t, out, f, id); return out; }
   if (s.set === "office") officeScene(cam, t, out, f, id);
   return out;
 };

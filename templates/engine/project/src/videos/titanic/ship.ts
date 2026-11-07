@@ -86,10 +86,10 @@ function deckPlan(y: (x: number) => number, x0: number, x1: number, inset = 0) {
 }
 
 // ---------------- lifeboats ----------------
-export type BoatKind = "lifeboat" | "cutter";
+export type BoatKind = "lifeboat" | "cutter" | "collapsible";
 /** open wooden boat: white outside, varnished inside, thwarts (seats), gunwale. Origin = keel centre, length along x. */
 export function boatGeo(kind: BoatKind) {
-  const L = kind === "cutter" ? 7.6 : 9.1, B = kind === "cutter" ? 2.1 : 2.75, D = kind === "cutter" ? 0.95 : 1.15;
+  const L = kind === "cutter" ? 7.6 : kind === "collapsible" ? 8.0 : 9.1, B = kind === "cutter" ? 2.1 : kind === "collapsible" ? 2.5 : 2.75, D = kind === "cutter" ? 0.95 : kind === "collapsible" ? 0.8 : 1.15;
   const NS = 28, NT = 14, pos: number[] = [], uv: number[] = [], idx: number[] = [];
   for (let i = 0; i <= NS; i++) {
     const s = i / NS, x = (s - 0.5) * L, b = (B / 2) * Math.pow(Math.max(0, 1 - Math.abs(2 * s - 1) ** 2.4), 0.55), sh = 0.18 * (2 * s - 1) ** 2;
@@ -115,6 +115,7 @@ export function boatGeo(kind: BoatKind) {
 }
 const boatMats = () => ({
   white: twoTone(new THREE.MeshLambertMaterial({ color: "#f3f0e8", side: THREE.FrontSide })),
+  canvas: twoTone(new THREE.MeshLambertMaterial({ color: "#bdb4a0", side: THREE.FrontSide })),
   wood: twoTone(new THREE.MeshLambertMaterial({ color: "#b98a52", side: THREE.BackSide })),
   seat: lam("boatSeat", () => ({ color: "#a8784a" })),
 });
@@ -123,7 +124,7 @@ let BM: ReturnType<typeof boatMats> | null = null;
 export function makeBoat(kind: BoatKind) {
   BM ??= boatMats();
   const g = boatGeo(kind), grp = new THREE.Group();
-  const outer = new THREE.Mesh(g.shell, BM.white), inner = new THREE.Mesh(g.shell, BM.wood);
+  const outer = new THREE.Mesh(g.shell, kind === "collapsible" ? BM.canvas : BM.white), inner = new THREE.Mesh(g.shell, BM.wood);
   const b = new Batch(); for (const s of g.seats) b.add(s, BM.seat); b.build(grp);
   for (const m of [outer, inner]) { m.castShadow = true; m.receiveShadow = true; grp.add(m); }
   grp.userData = { L: g.L, B: g.B, D: g.D };
@@ -219,3 +220,64 @@ export function buildShip(root: THREE.Group) {
   return { hung, lamps };
 }
 export { sheer };
+
+// ---------------- RMS Carpathia (Cunard, 1903): 164 m, black hull, one red funnel with a black top and bands ----------------
+const CL = 164, CB = 19.5, CTOP = 9.5;
+export const carpHalfW = (x: number) => {
+  const h = CB / 2;
+  if (x > 30) return h * Math.sqrt(Math.max(0, 1 - ((x - 30) / (CL / 2 - 30)) ** 2.2));
+  if (x < -50) return h * Math.max(0.15, Math.sqrt(Math.max(0, 1 - ((-50 - x) / (CL / 2 - 50 + 3)) ** 2.6)));
+  return h;
+};
+export function buildCarpathia(root: THREE.Group) {
+  const b = new Batch();
+  const xs: number[] = []; for (let x = -CL / 2; x <= CL / 2 + 0.01; x += 1.5) xs.push(x);
+  const pos: number[] = [], uv: number[] = [], idx: number[] = [], Y0 = -2;
+  const top = (x: number) => CTOP + 1.6 * (x / (CL / 2)) ** 2;
+  for (const s of [1, -1]) {
+    const base = pos.length / 3;
+    xs.forEach((x, i) => {
+      const w = carpHalfW(x) * s; pos.push(x, Y0, w, x, top(x), w); const u = (x + CL / 2) / CL; uv.push(u * 0.6, 0, u * 0.6, 0.9);
+      if (i) { const a = base + (i - 1) * 2, bb = a + 1, c = a + 2, d = a + 3; if (s > 0) idx.push(a, c, bb, bb, c, d); else idx.push(a, bb, c, bb, d, c); }
+    });
+  }
+  const hg = new THREE.BufferGeometry(); hg.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3)); hg.setAttribute("uv", new THREE.Float32BufferAttribute(uv, 2)); hg.setIndex(idx); hg.computeVertexNormals();
+  b.add(hg, emissiveLam("carpHull", hullTex(false), hullTex(true), 1.4));
+  const dp: number[] = [], du: number[] = [], di: number[] = []; let n = 0;
+  for (const x of xs) { const w = Math.max(0.05, carpHalfW(x) - 0.05); dp.push(x, top(x), -w, x, top(x), w); du.push(x / 6, -w / 6, x / 6, w / 6); if (n) { const a = (n - 1) * 2; di.push(a, a + 1, a + 2, a + 1, a + 3, a + 2); } n++; }
+  const dg = new THREE.BufferGeometry(); dg.setAttribute("position", new THREE.Float32BufferAttribute(dp, 3)); dg.setAttribute("uv", new THREE.Float32BufferAttribute(du, 2)); dg.setIndex(di); dg.computeVertexNormals();
+  b.add(dg, lam("tDeck", () => ({ map: planksHD(), color: "#a07e5e" })));
+  const supM = emissiveLam("carpSup", supTex(false), supTex(true), 1.5), whiteM = lam("tWhite", () => ({ color: "#ece8de" }));
+  for (const [x0, x1, y0, y1, hw] of [[-40, 30, CTOP, CTOP + 3, 7.5], [-30, 22, CTOP + 3, CTOP + 5.5, 6]] as const) {
+    b.add(boxGeo(V(x0, y0, -hw), V(x1, y1, hw)), whiteM);
+    for (const s of [1, -1]) { const g = new THREE.PlaneGeometry(x1 - x0, y1 - y0); g.translate((x0 + x1) / 2, (y0 + y1) / 2, 0); if (s < 0) g.rotateY(Math.PI).translate(x0 + x1, 0, 0); g.translate(0, 0, s * (hw + 0.02)); b.add(g, supM); }
+  }
+  const red = lam("cunardRed", () => ({ color: "#c84a2a" })), black = lam("funTop", () => ({ color: "#1a1a20" }));
+  const m = new THREE.Matrix4().makeRotationZ(0.06).premultiply(new THREE.Matrix4().makeTranslation(-2, CTOP + 5.5, 0));
+  b.add(new THREE.CylinderGeometry(3.0, 3.0, 13, 28, 1, true).translate(0, 6.5, 0), red, m);
+  for (const y of [9.2, 10.4]) b.add(new THREE.CylinderGeometry(3.03, 3.03, 0.45, 28, 1, true).translate(0, y, 0), black, m);
+  b.add(new THREE.CylinderGeometry(3.03, 3.03, 2.6, 28, 1, true).translate(0, 14.3, 0), black, m);
+  b.add(new THREE.CircleGeometry(3.0, 28).rotateX(-Math.PI / 2).translate(0, 15.6, 0), black, m);
+  const mastM = lam("mast", () => ({ color: "#8a6a44" }));
+  for (const x of [60, 36, -48, -66]) b.add(new THREE.CylinderGeometry(0.3, 0.42, 30, 10).translate(x, top(x) + 15, 0), mastM);
+  b.build(root);
+  const lampM = new THREE.MeshBasicMaterial({ color: new THREE.Color(4.0, 3.2, 1.9) }), lamps = new THREE.InstancedMesh(new THREE.SphereGeometry(0.18, 10, 8), lampM, 40), M = new THREE.Matrix4();
+  let k = 0; for (let x = -38; x < 30; x += 4.5) for (const s of [1, -1]) { M.makeTranslation(x, CTOP + 2.4, s * 7.7); lamps.setMatrixAt(k++, M); }
+  lamps.count = k; root.add(lamps);
+}
+
+// ---------------- icebergs: lumpy white rocks with blue shade ----------------
+export function makeIceberg(seed: number, size: number) {
+  const g = new THREE.IcosahedronGeometry(1, 4), p = g.attributes.position as THREE.BufferAttribute;
+  let s = seed; const rnd = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+  const bumps = Array.from({ length: 4 }, () => [rnd() * 3, rnd() * 3, rnd() * 3, 0.08 + 0.12 * rnd()]);
+  for (let i = 0; i < p.count; i++) {
+    const v = new THREE.Vector3().fromBufferAttribute(p, i);
+    let r = 1; for (const [a, b, c, k] of bumps) r += k * Math.sin(v.x * a + v.y * b + v.z * c);
+    v.multiplyScalar(r); v.y = v.y > 0 ? v.y * 1.1 : v.y * 0.3; p.setXYZ(i, v.x, v.y, v.z);
+  }
+  g.computeVertexNormals();
+  const m = new THREE.Mesh(g, lam("ice", () => ({ color: "#e9f3fb" })));
+  m.scale.setScalar(size); m.castShadow = true; m.receiveShadow = true;
+  return m;
+}

@@ -10,7 +10,8 @@ import { Pool, Actor, Fx } from "./castcore";
 import type { WallFx } from "./castcore";
 import { stage } from "./cast";
 import { LIGHTS_T, LOOK_T } from "./lights";
-import { buildShip, makeBoat } from "./ship";
+import { buildShip, makeBoat, buildCarpathia, makeIceberg, BoatKind } from "./ship";
+import { boatsFor, CARP, L14 } from "./scenes";
 import { SHOTS, camAt, FPS, OFFICE, BOAT1, SEA_B1, SEA6, boat1Y } from "./story";
 
 export const loadKit = () => Promise.resolve({} as Kit);
@@ -29,7 +30,10 @@ export class World {
   private water: THREE.Mesh;
   private ship = new THREE.Group(); private hung: THREE.Group[] = [];
   private boat1: THREE.Group; private sea6: THREE.Group[] = [];
-  private room = new THREE.Group(); private dress: Record<string, THREE.Group> = { london: new THREE.Group(), inquiry: new THREE.Group(), belfast: new THREE.Group() };
+  private room = new THREE.Group(); private dress: Record<string, THREE.Group> = { london: new THREE.Group(), inquiry: new THREE.Group(), belfast: new THREE.Group(), wireless: new THREE.Group(), conference: new THREE.Group() };
+  private carp = new THREE.Group(); private ice = new THREE.Group();
+  private pool2: Record<string, THREE.Group[]> = { lifeboat: [], cutter: [], collapsible: [] };
+  private lanternM = new THREE.MeshBasicMaterial({ color: new THREE.Color(5, 3.4, 1.4) }); private lanterns: THREE.Mesh[] = [];
   private frustum = new THREE.Frustum(); private m4 = new THREE.Matrix4(); private v = new THREE.Vector3(); private sph = new THREE.Sphere();
 
   constructor(_kit: Kit) {
@@ -87,6 +91,17 @@ export class World {
     this.boat1 = makeBoat("cutter"); R.add(this.boat1);
     for (const [, , , n] of SEA6) { const b = makeBoat(n > 14 ? "lifeboat" : "cutter"); this.sea6.push(b); R.add(b); }
     this.buildRoom();
+    buildCarpathia(this.carp); R.add(this.carp);
+    // icebergs: a field around the Carpathia's approach and a few far off where the boats drift
+    const ib: [number, number, number, number][] = [[CARP[0] + 90, CARP[2] - 160, 9, 3], [CARP[0] - 60, CARP[2] + 200, 14, 7], [CARP[0] + 260, CARP[2] + 60, 18, 11],
+      [CARP[0] - 420, CARP[2] - 380, 16, 13], [CARP[0] - 120, CARP[2] - 420, 11, 17], [L14[0] - 420, L14[2] + 520, 16, 19], [L14[0] + 560, L14[2] + 380, 14, 23], [CARP[0] + 60, CARP[2] + 70, 4, 29], [CARP[0] - 160, CARP[2] + 40, 5, 31]];
+    for (const [x, z, sz, seed] of ib) { const m = makeIceberg(seed, sz); m.position.set(x, -sz * 0.15, z); this.ice.add(m); }
+    R.add(this.ice);
+  }
+  private boatOf(kind: string, i: number) {
+    const l = this.pool2[kind];
+    while (l.length <= i) { const b = makeBoat(kind as BoatKind); this.pool2[kind].push(b); this.root.add(b); }
+    return l[i];
   }
 
   /** one interior (10 x 7 m, 3.6 m high) at OFFICE with three dressings */
@@ -132,6 +147,23 @@ export class World {
       add(boxGeo(V(-4.2, 0, -2.9), V(-2.4, 1.0, -1.9)), oak, d);
       d.build(this.dress.belfast);
       const g = new THREE.Mesh(new THREE.SphereGeometry(0.12, 16, 10), lampM); g.position.set(O[0] + 0.5, 2.1, O[2] - 0.6); this.dress.belfast.add(g); }
+    // Carpathia's wireless cabin: small desk, the set, a bunk
+    { const d = new Batch();
+      add(boxGeo(V(-1.2, 0.74, -2.9), V(1.2, 0.8, -2.1)), oak, d);
+      for (const [x, z] of [[-1.15, -2.85], [1.15, -2.85], [-1.15, -2.15], [1.15, -2.15]]) add(boxGeo(V(x - 0.04, 0, z - 0.04), V(x + 0.04, 0.74, z + 0.04)), oak, d);
+      add(boxGeo(V(-0.9, 0.8, -2.85), V(0.2, 1.25, -2.45)), lam("radioBox", () => ({ color: "#3a2a22" })), d);
+      add(boxGeo(V(0.35, 0.8, -2.8), V(0.95, 1.05, -2.5)), lam("radioBox2", () => ({ color: "#2a2a30" })), d);
+      add(boxGeo(V(2.4, 0.45, -2.9), V(4.6, 0.65, -1.9)), lam("bunk", () => ({ color: "#d9d2c0" })), d);
+      add(boxGeo(V(2.4, 0, -2.9), V(4.6, 0.45, -1.9)), oak, d);
+      d.build(this.dress.wireless);
+      const g = new THREE.Mesh(new THREE.SphereGeometry(0.1, 12, 8), lampM); g.position.set(O[0] - 0.4, 2.0, O[2] - 2.3); this.dress.wireless.add(g); }
+    // the London conference of 1913-14: a long table
+    { const d = new Batch();
+      add(boxGeo(V(-3.6, 0.74, -2.2), V(3.6, 0.82, -0.9)), oak, d);
+      for (const x of [-3.5, 3.5]) for (const z of [-2.1, -1.0]) add(boxGeo(V(x - 0.05, 0, z - 0.05), V(x + 0.05, 0.74, z + 0.05)), oak, d);
+      add(boxGeo(V(-3.4, 0.82, -1.7), V(3.4, 0.84, -1.3)), lam("papers2", () => ({ color: "#efe9da" })), d);
+      d.build(this.dress.conference);
+      for (const x of [-2.6, 0, 2.6]) { const g = new THREE.Mesh(new THREE.SphereGeometry(0.13, 12, 8), lampM); g.position.set(O[0] + x, 2.9, O[2] - 1.6); this.dress.conference.add(g); } }
     for (const k of Object.keys(this.dress)) this.room.add(this.dress[k]);
     this.root.add(this.room);
   }
@@ -172,15 +204,43 @@ export class World {
     W.wShade.value.set(...wc.shade); W.wTime.value = t * 0.4;
 
     // ---- which set ----
-    const out = s.set !== "office";
-    this.ship.visible = out; this.water.visible = out; this.stars.visible = out; this.room.visible = !out;
-    for (const k of Object.keys(this.dress)) this.dress[k].visible = !out && s.dress === k;
-    // boat 1: hung at its davits (hidden copy) -> lowering (shots 1-2) -> afloat (shot 3); the hung cutter at station 72 starboard hides
-    for (const h of this.hung) h.visible = !(h.userData.station.x === 72 && h.userData.station.side > 0 && (id <= 3 || id === 6));
+    const outside = s.set !== "office", scn = s.scene;
+    const shipOn = s.set === "ship" || s.set === "deck" || (s.set === "sea" && (id <= 20 || scn === "southBoat" || scn === "boat1Ship"));
+    this.ship.visible = shipOn; this.water.visible = outside; this.stars.visible = outside && s.light !== "day" && s.light !== "dawn"; this.room.visible = !outside;
+    this.carp.visible = s.set === "carp"; this.ice.visible = id > 20 && (s.set === "carp" || (s.set === "sea" && !shipOn));
+    for (const k of Object.keys(this.dress)) this.dress[k].visible = !outside && s.dress === k;
+    // boat 1 (pilot shots 1-3): hung -> lowering -> afloat; its davit copy hides while it is out
+    const b1out = id <= 3 || id === 6 || scn === "hookAgain" || scn === "boat1Ship" || scn === "boat1Dark";
+    const b7out = scn === "boat7";
+    for (const h of this.hung) { const st = h.userData.station; h.visible = !((st.x === 72 && st.side > 0 && b1out) || (st.x === 48 && st.side > 0 && b7out)); }
     this.boat1.visible = id <= 3;
     if (id <= 2) { this.boat1.position.set(BOAT1[0], boat1Y(f), BOAT1[2]); this.boat1.rotation.set(0, 0, 0.012 * Math.sin(f * 0.21)); }
     if (id === 3) { this.boat1.position.set(SEA_B1[0], -0.52, SEA_B1[2]); this.boat1.rotation.set(0.01 * Math.sin(t * 1.3), 0.5, 0.015 * Math.sin(t * 1.1)); }
     this.sea6.forEach((b, k) => { b.visible = id === 6; const [x, z, yaw] = SEA6[k]; b.position.set(x - 0.03 * (f - 579) * Math.sin(yaw), -0.52, z + 0.05 * (f - 579)); b.rotation.set(0.01 * Math.sin(t + k), yaw, 0.015 * Math.sin(t * 1.2 + k)); });
+    // loose boats of chapters 2-10
+    const used2: Record<string, number> = { lifeboat: 0, cutter: 0, collapsible: 0 };
+    let li = 0;
+    for (const bp of boatsFor(scn, f, s.a)) {
+      const b = this.boatOf(bp.kind, used2[bp.kind]++);
+      b.visible = true; b.position.set(bp.x, bp.y, bp.z);
+      const bob = bp.y < 0 ? 0.012 * Math.sin(t * 1.3 + bp.x) : 0;
+      b.rotation.set(bp.flip ? Math.PI : bob, bp.yaw, (bp.roll ?? 0) + (bp.y < 0 ? 0.015 * Math.sin(t * 1.1 + bp.z) : 0));
+      if (bp.lantern) {
+        while (this.lanterns.length <= li) { const m = new THREE.Mesh(new THREE.SphereGeometry(0.11, 12, 8), this.lanternM); m.layers.set(NOINK); this.lanterns.push(m); this.root.add(m); }
+        const m = this.lanterns[li++], c = Math.cos(bp.yaw), sn = Math.sin(bp.yaw);
+        m.visible = true; m.position.set(bp.x - 3.6 * c, bp.y + 1.9, bp.z + 3.6 * sn);
+      }
+    }
+    for (const k of Object.keys(this.pool2)) this.pool2[k].forEach((b, i) => { if (i >= used2[k]) b.visible = false; });
+    for (let i = li; i < this.lanterns.length; i++) this.lanterns[i].visible = false;
+    // the Carpathia
+    if (this.carp.visible) {
+      let x = CARP[0], z = CARP[2], yaw = 0;
+      if (scn === "carpTurn") { yaw = -0.9 * (0.5 - 0.5 * Math.cos(Math.PI * Math.min(1, (f - s.a) / Math.max(1, s.b - s.a)))); x -= 120; z -= 200; }
+      if (scn === "carpIce") { x = CARP[0] - 200 + 7 * (f - s.a) / 30; z = CARP[2] - 150; yaw = -0.9; }
+      if (scn === "dawnSea") { x = CARP[0] + 40; z = CARP[2] - 40; yaw = Math.PI * 0.85; }
+      this.carp.position.set(x, 0, z); this.carp.rotation.set(0, yaw, 0);
+    }
 
     // ---- cast ----
     const right = V(0, 0, 0).setFromMatrixColumn(cam.matrixWorld, 0);
