@@ -1,0 +1,104 @@
+[
+ {
+  "word": "Third",
+  "start": 0.043,
+  "end": 0.268,
+  "line": 1
+ },
+ {
+  "word": "class:",
+  "start": 0.318,
+  "end": 0.693,
+  "line": 1
+ },
+ {
+  "word": "more",
+  "start": 0.768,
+  "end": 0.918,
+  "line": 1
+ },
+ {
+  "word": "than",
+  "start": 0.943,
+  "end": 1.068,
+  "line": 1
+ },
+ {
+  "word": "seven",
+  "start": 1.143,
+  "end": 1.418,
+  "line": 1
+ },
+ {
+  "word": "hundred",
+  "start": 1.468,
+  "end": 1.693,
+  "line": 1
+ },
+ {
+  "word": "passengers,",
+  "start": 1.743,
+  "end": 2.568,
+  "line": 1
+ },
+ {
+  "word": "many",
+  "start": 2.718,
+  "end": 2.943,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 2.943,
+  "end": 3.018,
+  "line": 1
+ },
+ {
+  "word": "them",
+  "start": 3.043,
+  "end": 3.193,
+  "line": 1
+ },
+ {
+  "word": "families",
+  "start": 3.268,
+  "end": 3.768,
+  "line": 1
+ },
+ {
+  "word": "heading",
+  "start": 3.818,
+  "end": 4.093,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 4.143,
+  "end": 4.343,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 4.393,
+  "end": 4.543,
+  "line": 1
+ },
+ {
+  "word": "new",
+  "start": 4.593,
+  "end": 4.868,
+  "line": 1
+ },
+ {
+  "word": "life",
+  "start": 4.918,
+  "end": 4.968,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 5.018,
+  "end": 5.572,
+  "line": 1
+ }
+]

@@ -1,0 +1,98 @@
+[
+ {
+  "word": "The",
+  "start": 0.045,
+  "end": 0.12,
+  "line": 1
+ },
+ {
+  "word": "film",
+  "start": 0.195,
+  "end": 0.445,
+  "line": 1
+ },
+ {
+  "word": "Titanic",
+  "start": 0.495,
+  "end": 1.045,
+  "line": 1
+ },
+ {
+  "word": "follows",
+  "start": 1.12,
+  "end": 1.495,
+  "line": 1
+ },
+ {
+  "word": "two",
+  "start": 1.57,
+  "end": 1.745,
+  "line": 1
+ },
+ {
+  "word": "passengers",
+  "start": 1.795,
+  "end": 2.47,
+  "line": 1
+ },
+ {
+  "word": "who",
+  "start": 2.52,
+  "end": 2.645,
+  "line": 1
+ },
+ {
+  "word": "never",
+  "start": 2.72,
+  "end": 2.995,
+  "line": 1
+ },
+ {
+  "word": "existed.",
+  "start": 3.045,
+  "end": 3.745,
+  "line": 1
+ },
+ {
+  "word": "This",
+  "start": 3.92,
+  "end": 4.07,
+  "line": 1
+ },
+ {
+  "word": "series",
+  "start": 4.145,
+  "end": 4.495,
+  "line": 1
+ },
+ {
+  "word": "follows",
+  "start": 4.57,
+  "end": 4.97,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 5.02,
+  "end": 5.07,
+  "line": 1
+ },
+ {
+  "word": "ones",
+  "start": 5.12,
+  "end": 5.345,
+  "line": 1
+ },
+ {
+  "word": "who",
+  "start": 5.37,
+  "end": 5.47,
+  "line": 1
+ },
+ {
+  "word": "did.",
+  "start": 5.52,
+  "end": 5.854,
+  "line": 1
+ }
+]

@@ -1,0 +1,74 @@
+[
+ {
+  "word": "One",
+  "start": 0.041,
+  "end": 0.166,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 0.191,
+  "end": 0.291,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 0.291,
+  "end": 0.341,
+  "line": 1
+ },
+ {
+  "word": "men",
+  "start": 0.391,
+  "end": 0.591,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 0.641,
+  "end": 0.741,
+  "line": 1
+ },
+ {
+  "word": "charge",
+  "start": 0.791,
+  "end": 1.141,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 1.166,
+  "end": 1.241,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.241,
+  "end": 1.291,
+  "line": 1
+ },
+ {
+  "word": "design",
+  "start": 1.341,
+  "end": 1.891,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 1.991,
+  "end": 2.091,
+  "line": 1
+ },
+ {
+  "word": "Thomas",
+  "start": 2.141,
+  "end": 2.466,
+  "line": 1
+ },
+ {
+  "word": "Andrews.",
+  "start": 2.516,
+  "end": 3.055,
+  "line": 1
+ }
+]

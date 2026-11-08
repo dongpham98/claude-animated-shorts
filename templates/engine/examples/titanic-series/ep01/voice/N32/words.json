@@ -1,0 +1,74 @@
+[
+ {
+  "word": "Remember",
+  "start": 0.044,
+  "end": 0.444,
+  "line": 1
+ },
+ {
+  "word": "this",
+  "start": 0.494,
+  "end": 0.694,
+  "line": 1
+ },
+ {
+  "word": "room.",
+  "start": 0.744,
+  "end": 1.069,
+  "line": 1
+ },
+ {
+  "word": "In",
+  "start": 1.194,
+  "end": 1.294,
+  "line": 1
+ },
+ {
+  "word": "four",
+  "start": 1.369,
+  "end": 1.519,
+  "line": 1
+ },
+ {
+  "word": "days,",
+  "start": 1.569,
+  "end": 1.894,
+  "line": 1
+ },
+ {
+  "word": "it",
+  "start": 1.944,
+  "end": 1.994,
+  "line": 1
+ },
+ {
+  "word": "will",
+  "start": 2.019,
+  "end": 2.119,
+  "line": 1
+ },
+ {
+  "word": "matter",
+  "start": 2.169,
+  "end": 2.444,
+  "line": 1
+ },
+ {
+  "word": "more",
+  "start": 2.494,
+  "end": 2.669,
+  "line": 1
+ },
+ {
+  "word": "than",
+  "start": 2.694,
+  "end": 2.769,
+  "line": 1
+ },
+ {
+  "word": "anything.",
+  "start": 2.819,
+  "end": 3.271,
+  "line": 1
+ }
+]

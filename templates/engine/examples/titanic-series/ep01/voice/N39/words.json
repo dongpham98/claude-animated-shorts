@@ -1,0 +1,86 @@
+[
+ {
+  "word": "Next",
+  "start": 0.095,
+  "end": 0.345,
+  "line": 1
+ },
+ {
+  "word": "morning,",
+  "start": 0.395,
+  "end": 0.77,
+  "line": 1
+ },
+ {
+  "word": "April",
+  "start": 0.87,
+  "end": 1.22,
+  "line": 1
+ },
+ {
+  "word": "eleventh,",
+  "start": 1.27,
+  "end": 1.745,
+  "line": 1
+ },
+ {
+  "word": "Titanic",
+  "start": 1.845,
+  "end": 2.37,
+  "line": 1
+ },
+ {
+  "word": "anchors",
+  "start": 2.42,
+  "end": 2.795,
+  "line": 1
+ },
+ {
+  "word": "off",
+  "start": 2.845,
+  "end": 3.02,
+  "line": 1
+ },
+ {
+  "word": "Queenstown,",
+  "start": 3.07,
+  "end": 3.77,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 3.845,
+  "end": 3.945,
+  "line": 1
+ },
+ {
+  "word": "Ireland.",
+  "start": 3.995,
+  "end": 4.645,
+  "line": 1
+ },
+ {
+  "word": "Her",
+  "start": 4.77,
+  "end": 4.845,
+  "line": 1
+ },
+ {
+  "word": "very",
+  "start": 4.895,
+  "end": 5.12,
+  "line": 1
+ },
+ {
+  "word": "last",
+  "start": 5.17,
+  "end": 5.42,
+  "line": 1
+ },
+ {
+  "word": "stop.",
+  "start": 5.47,
+  "end": 5.943,
+  "line": 1
+ }
+]

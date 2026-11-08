@@ -1,0 +1,98 @@
+[
+ {
+  "word": "Four",
+  "start": 0.056,
+  "end": 0.256,
+  "line": 1
+ },
+ {
+  "word": "days",
+  "start": 0.306,
+  "end": 0.581,
+  "line": 1
+ },
+ {
+  "word": "at",
+  "start": 0.631,
+  "end": 0.731,
+  "line": 1
+ },
+ {
+  "word": "sea.",
+  "start": 0.806,
+  "end": 1.131,
+  "line": 1
+ },
+ {
+  "word": "Next",
+  "start": 1.256,
+  "end": 1.481,
+  "line": 1
+ },
+ {
+  "word": "time:",
+  "start": 1.531,
+  "end": 1.956,
+  "line": 1
+ },
+ {
+  "word": "life",
+  "start": 2.081,
+  "end": 2.331,
+  "line": 1
+ },
+ {
+  "word": "on",
+  "start": 2.356,
+  "end": 2.506,
+  "line": 1
+ },
+ {
+  "word": "board,",
+  "start": 2.556,
+  "end": 2.856,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 2.906,
+  "end": 2.981,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 3.006,
+  "end": 3.056,
+  "line": 1
+ },
+ {
+  "word": "warnings",
+  "start": 3.131,
+  "end": 3.531,
+  "line": 1
+ },
+ {
+  "word": "that",
+  "start": 3.581,
+  "end": 3.681,
+  "line": 1
+ },
+ {
+  "word": "start",
+  "start": 3.731,
+  "end": 3.956,
+  "line": 1
+ },
+ {
+  "word": "to",
+  "start": 4.006,
+  "end": 4.081,
+  "line": 1
+ },
+ {
+  "word": "arrive.",
+  "start": 4.131,
+  "end": 4.65,
+  "line": 1
+ }
+]

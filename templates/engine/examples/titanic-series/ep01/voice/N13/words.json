@@ -1,0 +1,44 @@
+[
+ {
+  "word": "Southampton,",
+  "start": 0.063,
+  "end": 0.738,
+  "line": 1
+ },
+ {
+  "word": "April",
+  "start": 0.813,
+  "end": 1.113,
+  "line": 1
+ },
+ {
+  "word": "tenth,",
+  "start": 1.188,
+  "end": 1.488,
+  "line": 1
+ },
+ {
+  "word": "nineteen",
+  "start": 1.563,
+  "end": 1.863,
+  "line": 1
+ },
+ {
+  "word": "twelve.",
+  "start": 1.913,
+  "end": 2.338,
+  "line": 1
+ },
+ {
+  "word": "Departure",
+  "start": 2.463,
+  "end": 2.938,
+  "line": 1
+ },
+ {
+  "word": "day.",
+  "start": 2.988,
+  "end": 3.301,
+  "line": 1
+ }
+]

@@ -1,0 +1,122 @@
+[
+ {
+  "word": "Who",
+  "start": 0.05,
+  "end": 0.15,
+  "line": 1
+ },
+ {
+  "word": "will",
+  "start": 0.2,
+  "end": 0.274,
+  "line": 1
+ },
+ {
+  "word": "you",
+  "start": 0.324,
+  "end": 0.424,
+  "line": 1
+ },
+ {
+  "word": "follow",
+  "start": 0.5,
+  "end": 0.85,
+  "line": 1
+ },
+ {
+  "word": "through",
+  "start": 0.924,
+  "end": 1.1,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.15,
+  "end": 1.2,
+  "line": 1
+ },
+ {
+  "word": "next",
+  "start": 1.25,
+  "end": 1.5,
+  "line": 1
+ },
+ {
+  "word": "episode?",
+  "start": 1.55,
+  "end": 2.2,
+  "line": 1
+ },
+ {
+  "word": "Tell",
+  "start": 2.35,
+  "end": 2.524,
+  "line": 1
+ },
+ {
+  "word": "me",
+  "start": 2.55,
+  "end": 2.65,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 2.674,
+  "end": 2.774,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 2.774,
+  "end": 2.824,
+  "line": 1
+ },
+ {
+  "word": "comments,",
+  "start": 2.874,
+  "end": 3.374,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 3.45,
+  "end": 3.524,
+  "line": 1
+ },
+ {
+  "word": "subscribe",
+  "start": 3.574,
+  "end": 4.2,
+  "line": 1
+ },
+ {
+  "word": "so",
+  "start": 4.25,
+  "end": 4.35,
+  "line": 1
+ },
+ {
+  "word": "you",
+  "start": 4.374,
+  "end": 4.45,
+  "line": 1
+ },
+ {
+  "word": "don't",
+  "start": 4.474,
+  "end": 4.624,
+  "line": 1
+ },
+ {
+  "word": "miss",
+  "start": 4.674,
+  "end": 4.85,
+  "line": 1
+ },
+ {
+  "word": "it.",
+  "start": 4.924,
+  "end": 4.99,
+  "line": 1
+ }
+]

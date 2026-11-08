@@ -150,11 +150,11 @@ export const RadioRoom: React.FC<{ f: number; spec: Spec; pose: Pose; pile: numb
     {Array.from({ length: 10 }, (_, i) => <rect key={i} x={i * 200 - 20} y={0} width={8} height={760} fill={who === "titanic" ? "#c4aa84" : "#30395a"} />)}
     <rect x={0} y={740} width={1920} height={30} fill="#8a5a36" {...st(4)} />
     {/* clock */}
-    <g transform="translate(1560 230)">
+    {clock !== "" && <g transform="translate(1560 230)">
       <circle r={86} fill="#fff7e6" {...st(6)} />
       <text y={22} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={54} fill={INK}>{clock}</text>
       <text y={-40} textAnchor="middle" fontFamily={FONT2} fontWeight={700} fontSize={20} fill="#7b6a58">P.M.</text>
-    </g>
+    </g>}
     {/* Marconi set on the wall */}
     <g transform="translate(560 300)">
       <rect x={-220} y={-120} width={440} height={240} rx={16} fill="#5a3a24" {...st(6)} />

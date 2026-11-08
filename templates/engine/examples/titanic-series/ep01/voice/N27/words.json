@@ -1,0 +1,56 @@
+[
+ {
+  "word": "Hold",
+  "start": 0.034,
+  "end": 0.234,
+  "line": 1
+ },
+ {
+  "word": "on",
+  "start": 0.259,
+  "end": 0.409,
+  "line": 1
+ },
+ {
+  "word": "to",
+  "start": 0.459,
+  "end": 0.509,
+  "line": 1
+ },
+ {
+  "word": "these",
+  "start": 0.534,
+  "end": 0.734,
+  "line": 1
+ },
+ {
+  "word": "names.",
+  "start": 0.784,
+  "end": 1.209,
+  "line": 1
+ },
+ {
+  "word": "We'll",
+  "start": 1.309,
+  "end": 1.409,
+  "line": 1
+ },
+ {
+  "word": "meet",
+  "start": 1.459,
+  "end": 1.609,
+  "line": 1
+ },
+ {
+  "word": "them",
+  "start": 1.634,
+  "end": 1.734,
+  "line": 1
+ },
+ {
+  "word": "again.",
+  "start": 1.784,
+  "end": 2.188,
+  "line": 1
+ }
+]

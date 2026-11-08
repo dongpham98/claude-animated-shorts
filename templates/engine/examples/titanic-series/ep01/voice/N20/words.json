@@ -1,0 +1,80 @@
+[
+ {
+  "word": "First",
+  "start": 0.043,
+  "end": 0.293,
+  "line": 1
+ },
+ {
+  "word": "class:",
+  "start": 0.343,
+  "end": 0.718,
+  "line": 1
+ },
+ {
+  "word": "more",
+  "start": 0.793,
+  "end": 0.943,
+  "line": 1
+ },
+ {
+  "word": "than",
+  "start": 0.968,
+  "end": 1.068,
+  "line": 1
+ },
+ {
+  "word": "three",
+  "start": 1.143,
+  "end": 1.318,
+  "line": 1
+ },
+ {
+  "word": "hundred",
+  "start": 1.343,
+  "end": 1.568,
+  "line": 1
+ },
+ {
+  "word": "passengers,",
+  "start": 1.618,
+  "end": 2.343,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 2.443,
+  "end": 2.543,
+  "line": 1
+ },
+ {
+  "word": "rooms",
+  "start": 2.593,
+  "end": 2.943,
+  "line": 1
+ },
+ {
+  "word": "like",
+  "start": 2.968,
+  "end": 3.093,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 3.118,
+  "end": 3.143,
+  "line": 1
+ },
+ {
+  "word": "grand",
+  "start": 3.193,
+  "end": 3.493,
+  "line": 1
+ },
+ {
+  "word": "hotel.",
+  "start": 3.543,
+  "end": 4.054,
+  "line": 1
+ }
+]

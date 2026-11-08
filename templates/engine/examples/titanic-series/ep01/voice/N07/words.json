@@ -1,0 +1,110 @@
+[
+ {
+  "word": "Belfast,",
+  "start": 0.031,
+  "end": 0.631,
+  "line": 1
+ },
+ {
+  "word": "March",
+  "start": 0.706,
+  "end": 0.981,
+  "line": 1
+ },
+ {
+  "word": "thirty-first,",
+  "start": 1.056,
+  "end": 1.781,
+  "line": 1
+ },
+ {
+  "word": "nineteen-oh-nine.",
+  "start": 1.856,
+  "end": 2.881,
+  "line": 1
+ },
+ {
+  "word": "At",
+  "start": 3.031,
+  "end": 3.106,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 3.131,
+  "end": 3.181,
+  "line": 1
+ },
+ {
+  "word": "Harland",
+  "start": 3.256,
+  "end": 3.706,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 3.756,
+  "end": 3.831,
+  "line": 1
+ },
+ {
+  "word": "Wolff",
+  "start": 3.881,
+  "end": 4.131,
+  "line": 1
+ },
+ {
+  "word": "shipyard,",
+  "start": 4.206,
+  "end": 4.681,
+  "line": 1
+ },
+ {
+  "word": "workers",
+  "start": 4.781,
+  "end": 5.206,
+  "line": 1
+ },
+ {
+  "word": "lay",
+  "start": 5.256,
+  "end": 5.431,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 5.481,
+  "end": 5.556,
+  "line": 1
+ },
+ {
+  "word": "keel",
+  "start": 5.631,
+  "end": 5.956,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 6.006,
+  "end": 6.081,
+  "line": 1
+ },
+ {
+  "word": "ship",
+  "start": 6.181,
+  "end": 6.381,
+  "line": 1
+ },
+ {
+  "word": "number",
+  "start": 6.431,
+  "end": 6.681,
+  "line": 1
+ },
+ {
+  "word": "four-oh-one.",
+  "start": 6.781,
+  "end": 7.462,
+  "line": 1
+ }
+]

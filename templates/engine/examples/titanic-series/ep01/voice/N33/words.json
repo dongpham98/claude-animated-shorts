@@ -1,0 +1,116 @@
+[
+ {
+  "word": "That",
+  "start": 0.069,
+  "end": 0.219,
+  "line": 1
+ },
+ {
+  "word": "evening,",
+  "start": 0.269,
+  "end": 0.644,
+  "line": 1
+ },
+ {
+  "word": "Titanic",
+  "start": 0.719,
+  "end": 1.244,
+  "line": 1
+ },
+ {
+  "word": "stops",
+  "start": 1.294,
+  "end": 1.669,
+  "line": 1
+ },
+ {
+  "word": "at",
+  "start": 1.719,
+  "end": 1.794,
+  "line": 1
+ },
+ {
+  "word": "Cherbourg,",
+  "start": 1.869,
+  "end": 2.394,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 2.469,
+  "end": 2.569,
+  "line": 1
+ },
+ {
+  "word": "France.",
+  "start": 2.644,
+  "end": 3.269,
+  "line": 1
+ },
+ {
+  "word": "Two",
+  "start": 3.444,
+  "end": 3.569,
+  "line": 1
+ },
+ {
+  "word": "little",
+  "start": 3.594,
+  "end": 3.794,
+  "line": 1
+ },
+ {
+  "word": "ferries",
+  "start": 3.869,
+  "end": 4.244,
+  "line": 1
+ },
+ {
+  "word": "bring",
+  "start": 4.294,
+  "end": 4.444,
+  "line": 1
+ },
+ {
+  "word": "out",
+  "start": 4.469,
+  "end": 4.619,
+  "line": 1
+ },
+ {
+  "word": "about",
+  "start": 4.644,
+  "end": 4.944,
+  "line": 1
+ },
+ {
+  "word": "two",
+  "start": 5.019,
+  "end": 5.219,
+  "line": 1
+ },
+ {
+  "word": "hundred",
+  "start": 5.269,
+  "end": 5.619,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 5.644,
+  "end": 5.719,
+  "line": 1
+ },
+ {
+  "word": "seventy",
+  "start": 5.769,
+  "end": 6.094,
+  "line": 1
+ },
+ {
+  "word": "passengers.",
+  "start": 6.144,
+  "end": 6.833,
+  "line": 1
+ }
+]

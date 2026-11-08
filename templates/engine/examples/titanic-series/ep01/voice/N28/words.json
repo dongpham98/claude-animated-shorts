@@ -1,0 +1,62 @@
+[
+ {
+  "word": "And",
+  "start": 0.045,
+  "end": 0.12,
+  "line": 1
+ },
+ {
+  "word": "then",
+  "start": 0.145,
+  "end": 0.27,
+  "line": 1
+ },
+ {
+  "word": "there's",
+  "start": 0.32,
+  "end": 0.545,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 0.595,
+  "end": 0.67,
+  "line": 1
+ },
+ {
+  "word": "crew:",
+  "start": 0.745,
+  "end": 1.12,
+  "line": 1
+ },
+ {
+  "word": "about",
+  "start": 1.22,
+  "end": 1.52,
+  "line": 1
+ },
+ {
+  "word": "nine",
+  "start": 1.595,
+  "end": 1.82,
+  "line": 1
+ },
+ {
+  "word": "hundred",
+  "start": 1.87,
+  "end": 2.145,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 2.17,
+  "end": 2.22,
+  "line": 1
+ },
+ {
+  "word": "them.",
+  "start": 2.245,
+  "end": 2.498,
+  "line": 1
+ }
+]

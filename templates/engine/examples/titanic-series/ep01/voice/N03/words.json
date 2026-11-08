@@ -1,0 +1,50 @@
+[
+ {
+  "word": "Three",
+  "start": 0.038,
+  "end": 0.188,
+  "line": 1
+ },
+ {
+  "word": "days",
+  "start": 0.212,
+  "end": 0.388,
+  "line": 1
+ },
+ {
+  "word": "later,",
+  "start": 0.412,
+  "end": 0.662,
+  "line": 1
+ },
+ {
+  "word": "that",
+  "start": 0.738,
+  "end": 0.888,
+  "line": 1
+ },
+ {
+  "word": "ship",
+  "start": 0.962,
+  "end": 1.162,
+  "line": 1
+ },
+ {
+  "word": "hit",
+  "start": 1.212,
+  "end": 1.312,
+  "line": 1
+ },
+ {
+  "word": "an",
+  "start": 1.338,
+  "end": 1.388,
+  "line": 1
+ },
+ {
+  "word": "iceberg.",
+  "start": 1.438,
+  "end": 1.976,
+  "line": 1
+ }
+]

@@ -12,7 +12,8 @@ export type Spec = {
   main: string; mainDark: string; trim?: string;
   hat?: "captain" | "bighat" | "sailor";
   headphones?: boolean; hatColor?: string;
-  prop?: "violin" | "plans" | "notebook";
+  prop?: "violin" | "plans" | "notebook" | "camera" | "shovel";
+  collar?: boolean; // clerical collar (Fr Browne)
   female?: boolean; scale?: number;
 };
 export type Pose = {
@@ -28,6 +29,7 @@ export type Pose = {
   bow?: number;                          // violin bow stroke -1..1
   sway?: number;                         // idle sway (deg)
   breathe?: number;                      // 0..1 breathing phase value
+  flash?: number;                        // camera flash 0..1
 };
 
 const st = { stroke: INK, strokeWidth: LINE, strokeLinejoin: "round" as const, strokeLinecap: "round" as const };
@@ -296,6 +298,23 @@ const Plans: React.FC = () => (
   </g>
 );
 
+/** box camera held at the chest with both hands; flash burst from the lens */
+const CameraBox: React.FC<{ flash: number; skin: string }> = ({ flash, skin }) => (
+  <g transform="translate(6 -60)">
+    {flash > 0 && <g opacity={flash}>{Array.from({ length: 10 }, (_, i) => { const a = (i / 10) * Math.PI * 2; return <line key={i} x1={30 + Math.cos(a) * 14} y1={Math.sin(a) * 14} x2={30 + Math.cos(a) * (40 + 30 * flash)} y2={Math.sin(a) * (40 + 30 * flash)} stroke="#fff6c2" strokeWidth={5} strokeLinecap="round" />; })}<circle cx={30} cy={0} r={22 * flash + 6} fill="#fffbe2" /></g>}
+    <rect x={-24} y={-17} width={46} height={34} rx={4} fill="#2d2a30" stroke={INK} strokeWidth={2.6} />
+    <rect x={-18} y={-23} width={16} height={7} rx={2} fill="#4a4550" stroke={INK} strokeWidth={2} />
+    <circle cx={22} cy={0} r={11} fill="#4a4550" stroke={INK} strokeWidth={2.6} /><circle cx={22} cy={0} r={6} fill="#7fb6d6" stroke={INK} strokeWidth={1.8} />
+    <circle cx={-26} cy={6} r={7.5} fill={skin} stroke={INK} strokeWidth={2.4} /><circle cx={12} cy={16} r={7.5} fill={skin} stroke={INK} strokeWidth={2.4} />
+  </g>
+);
+const Shovel: React.FC = () => (
+  <g transform={`translate(0 ${ARM_LEN})`}>
+    <line x1={0} y1={-20} x2={0} y2={46} stroke="#7a5233" strokeWidth={5} strokeLinecap="round" />
+    <path d="M -12 44 L 12 44 L 9 70 Q 0 76 -9 70 Z" fill="#6b6f7d" stroke={INK} strokeWidth={2.4} />
+  </g>
+);
+
 export const Chibi: React.FC<{ spec: Spec; pose: Pose; x: number; y: number; size: number; facing?: 1 | -1 }> = ({ spec, pose, x, y, size, facing = 1 }) => {
   const s = (size / 200) * (spec.scale ?? 1);
   const walk = pose.walk ?? 0, ph = pose.phase ?? 0;
@@ -325,8 +344,9 @@ export const Chibi: React.FC<{ spec: Spec; pose: Pose; x: number; y: number; siz
           <Torso spec={spec} />
           {/* neck */}
           <rect x={-8} y={-102} width={16} height={12} fill={spec.skin} {...st} strokeWidth={LINE * 0.8} />
+          {spec.collar && <rect x={-11} y={-95} width={22} height={7} rx={2} fill="#fbf8f2" {...st} strokeWidth={2} />}
           {armL <= 95 && <Arm spec={spec} side={-1} raise={armL}>{spec.prop === "notebook" && <Book />}</Arm>}
-          {armR <= 95 && <Arm spec={spec} side={1} raise={armR}>{spec.prop === "plans" && <Plans />}{spec.prop === "notebook" && <Pen />}</Arm>}
+          {armR <= 95 && <Arm spec={spec} side={1} raise={armR}>{spec.prop === "plans" && <Plans />}{spec.prop === "notebook" && <Pen />}{spec.prop === "shovel" && <Shovel />}</Arm>}
           <g transform={`translate(0 ${nod * 6}) rotate(${(pose.head ?? 0)} 0 -100)`}>
             {spec.hairStyle !== "none" && <HairBack spec={spec} />}
             <ellipse cx={-49 - (pose.look ?? 0) * 3} cy={-130} rx={8} ry={10} fill={spec.skin} {...st} />
@@ -347,6 +367,7 @@ export const Chibi: React.FC<{ spec: Spec; pose: Pose; x: number; y: number; siz
           </g>
           {armL > 95 && <Arm spec={spec} side={-1} raise={armL}>{spec.prop === "notebook" && <Book />}</Arm>}
           {armR > 95 && <Arm spec={spec} side={1} raise={armR}>{spec.prop === "plans" && <Plans />}{spec.prop === "notebook" && <Pen />}</Arm>}
+          {spec.prop === "camera" && <CameraBox flash={pose.flash ?? 0} skin={spec.skin} />}
           {spec.prop === "violin" && (() => {
             const [nx, ny] = handPos(1, armR);
             return <g><ViolinBody /><circle cx={nx} cy={ny} r={8} fill={spec.skin} {...st} /><Bow bow={pose.bow ?? 0} hand={hand} /><circle cx={hand[0]} cy={hand[1]} r={8} fill={spec.skin} {...st} /></g>;
