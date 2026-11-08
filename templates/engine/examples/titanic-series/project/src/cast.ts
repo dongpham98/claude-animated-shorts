@@ -28,4 +28,10 @@ export const BROWN: Spec = {
 };
 /** Andrews on the maiden voyage: notebook of improvements (steward Henry Etches, US inquiry: "making notes of improvements") */
 export const ANDREWS_NB: Spec = { ...ANDREWS, prop: "notebook" };
+// --- crew for the recap (appearance generic, period-correct uniforms) ---
+export const FLEET: Spec = { id: "fleet", name: "Frederick Fleet", skin: PAL.skinMid, hair: PAL.hairDark, hairStyle: "short", outfit: "crew", main: "#2c3a5e", mainDark: "#1d2742", hat: "sailor", hatColor: "#1d2742", scale: 0.95 };
+export const LEE: Spec = { id: "lee", name: "Reginald Lee", skin: PAL.skinLight, hair: PAL.hairBrown, hairStyle: "short", outfit: "crew", main: "#34456b", mainDark: "#1d2742", hat: "sailor", hatColor: "#1d2742", scale: 1.0 };
+export const PHILLIPS: Spec = { id: "phillips", name: "Jack Phillips", skin: PAL.skinLight, hair: PAL.hairDark, hairStyle: "sidepart", outfit: "marconi", main: "#26304a", mainDark: "#1b2236", trim: "#3b4a72", headphones: true, scale: 0.95 };
+export const MURDOCH: Spec = { id: "murdoch", name: "William Murdoch", skin: PAL.skinMid, hair: PAL.hairBrown, hairStyle: "short", outfit: "officer", main: PAL.navy, mainDark: PAL.navyDark, hat: "captain", scale: 1.0 };
+export const EVANS: Spec = { id: "evans", name: "Cyril Evans", skin: PAL.skinLight, hair: PAL.hairBrown, hairStyle: "sidepart", outfit: "marconi", main: "#26304a", mainDark: "#1b2236", trim: "#3b4a72", scale: 0.9 };
 export const CAST = [SMITH, ANDREWS, HARTLEY, BROWN];

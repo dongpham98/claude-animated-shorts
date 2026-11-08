@@ -8,9 +8,10 @@ export type Spec = {
   id: string; name: string;
   skin: string; hair: string; hairStyle: HairStyle;
   beard?: "full" | "moustache"; beardColor?: string;
-  outfit: "captain" | "suit" | "band" | "dress";
+  outfit: "captain" | "officer" | "suit" | "band" | "marconi" | "crew" | "dress";
   main: string; mainDark: string; trim?: string;
-  hat?: "captain" | "bighat"; hatColor?: string;
+  hat?: "captain" | "bighat" | "sailor";
+  headphones?: boolean; hatColor?: string;
   prop?: "violin" | "plans" | "notebook";
   female?: boolean; scale?: number;
 };
@@ -41,13 +42,13 @@ const SHOULDER_Y = -84, SHOULDER_X = 27, ARM_LEN = 38;
 const Arm: React.FC<{ spec: Spec; side: -1 | 1; raise: number; children?: React.ReactNode }> = ({ spec, side, raise, children }) => {
   const r = -side * (10 + raise);
   const sleeve = spec.outfit === "dress" ? spec.main : spec.main;
-  const cuff = spec.outfit === "captain" ? PAL.gold : spec.outfit === "band" ? (spec.trim ?? PAL.bandGreen) : spec.outfit === "dress" ? PAL.lace : PAL.shirt;
+  const cuff = spec.outfit === "captain" || spec.outfit === "officer" ? PAL.gold : spec.outfit === "crew" ? spec.mainDark : spec.outfit === "marconi" ? PAL.gold : spec.outfit === "band" ? (spec.trim ?? PAL.bandGreen) : spec.outfit === "dress" ? PAL.lace : PAL.shirt;
   return (
     <g transform={`translate(${side * SHOULDER_X} ${SHOULDER_Y}) rotate(${r})`}>
       <path d={`M -8 -4 Q -9 ${ARM_LEN * 0.6} -7 ${ARM_LEN - 6} L 7 ${ARM_LEN - 6} Q 9 ${ARM_LEN * 0.6} 8 -4 Q 0 -10 -8 -4 Z`} fill={sleeve} {...st} />
       <path d={`M -6 0 Q -7 ${ARM_LEN * 0.6} -5 ${ARM_LEN - 7} L 1 ${ARM_LEN - 7} Q 2 ${ARM_LEN * 0.6} 1 0 Z`} fill={SHADE} transform={side < 0 ? "" : "scale(-1 1)"} />
       <rect x={-7.5} y={ARM_LEN - 10} width={15} height={5} rx={2} fill={cuff} {...st} strokeWidth={LINE * 0.8} />
-      {spec.outfit === "captain" && <line x1={-7} y1={ARM_LEN - 13} x2={7} y2={ARM_LEN - 13} stroke={PAL.gold} strokeWidth={2} />}
+      {(spec.outfit === "captain" || spec.outfit === "officer") && <line x1={-7} y1={ARM_LEN - 13} x2={7} y2={ARM_LEN - 13} stroke={PAL.gold} strokeWidth={2} />}
       <circle cx={0} cy={ARM_LEN} r={8} fill={spec.skin} {...st} />
       {children}
     </g>
@@ -61,7 +62,7 @@ export const handPos = (side: -1 | 1, raise: number): [number, number] => {
 };
 
 const Leg: React.FC<{ spec: Spec; side: -1 | 1; swing: number; lift: number }> = ({ spec, side, swing, lift }) => {
-  const pants = spec.outfit === "captain" ? PAL.navyDark : spec.outfit === "band" ? PAL.bandJacket : spec.mainDark;
+  const pants = spec.outfit === "captain" || spec.outfit === "officer" ? PAL.navyDark : spec.outfit === "band" || spec.outfit === "marconi" ? PAL.bandJacket : spec.mainDark;
   return (
     <g transform={`translate(${side * 12} ${-32 - lift}) rotate(${swing})`}>
       <path d="M -8 -2 L -8 24 Q 0 28 8 24 L 8 -2 Z" fill={pants} {...st} />
@@ -72,7 +73,7 @@ const Leg: React.FC<{ spec: Spec; side: -1 | 1; swing: number; lift: number }> =
 };
 
 const Torso: React.FC<{ spec: Spec }> = ({ spec }) => {
-  const o = spec.outfit;
+  const o = spec.outfit === "officer" ? "captain" : spec.outfit === "marconi" ? "band" : spec.outfit;
   if (o === "dress") {
     return (
       <g>
@@ -109,6 +110,13 @@ const Torso: React.FC<{ spec: Spec }> = ({ spec }) => {
           <path d="M -10 -94 L -15 -74 L -4 -62 M 10 -94 L 15 -74 L 4 -62" fill="none" stroke={INK} strokeWidth={1.8} />
           <circle cx={-3} cy={-46} r={2.2} fill={INK} /><circle cx={-3} cy={-37} r={2.2} fill={INK} />
           <path d="M 13 -56 L 22 -56" stroke={PAL.white} strokeWidth={2.5} />
+        </g>
+      )}
+      {o === "crew" && (
+        <g>
+          <path d="M -14 -95 Q 0 -86 14 -95 L 14 -84 Q 0 -76 -14 -84 Z" fill={spec.mainDark} {...st} strokeWidth={LINE * 0.7} />
+          {[-70, -58, -46].map((y) => <path key={y} d={`M -24 ${y} Q 0 ${y + 3} 24 ${y}`} fill="none" stroke={spec.mainDark} strokeWidth={2.2} opacity={0.7} />)}
+          <path d="M -27 -36 Q 0 -31 27 -36" fill="none" stroke={spec.mainDark} strokeWidth={4} />
         </g>
       )}
       {o === "band" && (
@@ -163,6 +171,13 @@ const Hat: React.FC<{ spec: Spec; look: number }> = ({ spec, look }) => {
       <path d="M -46 -164 Q 0 -150 46 -164 Q 40 -152 0 -146 Q -40 -152 -46 -164 Z" fill={INK} />
       <path d="M -10 -186 L 10 -186 L 6 -174 L -6 -174 Z" fill={PAL.gold} stroke={INK} strokeWidth={1.4} />
       <path d="M 0 -194 L 2.6 -188 L 8 -188 L 3.8 -184 L 5.4 -178 L 0 -181.5 L -5.4 -178 L -3.8 -184 L -8 -188 L -2.6 -188 Z" fill={PAL.gold} stroke={INK} strokeWidth={1} />
+    </g>
+  );
+  if (spec.hat === "sailor") return (
+    <g transform={`translate(${s} 0)`}>
+      <ellipse cx={0} cy={-180} rx={54} ry={14} fill={spec.hatColor ?? PAL.navy} {...st} />
+      <path d="M -44 -182 Q -40 -206 0 -207 Q 40 -206 44 -182 Z" fill={spec.hatColor ?? PAL.navy} {...st} />
+      <path d="M -50 -176 Q 0 -166 50 -176" fill="none" stroke="#11182b" strokeWidth={5} />
     </g>
   );
   if (spec.hat === "bighat") return (
@@ -321,6 +336,14 @@ export const Chibi: React.FC<{ spec: Spec; pose: Pose; x: number; y: number; siz
             <g transform={`translate(0 ${nod * 3})`}><Face spec={spec} pose={pose} /></g>
             <HairFront spec={spec} look={pose.look ?? 0} />
             <Hat spec={spec} look={pose.look ?? 0} />
+            {spec.headphones && (
+              <g>
+                <path d="M -52 -136 Q -54 -196 0 -198 Q 54 -196 52 -136" fill="none" stroke={INK} strokeWidth={9} />
+                <path d="M -52 -136 Q -54 -196 0 -198 Q 54 -196 52 -136" fill="none" stroke="#6b6f7d" strokeWidth={5} />
+                <rect x={-62} y={-146} width={18} height={30} rx={7} fill="#3a3d4a" {...st} />
+                <rect x={44} y={-146} width={18} height={30} rx={7} fill="#3a3d4a" {...st} />
+              </g>
+            )}
           </g>
           {armL > 95 && <Arm spec={spec} side={-1} raise={armL}>{spec.prop === "notebook" && <Book />}</Arm>}
           {armR > 95 && <Arm spec={spec} side={1} raise={armR}>{spec.prop === "plans" && <Plans />}{spec.prop === "notebook" && <Pen />}</Arm>}
