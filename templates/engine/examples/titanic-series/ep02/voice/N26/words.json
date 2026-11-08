@@ -1,0 +1,92 @@
+[
+ {
+  "word": "Coal",
+  "start": 0.072,
+  "end": 0.347,
+  "line": 1
+ },
+ {
+  "word": "fires",
+  "start": 0.422,
+  "end": 0.872,
+  "line": 1
+ },
+ {
+  "word": "were",
+  "start": 0.922,
+  "end": 1.022,
+  "line": 1
+ },
+ {
+  "word": "common",
+  "start": 1.097,
+  "end": 1.522,
+  "line": 1
+ },
+ {
+  "word": "on",
+  "start": 1.572,
+  "end": 1.722,
+  "line": 1
+ },
+ {
+  "word": "steamships",
+  "start": 1.772,
+  "end": 2.322,
+  "line": 1
+ },
+ {
+  "word": "back",
+  "start": 2.372,
+  "end": 2.597,
+  "line": 1
+ },
+ {
+  "word": "then.",
+  "start": 2.647,
+  "end": 3.047,
+  "line": 1
+ },
+ {
+  "word": "Whether",
+  "start": 3.172,
+  "end": 3.397,
+  "line": 1
+ },
+ {
+  "word": "this",
+  "start": 3.472,
+  "end": 3.897,
+  "line": 1
+ },
+ {
+  "word": "one",
+  "start": 3.947,
+  "end": 4.297,
+  "line": 1
+ },
+ {
+  "word": "mattered",
+  "start": 4.347,
+  "end": 4.697,
+  "line": 1
+ },
+ {
+  "word": "later",
+  "start": 4.772,
+  "end": 4.847,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 4.897,
+  "end": 5.147,
+  "line": 1
+ },
+ {
+  "word": "still",
+  "start": 5.197,
+  "end": 5.779,
+  "line": 1
+ }
+]

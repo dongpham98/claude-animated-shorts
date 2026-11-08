@@ -1,0 +1,140 @@
+[
+ {
+  "word": "John",
+  "start": 0.109,
+  "end": 0.434,
+  "line": 1
+ },
+ {
+  "word": "Jacob",
+  "start": 0.484,
+  "end": 0.859,
+  "line": 1
+ },
+ {
+  "word": "Astor",
+  "start": 0.959,
+  "end": 1.484,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 1.534,
+  "end": 1.609,
+  "line": 1
+ },
+ {
+  "word": "his",
+  "start": 1.634,
+  "end": 1.759,
+  "line": 1
+ },
+ {
+  "word": "young",
+  "start": 1.809,
+  "end": 1.984,
+  "line": 1
+ },
+ {
+  "word": "wife",
+  "start": 2.034,
+  "end": 2.284,
+  "line": 1
+ },
+ {
+  "word": "Madeleine",
+  "start": 2.359,
+  "end": 2.884,
+  "line": 1
+ },
+ {
+  "word": "walk",
+  "start": 2.959,
+  "end": 3.184,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 3.234,
+  "end": 3.309,
+  "line": 1
+ },
+ {
+  "word": "deck",
+  "start": 3.384,
+  "end": 3.634,
+  "line": 1
+ },
+ {
+  "word": "with",
+  "start": 3.684,
+  "end": 3.784,
+  "line": 1
+ },
+ {
+  "word": "their",
+  "start": 3.834,
+  "end": 3.984,
+  "line": 1
+ },
+ {
+  "word": "Airedale",
+  "start": 4.059,
+  "end": 4.484,
+  "line": 1
+ },
+ {
+  "word": "terrier,",
+  "start": 4.559,
+  "end": 5.059,
+  "line": 1
+ },
+ {
+  "word": "Kitty.",
+  "start": 5.159,
+  "end": 5.809,
+  "line": 1
+ },
+ {
+  "word": "There",
+  "start": 6.009,
+  "end": 6.259,
+  "line": 1
+ },
+ {
+  "word": "are",
+  "start": 6.309,
+  "end": 6.559,
+  "line": 1
+ },
+ {
+  "word": "about",
+  "start": 6.584,
+  "end": 6.634,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 6.709,
+  "end": 7.084,
+  "line": 1
+ },
+ {
+  "word": "dozen",
+  "start": 7.134,
+  "end": 7.509,
+  "line": 1
+ },
+ {
+  "word": "dogs",
+  "start": 7.559,
+  "end": 7.709,
+  "line": 1
+ },
+ {
+  "word": "on",
+  "start": 7.759,
+  "end": 8.165,
+  "line": 1
+ }
+]

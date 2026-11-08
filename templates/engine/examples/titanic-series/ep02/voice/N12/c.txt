@@ -1,0 +1,1 @@
+An operator can only listen to one station at a time. If two ships send at once, they drown each other out.

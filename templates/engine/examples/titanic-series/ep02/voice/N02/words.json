@@ -1,0 +1,98 @@
+[
+ {
+  "word": "It's",
+  "start": 0.066,
+  "end": 0.191,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 0.241,
+  "end": 0.291,
+  "line": 1
+ },
+ {
+  "word": "warning",
+  "start": 0.366,
+  "end": 0.766,
+  "line": 1
+ },
+ {
+  "word": "from",
+  "start": 0.816,
+  "end": 0.941,
+  "line": 1
+ },
+ {
+  "word": "another",
+  "start": 0.991,
+  "end": 1.291,
+  "line": 1
+ },
+ {
+  "word": "ship.",
+  "start": 1.391,
+  "end": 1.816,
+  "line": 1
+ },
+ {
+  "word": "Icebergs,",
+  "start": 1.991,
+  "end": 2.666,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 2.741,
+  "end": 2.816,
+  "line": 1
+ },
+ {
+  "word": "large",
+  "start": 2.866,
+  "end": 3.241,
+  "line": 1
+ },
+ {
+  "word": "fields",
+  "start": 3.291,
+  "end": 3.591,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 3.616,
+  "end": 3.691,
+  "line": 1
+ },
+ {
+  "word": "ice,",
+  "start": 3.766,
+  "end": 4.091,
+  "line": 1
+ },
+ {
+  "word": "on",
+  "start": 4.166,
+  "end": 4.266,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 4.266,
+  "end": 4.316,
+  "line": 1
+ },
+ {
+  "word": "route",
+  "start": 4.366,
+  "end": 4.591,
+  "line": 1
+ },
+ {
+  "word": "ahead.",
+  "start": 4.641,
+  "end": 5.026,
+  "line": 1
+ }
+]

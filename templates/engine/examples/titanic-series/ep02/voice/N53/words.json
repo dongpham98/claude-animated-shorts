@@ -1,0 +1,86 @@
+[
+ {
+  "word": "So",
+  "start": 0.096,
+  "end": 0.222,
+  "line": 1
+ },
+ {
+  "word": "Titanic",
+  "start": 0.272,
+  "end": 0.796,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 0.846,
+  "end": 0.922,
+  "line": 1
+ },
+ {
+  "word": "still",
+  "start": 0.972,
+  "end": 1.196,
+  "line": 1
+ },
+ {
+  "word": "doing",
+  "start": 1.272,
+  "end": 1.572,
+  "line": 1
+ },
+ {
+  "word": "about",
+  "start": 1.622,
+  "end": 1.872,
+  "line": 1
+ },
+ {
+  "word": "twenty-two",
+  "start": 1.922,
+  "end": 2.396,
+  "line": 1
+ },
+ {
+  "word": "knots,",
+  "start": 2.446,
+  "end": 2.896,
+  "line": 1
+ },
+ {
+  "word": "into",
+  "start": 2.946,
+  "end": 3.146,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 3.196,
+  "end": 3.246,
+  "line": 1
+ },
+ {
+  "word": "calm,",
+  "start": 3.322,
+  "end": 3.772,
+  "line": 1
+ },
+ {
+  "word": "black,",
+  "start": 3.896,
+  "end": 4.222,
+  "line": 1
+ },
+ {
+  "word": "moonless",
+  "start": 4.322,
+  "end": 4.646,
+  "line": 1
+ },
+ {
+  "word": "sea.",
+  "start": 4.722,
+  "end": 5.059,
+  "line": 1
+ }
+]

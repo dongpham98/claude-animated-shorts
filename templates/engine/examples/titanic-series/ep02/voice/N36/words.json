@@ -1,0 +1,80 @@
+[
+ {
+  "word": "Ismay",
+  "start": 0.065,
+  "end": 0.465,
+  "line": 1
+ },
+ {
+  "word": "later",
+  "start": 0.515,
+  "end": 0.715,
+  "line": 1
+ },
+ {
+  "word": "said",
+  "start": 0.765,
+  "end": 0.94,
+  "line": 1
+ },
+ {
+  "word": "he",
+  "start": 0.965,
+  "end": 1.04,
+  "line": 1
+ },
+ {
+  "word": "read",
+  "start": 1.09,
+  "end": 1.24,
+  "line": 1
+ },
+ {
+  "word": "it",
+  "start": 1.265,
+  "end": 1.365,
+  "line": 1
+ },
+ {
+  "word": "casually,",
+  "start": 1.44,
+  "end": 2.09,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 2.215,
+  "end": 2.29,
+  "line": 1
+ },
+ {
+  "word": "put",
+  "start": 2.34,
+  "end": 2.515,
+  "line": 1
+ },
+ {
+  "word": "it",
+  "start": 2.565,
+  "end": 2.64,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 2.69,
+  "end": 2.74,
+  "line": 1
+ },
+ {
+  "word": "his",
+  "start": 2.765,
+  "end": 2.89,
+  "line": 1
+ },
+ {
+  "word": "pocket.",
+  "start": 2.94,
+  "end": 3.478,
+  "line": 1
+ }
+]

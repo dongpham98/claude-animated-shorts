@@ -1,0 +1,38 @@
+[
+ {
+  "word": "Next",
+  "start": 0.07,
+  "end": 0.295,
+  "line": 1
+ },
+ {
+  "word": "time,",
+  "start": 0.32,
+  "end": 0.52,
+  "line": 1
+ },
+ {
+  "word": "Episode",
+  "start": 0.57,
+  "end": 0.92,
+  "line": 1
+ },
+ {
+  "word": "3:",
+  "start": 0.97,
+  "end": 1.245,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.345,
+  "end": 1.445,
+  "line": 1
+ },
+ {
+  "word": "iceberg.",
+  "start": 1.495,
+  "end": 2.13,
+  "line": 1
+ }
+]

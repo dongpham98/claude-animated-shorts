@@ -1,0 +1,68 @@
+[
+ {
+  "word": "Jack",
+  "start": 0.063,
+  "end": 0.338,
+  "line": 1
+ },
+ {
+  "word": "Phillips,",
+  "start": 0.413,
+  "end": 0.813,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 0.863,
+  "end": 0.938,
+  "line": 1
+ },
+ {
+  "word": "senior",
+  "start": 1.038,
+  "end": 1.363,
+  "line": 1
+ },
+ {
+  "word": "wireless",
+  "start": 1.438,
+  "end": 1.888,
+  "line": 1
+ },
+ {
+  "word": "operator.",
+  "start": 1.938,
+  "end": 2.613,
+  "line": 1
+ },
+ {
+  "word": "Today",
+  "start": 2.763,
+  "end": 3.163,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 3.213,
+  "end": 3.288,
+  "line": 1
+ },
+ {
+  "word": "his",
+  "start": 3.313,
+  "end": 3.463,
+  "line": 1
+ },
+ {
+  "word": "twenty-fifth",
+  "start": 3.513,
+  "end": 4.038,
+  "line": 1
+ },
+ {
+  "word": "birthday.",
+  "start": 4.088,
+  "end": 4.627,
+  "line": 1
+ }
+]

@@ -1,0 +1,104 @@
+[
+ {
+  "word": "And",
+  "start": 0.093,
+  "end": 0.168,
+  "line": 1
+ },
+ {
+  "word": "Thomas",
+  "start": 0.218,
+  "end": 0.568,
+  "line": 1
+ },
+ {
+  "word": "Andrews",
+  "start": 0.618,
+  "end": 1.043,
+  "line": 1
+ },
+ {
+  "word": "walks",
+  "start": 1.118,
+  "end": 1.393,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.443,
+  "end": 1.493,
+  "line": 1
+ },
+ {
+  "word": "whole",
+  "start": 1.543,
+  "end": 1.793,
+  "line": 1
+ },
+ {
+  "word": "ship",
+  "start": 1.893,
+  "end": 2.093,
+  "line": 1
+ },
+ {
+  "word": "with",
+  "start": 2.143,
+  "end": 2.243,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 2.268,
+  "end": 2.318,
+  "line": 1
+ },
+ {
+  "word": "notebook,",
+  "start": 2.368,
+  "end": 2.968,
+  "line": 1
+ },
+ {
+  "word": "writing",
+  "start": 3.118,
+  "end": 3.493,
+  "line": 1
+ },
+ {
+  "word": "down",
+  "start": 3.543,
+  "end": 3.818,
+  "line": 1
+ },
+ {
+  "word": "everything",
+  "start": 3.893,
+  "end": 4.368,
+  "line": 1
+ },
+ {
+  "word": "that",
+  "start": 4.418,
+  "end": 4.543,
+  "line": 1
+ },
+ {
+  "word": "could",
+  "start": 4.593,
+  "end": 4.668,
+  "line": 1
+ },
+ {
+  "word": "be",
+  "start": 4.718,
+  "end": 4.818,
+  "line": 1
+ },
+ {
+  "word": "better.",
+  "start": 4.868,
+  "end": 5.248,
+  "line": 1
+ }
+]

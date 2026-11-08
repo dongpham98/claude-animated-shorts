@@ -1,0 +1,158 @@
+[
+ {
+  "word": "That",
+  "start": 0.091,
+  "end": 0.241,
+  "line": 1
+ },
+ {
+  "word": "day,",
+  "start": 0.291,
+  "end": 0.541,
+  "line": 1
+ },
+ {
+  "word": "Titanic",
+  "start": 0.616,
+  "end": 1.141,
+  "line": 1
+ },
+ {
+  "word": "received",
+  "start": 1.191,
+  "end": 1.666,
+  "line": 1
+ },
+ {
+  "word": "six",
+  "start": 1.741,
+  "end": 1.991,
+  "line": 1
+ },
+ {
+  "word": "warnings",
+  "start": 2.041,
+  "end": 2.516,
+  "line": 1
+ },
+ {
+  "word": "about",
+  "start": 2.566,
+  "end": 2.841,
+  "line": 1
+ },
+ {
+  "word": "ice.",
+  "start": 2.891,
+  "end": 3.466,
+  "line": 1
+ },
+ {
+  "word": "This",
+  "start": 3.641,
+  "end": 3.841,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 3.916,
+  "end": 4.016,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 4.066,
+  "end": 4.141,
+  "line": 1
+ },
+ {
+  "word": "story",
+  "start": 4.216,
+  "end": 4.641,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 4.691,
+  "end": 4.791,
+  "line": 1
+ },
+ {
+  "word": "where",
+  "start": 4.841,
+  "end": 5.016,
+  "line": 1
+ },
+ {
+  "word": "they",
+  "start": 5.066,
+  "end": 5.216,
+  "line": 1
+ },
+ {
+  "word": "went,",
+  "start": 5.291,
+  "end": 5.616,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 5.741,
+  "end": 5.816,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 5.866,
+  "end": 5.966,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 5.966,
+  "end": 6.041,
+  "line": 1
+ },
+ {
+  "word": "four",
+  "start": 6.141,
+  "end": 6.391,
+  "line": 1
+ },
+ {
+  "word": "days",
+  "start": 6.441,
+  "end": 6.766,
+  "line": 1
+ },
+ {
+  "word": "that",
+  "start": 6.816,
+  "end": 6.966,
+  "line": 1
+ },
+ {
+  "word": "led",
+  "start": 7.016,
+  "end": 7.166,
+  "line": 1
+ },
+ {
+  "word": "up",
+  "start": 7.191,
+  "end": 7.341,
+  "line": 1
+ },
+ {
+  "word": "to",
+  "start": 7.391,
+  "end": 7.466,
+  "line": 1
+ },
+ {
+  "word": "them.",
+  "start": 7.516,
+  "end": 7.77,
+  "line": 1
+ }
+]

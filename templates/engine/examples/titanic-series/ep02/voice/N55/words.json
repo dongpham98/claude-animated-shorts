@@ -1,0 +1,26 @@
+[
+ {
+  "word": "It's",
+  "start": 0.065,
+  "end": 0.19,
+  "line": 1
+ },
+ {
+  "word": "eleven",
+  "start": 0.24,
+  "end": 0.59,
+  "line": 1
+ },
+ {
+  "word": "thirty-nine",
+  "start": 0.64,
+  "end": 1.115,
+  "line": 1
+ },
+ {
+  "word": "p.m.",
+  "start": 1.165,
+  "end": 1.39,
+  "line": 1
+ }
+]

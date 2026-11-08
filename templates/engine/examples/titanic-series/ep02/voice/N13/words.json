@@ -1,0 +1,56 @@
+[
+ {
+  "word": "Some",
+  "start": 0.072,
+  "end": 0.247,
+  "line": 1
+ },
+ {
+  "word": "messages",
+  "start": 0.297,
+  "end": 0.797,
+  "line": 1
+ },
+ {
+  "word": "are",
+  "start": 0.847,
+  "end": 0.922,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 0.972,
+  "end": 1.072,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.072,
+  "end": 1.122,
+  "line": 1
+ },
+ {
+  "word": "captain:",
+  "start": 1.172,
+  "end": 1.697,
+  "line": 1
+ },
+ {
+  "word": "weather,",
+  "start": 1.797,
+  "end": 2.047,
+  "line": 1
+ },
+ {
+  "word": "positions,",
+  "start": 2.122,
+  "end": 2.697,
+  "line": 1
+ },
+ {
+  "word": "ice.",
+  "start": 2.772,
+  "end": 3.16,
+  "line": 1
+ }
+]

@@ -1,0 +1,158 @@
+[
+ {
+  "word": "By",
+  "start": 0.088,
+  "end": 0.238,
+  "line": 1
+ },
+ {
+  "word": "late",
+  "start": 0.288,
+  "end": 0.488,
+  "line": 1
+ },
+ {
+  "word": "afternoon,",
+  "start": 0.538,
+  "end": 1.163,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.213,
+  "end": 1.313,
+  "line": 1
+ },
+ {
+  "word": "air",
+  "start": 1.388,
+  "end": 1.638,
+  "line": 1
+ },
+ {
+  "word": "turns",
+  "start": 1.713,
+  "end": 2.063,
+  "line": 1
+ },
+ {
+  "word": "cold.",
+  "start": 2.138,
+  "end": 2.788,
+  "line": 1
+ },
+ {
+  "word": "At",
+  "start": 2.938,
+  "end": 3.038,
+  "line": 1
+ },
+ {
+  "word": "five",
+  "start": 3.088,
+  "end": 3.363,
+  "line": 1
+ },
+ {
+  "word": "fifty,",
+  "start": 3.438,
+  "end": 3.888,
+  "line": 1
+ },
+ {
+  "word": "Titanic",
+  "start": 3.988,
+  "end": 4.513,
+  "line": 1
+ },
+ {
+  "word": "turns",
+  "start": 4.588,
+  "end": 4.963,
+  "line": 1
+ },
+ {
+  "word": "at",
+  "start": 5.013,
+  "end": 5.063,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 5.088,
+  "end": 5.138,
+  "line": 1
+ },
+ {
+  "word": "corner,",
+  "start": 5.188,
+  "end": 5.613,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 5.713,
+  "end": 5.788,
+  "line": 1
+ },
+ {
+  "word": "point",
+  "start": 5.863,
+  "end": 6.188,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 6.238,
+  "end": 6.438,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 6.488,
+  "end": 6.888,
+  "line": 1
+ },
+ {
+  "word": "ocean",
+  "start": 6.938,
+  "end": 7.088,
+  "line": 1
+ },
+ {
+  "word": "where",
+  "start": 7.188,
+  "end": 7.438,
+  "line": 1
+ },
+ {
+  "word": "ships",
+  "start": 7.488,
+  "end": 7.588,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 7.638,
+  "end": 7.738,
+  "line": 1
+ },
+ {
+  "word": "New",
+  "start": 7.788,
+  "end": 8.063,
+  "line": 1
+ },
+ {
+  "word": "York",
+  "start": 8.113,
+  "end": 8.438,
+  "line": 1
+ },
+ {
+  "word": "change",
+  "start": 8.488,
+  "end": 8.994,
+  "line": 1
+ }
+]

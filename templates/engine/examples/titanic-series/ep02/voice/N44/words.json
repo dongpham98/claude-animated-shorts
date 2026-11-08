@@ -1,0 +1,80 @@
+[
+ {
+  "word": "The",
+  "start": 0.066,
+  "end": 0.116,
+  "line": 1
+ },
+ {
+  "word": "captain",
+  "start": 0.166,
+  "end": 0.541,
+  "line": 1
+ },
+ {
+  "word": "goes",
+  "start": 0.591,
+  "end": 0.841,
+  "line": 1
+ },
+ {
+  "word": "to",
+  "start": 0.891,
+  "end": 0.941,
+  "line": 1
+ },
+ {
+  "word": "his",
+  "start": 0.966,
+  "end": 1.091,
+  "line": 1
+ },
+ {
+  "word": "cabin,",
+  "start": 1.141,
+  "end": 1.616,
+  "line": 1
+ },
+ {
+  "word": "just",
+  "start": 1.716,
+  "end": 1.966,
+  "line": 1
+ },
+ {
+  "word": "off",
+  "start": 1.991,
+  "end": 2.166,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 2.191,
+  "end": 2.241,
+  "line": 1
+ },
+ {
+  "word": "bridge,",
+  "start": 2.291,
+  "end": 2.716,
+  "line": 1
+ },
+ {
+  "word": "with",
+  "start": 2.791,
+  "end": 2.916,
+  "line": 1
+ },
+ {
+  "word": "one",
+  "start": 2.966,
+  "end": 3.116,
+  "line": 1
+ },
+ {
+  "word": "instruction:",
+  "start": 3.141,
+  "end": 3.796,
+  "line": 1
+ }
+]

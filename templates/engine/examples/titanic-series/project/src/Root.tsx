@@ -8,6 +8,7 @@ import { Recap, RECAP_FRAMES } from "./Recap";
 import { Ep1, EP1_FRAMES } from "./Ep1";
 import { ShortA, SHA_FRAMES } from "./ShortA";
 import { ShortB, SHB_FRAMES } from "./ShortB";
+import { Ep2, EP2_FRAMES } from "./Ep2";
 export const Root: React.FC = () => (
   <>
     <Composition id="Lineup" component={Lineup} durationInFrames={60} fps={30} width={1920} height={1080} />
@@ -18,5 +19,6 @@ export const Root: React.FC = () => (
     <Composition id="Ep1" component={Ep1} durationInFrames={EP1_FRAMES} fps={30} width={1920} height={1080} />
     <Composition id="ShortA" component={ShortA} durationInFrames={SHA_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="ShortB" component={ShortB} durationInFrames={SHB_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="Ep2" component={Ep2} durationInFrames={EP2_FRAMES} fps={30} width={1920} height={1080} />
   </>
 );

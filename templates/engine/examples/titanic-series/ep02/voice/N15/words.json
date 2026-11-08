@@ -1,0 +1,128 @@
+[
+ {
+  "word": "So",
+  "start": 0.12,
+  "end": 0.22,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 0.245,
+  "end": 0.32,
+  "line": 1
+ },
+ {
+  "word": "radio",
+  "start": 0.37,
+  "end": 0.82,
+  "line": 1
+ },
+ {
+  "word": "room",
+  "start": 0.87,
+  "end": 1.17,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 1.22,
+  "end": 1.32,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 1.37,
+  "end": 1.42,
+  "line": 1
+ },
+ {
+  "word": "busy",
+  "start": 1.495,
+  "end": 1.77,
+  "line": 1
+ },
+ {
+  "word": "little",
+  "start": 1.82,
+  "end": 2.045,
+  "line": 1
+ },
+ {
+  "word": "office,",
+  "start": 2.095,
+  "end": 2.62,
+  "line": 1
+ },
+ {
+  "word": "open",
+  "start": 2.72,
+  "end": 3.07,
+  "line": 1
+ },
+ {
+  "word": "day",
+  "start": 3.12,
+  "end": 3.395,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 3.445,
+  "end": 3.52,
+  "line": 1
+ },
+ {
+  "word": "night,",
+  "start": 3.57,
+  "end": 3.97,
+  "line": 1
+ },
+ {
+  "word": "with",
+  "start": 4.07,
+  "end": 4.195,
+  "line": 1
+ },
+ {
+  "word": "two",
+  "start": 4.27,
+  "end": 4.445,
+  "line": 1
+ },
+ {
+  "word": "men",
+  "start": 4.495,
+  "end": 4.695,
+  "line": 1
+ },
+ {
+  "word": "taking",
+  "start": 4.745,
+  "end": 5.07,
+  "line": 1
+ },
+ {
+  "word": "turns",
+  "start": 5.12,
+  "end": 5.495,
+  "line": 1
+ },
+ {
+  "word": "at",
+  "start": 5.545,
+  "end": 5.595,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 5.62,
+  "end": 5.67,
+  "line": 1
+ },
+ {
+  "word": "key.",
+  "start": 5.745,
+  "end": 6.1,
+  "line": 1
+ }
+]

@@ -1,0 +1,62 @@
+[
+ {
+  "word": "Bruce",
+  "start": 0.066,
+  "end": 0.316,
+  "line": 1
+ },
+ {
+  "word": "Ismay",
+  "start": 0.366,
+  "end": 0.666,
+  "line": 1
+ },
+ {
+  "word": "reads",
+  "start": 0.716,
+  "end": 1.016,
+  "line": 1
+ },
+ {
+  "word": "it.",
+  "start": 1.091,
+  "end": 1.241,
+  "line": 1
+ },
+ {
+  "word": "And",
+  "start": 1.341,
+  "end": 1.416,
+  "line": 1
+ },
+ {
+  "word": "puts",
+  "start": 1.466,
+  "end": 1.691,
+  "line": 1
+ },
+ {
+  "word": "it",
+  "start": 1.741,
+  "end": 1.791,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 1.816,
+  "end": 1.866,
+  "line": 1
+ },
+ {
+  "word": "his",
+  "start": 1.891,
+  "end": 2.016,
+  "line": 1
+ },
+ {
+  "word": "pocket.",
+  "start": 2.066,
+  "end": 2.601,
+  "line": 1
+ }
+]

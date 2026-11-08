@@ -1,0 +1,182 @@
+[
+ {
+  "word": "The",
+  "start": 0.098,
+  "end": 0.148,
+  "line": 1
+ },
+ {
+  "word": "big",
+  "start": 0.198,
+  "end": 0.373,
+  "line": 1
+ },
+ {
+  "word": "station",
+  "start": 0.423,
+  "end": 0.848,
+  "line": 1
+ },
+ {
+  "word": "on",
+  "start": 0.923,
+  "end": 1.123,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.173,
+  "end": 1.673,
+  "line": 1
+ },
+ {
+  "word": "American",
+  "start": 1.748,
+  "end": 2.098,
+  "line": 1
+ },
+ {
+  "word": "side",
+  "start": 2.148,
+  "end": 2.248,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 2.323,
+  "end": 2.598,
+  "line": 1
+ },
+ {
+  "word": "Cape",
+  "start": 2.673,
+  "end": 3.123,
+  "line": 1
+ },
+ {
+  "word": "Race,",
+  "start": 3.223,
+  "end": 3.323,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 3.373,
+  "end": 4.448,
+  "line": 1
+ },
+ {
+  "word": "Newfoundland.",
+  "start": 4.648,
+  "end": 4.898,
+  "line": 1
+ },
+ {
+  "word": "Until",
+  "start": 4.948,
+  "end": 5.548,
+  "line": 1
+ },
+ {
+  "word": "Titanic",
+  "start": 5.598,
+  "end": 5.823,
+  "line": 1
+ },
+ {
+  "word": "gets",
+  "start": 5.873,
+  "end": 6.098,
+  "line": 1
+ },
+ {
+  "word": "within",
+  "start": 6.148,
+  "end": 6.473,
+  "line": 1
+ },
+ {
+  "word": "range",
+  "start": 6.498,
+  "end": 6.573,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 6.648,
+  "end": 6.798,
+  "line": 1
+ },
+ {
+  "word": "it,",
+  "start": 6.923,
+  "end": 7.448,
+  "line": 1
+ },
+ {
+  "word": "messages",
+  "start": 7.498,
+  "end": 7.598,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 7.648,
+  "end": 8.148,
+  "line": 1
+ },
+ {
+  "word": "America",
+  "start": 8.223,
+  "end": 8.398,
+  "line": 1
+ },
+ {
+  "word": "have",
+  "start": 8.448,
+  "end": 8.523,
+  "line": 1
+ },
+ {
+  "word": "to",
+  "start": 8.598,
+  "end": 8.973,
+  "line": 1
+ },
+ {
+  "word": "wait,",
+  "start": 9.073,
+  "end": 9.223,
+  "line": 1
+ },
+ {
+  "word": "or",
+  "start": 9.298,
+  "end": 9.548,
+  "line": 1
+ },
+ {
+  "word": "hop",
+  "start": 9.598,
+  "end": 9.748,
+  "line": 1
+ },
+ {
+  "word": "from",
+  "start": 9.848,
+  "end": 10.073,
+  "line": 1
+ },
+ {
+  "word": "ship",
+  "start": 10.123,
+  "end": 10.198,
+  "line": 1
+ },
+ {
+  "word": "to",
+  "start": 10.298,
+  "end": 10.662,
+  "line": 1
+ }
+]

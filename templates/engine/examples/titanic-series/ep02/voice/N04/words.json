@@ -1,0 +1,56 @@
+[
+ {
+  "word": "It",
+  "start": 0.066,
+  "end": 0.116,
+  "line": 1
+ },
+ {
+  "word": "will",
+  "start": 0.141,
+  "end": 0.216,
+  "line": 1
+ },
+ {
+  "word": "stay",
+  "start": 0.266,
+  "end": 0.516,
+  "line": 1
+ },
+ {
+  "word": "there",
+  "start": 0.566,
+  "end": 0.741,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 0.791,
+  "end": 0.891,
+  "line": 1
+ },
+ {
+  "word": "more",
+  "start": 0.941,
+  "end": 1.091,
+  "line": 1
+ },
+ {
+  "word": "than",
+  "start": 1.116,
+  "end": 1.241,
+  "line": 1
+ },
+ {
+  "word": "five",
+  "start": 1.291,
+  "end": 1.566,
+  "line": 1
+ },
+ {
+  "word": "hours.",
+  "start": 1.616,
+  "end": 2.093,
+  "line": 1
+ }
+]

@@ -1,0 +1,116 @@
+[
+ {
+  "word": "Thursday,",
+  "start": 0.116,
+  "end": 0.716,
+  "line": 1
+ },
+ {
+  "word": "April",
+  "start": 0.816,
+  "end": 1.166,
+  "line": 1
+ },
+ {
+  "word": "11th.",
+  "start": 1.216,
+  "end": 1.791,
+  "line": 1
+ },
+ {
+  "word": "Titanic",
+  "start": 1.941,
+  "end": 2.466,
+  "line": 1
+ },
+ {
+  "word": "leaves",
+  "start": 2.516,
+  "end": 2.791,
+  "line": 1
+ },
+ {
+  "word": "Ireland,",
+  "start": 2.891,
+  "end": 3.391,
+  "line": 1
+ },
+ {
+  "word": "her",
+  "start": 3.466,
+  "end": 3.566,
+  "line": 1
+ },
+ {
+  "word": "last",
+  "start": 3.616,
+  "end": 3.941,
+  "line": 1
+ },
+ {
+  "word": "stop,",
+  "start": 3.991,
+  "end": 4.391,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 4.466,
+  "end": 4.541,
+  "line": 1
+ },
+ {
+  "word": "turns",
+  "start": 4.591,
+  "end": 4.891,
+  "line": 1
+ },
+ {
+  "word": "west",
+  "start": 4.966,
+  "end": 5.241,
+  "line": 1
+ },
+ {
+  "word": "into",
+  "start": 5.266,
+  "end": 5.416,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 5.441,
+  "end": 5.516,
+  "line": 1
+ },
+ {
+  "word": "open",
+  "start": 5.591,
+  "end": 5.916,
+  "line": 1
+ },
+ {
+  "word": "Atlantic.",
+  "start": 5.966,
+  "end": 6.841,
+  "line": 1
+ },
+ {
+  "word": "Next",
+  "start": 7.041,
+  "end": 7.316,
+  "line": 1
+ },
+ {
+  "word": "land:",
+  "start": 7.366,
+  "end": 7.791,
+  "line": 1
+ },
+ {
+  "word": "America.",
+  "start": 7.916,
+  "end": 8.526,
+  "line": 1
+ }
+]

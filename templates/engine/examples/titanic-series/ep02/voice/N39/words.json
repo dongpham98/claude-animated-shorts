@@ -1,0 +1,80 @@
+[
+ {
+  "word": "Ten",
+  "start": 0.063,
+  "end": 0.263,
+  "line": 1
+ },
+ {
+  "word": "past",
+  "start": 0.313,
+  "end": 0.613,
+  "line": 1
+ },
+ {
+  "word": "seven.",
+  "start": 0.688,
+  "end": 1.138,
+  "line": 1
+ },
+ {
+  "word": "Captain",
+  "start": 1.263,
+  "end": 1.613,
+  "line": 1
+ },
+ {
+  "word": "Smith",
+  "start": 1.663,
+  "end": 1.938,
+  "line": 1
+ },
+ {
+  "word": "finally",
+  "start": 2.013,
+  "end": 2.438,
+  "line": 1
+ },
+ {
+  "word": "asks",
+  "start": 2.513,
+  "end": 2.813,
+  "line": 1
+ },
+ {
+  "word": "Ismay",
+  "start": 2.863,
+  "end": 3.288,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 3.338,
+  "end": 3.438,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 3.438,
+  "end": 3.488,
+  "line": 1
+ },
+ {
+  "word": "Baltic",
+  "start": 3.538,
+  "end": 3.938,
+  "line": 1
+ },
+ {
+  "word": "warning",
+  "start": 3.988,
+  "end": 4.288,
+  "line": 1
+ },
+ {
+  "word": "back.",
+  "start": 4.338,
+  "end": 4.702,
+  "line": 1
+ }
+]

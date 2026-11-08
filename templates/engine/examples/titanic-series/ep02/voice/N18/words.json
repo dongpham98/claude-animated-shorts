@@ -1,0 +1,98 @@
+[
+ {
+  "word": "A",
+  "start": 0.068,
+  "end": 0.118,
+  "line": 1
+ },
+ {
+  "word": "year",
+  "start": 0.168,
+  "end": 0.343,
+  "line": 1
+ },
+ {
+  "word": "later,",
+  "start": 0.393,
+  "end": 0.743,
+  "line": 1
+ },
+ {
+  "word": "his",
+  "start": 0.843,
+  "end": 0.993,
+  "line": 1
+ },
+ {
+  "word": "mother",
+  "start": 1.043,
+  "end": 1.293,
+  "line": 1
+ },
+ {
+  "word": "will",
+  "start": 1.343,
+  "end": 1.468,
+  "line": 1
+ },
+ {
+  "word": "write",
+  "start": 1.518,
+  "end": 1.768,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.818,
+  "end": 1.868,
+  "line": 1
+ },
+ {
+  "word": "story",
+  "start": 1.918,
+  "end": 2.293,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 2.318,
+  "end": 2.368,
+  "line": 1
+ },
+ {
+  "word": "this",
+  "start": 2.418,
+  "end": 2.568,
+  "line": 1
+ },
+ {
+  "word": "trip,",
+  "start": 2.618,
+  "end": 2.918,
+  "line": 1
+ },
+ {
+  "word": "told",
+  "start": 3.018,
+  "end": 3.243,
+  "line": 1
+ },
+ {
+  "word": "by",
+  "start": 3.293,
+  "end": 3.443,
+  "line": 1
+ },
+ {
+  "word": "that",
+  "start": 3.493,
+  "end": 3.643,
+  "line": 1
+ },
+ {
+  "word": "bear.",
+  "start": 3.693,
+  "end": 4.035,
+  "line": 1
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "word": "Phillips",
+  "start": 0.1,
+  "end": 0.475,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 0.525,
+  "end": 0.6,
+  "line": 1
+ },
+ {
+  "word": "Bride",
+  "start": 0.65,
+  "end": 1.025,
+  "line": 1
+ },
+ {
+  "word": "take",
+  "start": 1.1,
+  "end": 1.3,
+  "line": 1
+ },
+ {
+  "word": "it",
+  "start": 1.325,
+  "end": 1.375,
+  "line": 1
+ },
+ {
+  "word": "apart",
+  "start": 1.425,
+  "end": 1.9,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 1.95,
+  "end": 2.025,
+  "line": 1
+ },
+ {
+  "word": "hunt",
+  "start": 2.1,
+  "end": 2.35,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 2.425,
+  "end": 2.55,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 2.55,
+  "end": 2.65,
+  "line": 1
+ },
+ {
+  "word": "fault,",
+  "start": 2.75,
+  "end": 3.125,
+  "line": 1
+ },
+ {
+  "word": "through",
+  "start": 3.25,
+  "end": 3.425,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 3.475,
+  "end": 3.55,
+  "line": 1
+ },
+ {
+  "word": "night.",
+  "start": 3.625,
+  "end": 4.15,
+  "line": 1
+ },
+ {
+  "word": "It's",
+  "start": 4.3,
+  "end": 4.425,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 4.475,
+  "end": 4.575,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 4.575,
+  "end": 4.625,
+  "line": 1
+ },
+ {
+  "word": "transformer.",
+  "start": 4.675,
+  "end": 5.675,
+  "line": 1
+ },
+ {
+  "word": "About",
+  "start": 5.875,
+  "end": 6.125,
+  "line": 1
+ },
+ {
+  "word": "six",
+  "start": 6.2,
+  "end": 6.425,
+  "line": 1
+ },
+ {
+  "word": "hours",
+  "start": 6.475,
+  "end": 6.8,
+  "line": 1
+ },
+ {
+  "word": "later,",
+  "start": 6.85,
+  "end": 7.175,
+  "line": 1
+ },
+ {
+  "word": "it",
+  "start": 7.275,
+  "end": 7.35,
+  "line": 1
+ },
+ {
+  "word": "works",
+  "start": 7.4,
+  "end": 7.65,
+  "line": 1
+ },
+ {
+  "word": "again.",
+  "start": 7.7,
+  "end": 8.103,
+  "line": 1
+ }
+]

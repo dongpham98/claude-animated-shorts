@@ -1,0 +1,152 @@
+[
+ {
+  "word": "In",
+  "start": 0.122,
+  "end": 0.222,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 0.222,
+  "end": 0.297,
+  "line": 1
+ },
+ {
+  "word": "first-class",
+  "start": 0.372,
+  "end": 0.922,
+  "line": 1
+ },
+ {
+  "word": "dining",
+  "start": 0.972,
+  "end": 1.347,
+  "line": 1
+ },
+ {
+  "word": "saloon,",
+  "start": 1.397,
+  "end": 1.822,
+  "line": 1
+ },
+ {
+  "word": "dinner",
+  "start": 1.897,
+  "end": 2.172,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 2.222,
+  "end": 2.322,
+  "line": 1
+ },
+ {
+  "word": "ten",
+  "start": 2.397,
+  "end": 2.597,
+  "line": 1
+ },
+ {
+  "word": "courses:",
+  "start": 2.672,
+  "end": 3.322,
+  "line": 1
+ },
+ {
+  "word": "oysters,",
+  "start": 3.472,
+  "end": 4.172,
+  "line": 1
+ },
+ {
+  "word": "salmon,",
+  "start": 4.347,
+  "end": 4.847,
+  "line": 1
+ },
+ {
+  "word": "filet",
+  "start": 4.972,
+  "end": 5.297,
+  "line": 1
+ },
+ {
+  "word": "mignon,",
+  "start": 5.347,
+  "end": 5.922,
+  "line": 1
+ },
+ {
+  "word": "roast",
+  "start": 6.047,
+  "end": 6.322,
+  "line": 1
+ },
+ {
+  "word": "squab,",
+  "start": 6.372,
+  "end": 6.847,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 6.922,
+  "end": 6.997,
+  "line": 1
+ },
+ {
+  "word": "Waldorf",
+  "start": 7.047,
+  "end": 7.447,
+  "line": 1
+ },
+ {
+  "word": "pudding.",
+  "start": 7.497,
+  "end": 8.072,
+  "line": 1
+ },
+ {
+  "word": "A",
+  "start": 8.247,
+  "end": 8.297,
+  "line": 1
+ },
+ {
+  "word": "copy",
+  "start": 8.347,
+  "end": 8.647,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 8.672,
+  "end": 8.722,
+  "line": 1
+ },
+ {
+  "word": "that",
+  "start": 8.772,
+  "end": 8.947,
+  "line": 1
+ },
+ {
+  "word": "menu",
+  "start": 8.997,
+  "end": 9.297,
+  "line": 1
+ },
+ {
+  "word": "still",
+  "start": 9.347,
+  "end": 9.572,
+  "line": 1
+ },
+ {
+  "word": "survives.",
+  "start": 9.622,
+  "end": 10.323,
+  "line": 1
+ }
+]

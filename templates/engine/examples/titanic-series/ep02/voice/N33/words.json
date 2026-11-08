@@ -1,0 +1,140 @@
+[
+ {
+  "word": "Sunday,",
+  "start": 0.137,
+  "end": 0.637,
+  "line": 1
+ },
+ {
+  "word": "April",
+  "start": 0.737,
+  "end": 1.087,
+  "line": 1
+ },
+ {
+  "word": "14th.",
+  "start": 1.162,
+  "end": 1.862,
+  "line": 1
+ },
+ {
+  "word": "The",
+  "start": 1.987,
+  "end": 2.062,
+  "line": 1
+ },
+ {
+  "word": "sun",
+  "start": 2.137,
+  "end": 2.362,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 2.412,
+  "end": 2.512,
+  "line": 1
+ },
+ {
+  "word": "out,",
+  "start": 2.587,
+  "end": 2.862,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 2.962,
+  "end": 3.037,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 3.062,
+  "end": 3.137,
+  "line": 1
+ },
+ {
+  "word": "sea",
+  "start": 3.262,
+  "end": 3.512,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 3.562,
+  "end": 3.662,
+  "line": 1
+ },
+ {
+  "word": "calm.",
+  "start": 3.737,
+  "end": 4.412,
+  "line": 1
+ },
+ {
+  "word": "Captain",
+  "start": 4.612,
+  "end": 4.962,
+  "line": 1
+ },
+ {
+  "word": "Smith",
+  "start": 5.037,
+  "end": 5.387,
+  "line": 1
+ },
+ {
+  "word": "leads",
+  "start": 5.462,
+  "end": 5.737,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 5.787,
+  "end": 5.862,
+  "line": 1
+ },
+ {
+  "word": "morning",
+  "start": 5.912,
+  "end": 6.212,
+  "line": 1
+ },
+ {
+  "word": "service",
+  "start": 6.287,
+  "end": 6.712,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 6.762,
+  "end": 6.862,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 6.862,
+  "end": 6.937,
+  "line": 1
+ },
+ {
+  "word": "first-class",
+  "start": 7.012,
+  "end": 7.712,
+  "line": 1
+ },
+ {
+  "word": "dining",
+  "start": 7.787,
+  "end": 8.137,
+  "line": 1
+ },
+ {
+  "word": "saloon.",
+  "start": 8.187,
+  "end": 8.626,
+  "line": 1
+ }
+]

@@ -1,0 +1,218 @@
+[
+ {
+  "word": "At",
+  "start": 0.095,
+  "end": 0.17,
+  "line": 1
+ },
+ {
+  "word": "half",
+  "start": 0.22,
+  "end": 0.42,
+  "line": 1
+ },
+ {
+  "word": "past",
+  "start": 0.495,
+  "end": 0.82,
+  "line": 1
+ },
+ {
+  "word": "eight,",
+  "start": 0.87,
+  "end": 1.145,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 1.245,
+  "end": 1.345,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.345,
+  "end": 1.42,
+  "line": 1
+ },
+ {
+  "word": "second-class",
+  "start": 1.495,
+  "end": 2.22,
+  "line": 1
+ },
+ {
+  "word": "dining",
+  "start": 2.295,
+  "end": 2.67,
+  "line": 1
+ },
+ {
+  "word": "saloon,",
+  "start": 2.72,
+  "end": 3.195,
+  "line": 1
+ },
+ {
+  "word": "Reverend",
+  "start": 3.32,
+  "end": 3.795,
+  "line": 1
+ },
+ {
+  "word": "Ernest",
+  "start": 3.87,
+  "end": 4.245,
+  "line": 1
+ },
+ {
+  "word": "Carter",
+  "start": 4.32,
+  "end": 4.72,
+  "line": 1
+ },
+ {
+  "word": "leads",
+  "start": 4.77,
+  "end": 5.02,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 5.07,
+  "end": 5.12,
+  "line": 1
+ },
+ {
+  "word": "hymn-singing",
+  "start": 5.195,
+  "end": 5.845,
+  "line": 1
+ },
+ {
+  "word": "evening",
+  "start": 5.92,
+  "end": 6.37,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 6.42,
+  "end": 6.52,
+  "line": 1
+ },
+ {
+  "word": "about",
+  "start": 6.57,
+  "end": 6.82,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 6.845,
+  "end": 6.87,
+  "line": 1
+ },
+ {
+  "word": "hundred",
+  "start": 6.92,
+  "end": 7.245,
+  "line": 1
+ },
+ {
+  "word": "passengers.",
+  "start": 7.295,
+  "end": 8.395,
+  "line": 1
+ },
+ {
+  "word": "One",
+  "start": 8.57,
+  "end": 8.695,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 8.72,
+  "end": 8.77,
+  "line": 1
+ },
+ {
+  "word": "them,",
+  "start": 8.82,
+  "end": 9.07,
+  "line": 1
+ },
+ {
+  "word": "Lawrence",
+  "start": 9.195,
+  "end": 9.62,
+  "line": 1
+ },
+ {
+  "word": "Beesley,",
+  "start": 9.695,
+  "end": 10.195,
+  "line": 1
+ },
+ {
+  "word": "noticed",
+  "start": 10.295,
+  "end": 10.645,
+  "line": 1
+ },
+ {
+  "word": "how",
+  "start": 10.695,
+  "end": 10.87,
+  "line": 1
+ },
+ {
+  "word": "many",
+  "start": 10.92,
+  "end": 11.095,
+  "line": 1
+ },
+ {
+  "word": "people",
+  "start": 11.145,
+  "end": 11.47,
+  "line": 1
+ },
+ {
+  "word": "chose",
+  "start": 11.52,
+  "end": 11.845,
+  "line": 1
+ },
+ {
+  "word": "hymns",
+  "start": 11.895,
+  "end": 12.17,
+  "line": 1
+ },
+ {
+  "word": "about",
+  "start": 12.22,
+  "end": 12.52,
+  "line": 1
+ },
+ {
+  "word": "danger",
+  "start": 12.595,
+  "end": 13.045,
+  "line": 1
+ },
+ {
+  "word": "at",
+  "start": 13.095,
+  "end": 13.195,
+  "line": 1
+ },
+ {
+  "word": "sea.",
+  "start": 13.295,
+  "end": 13.629,
+  "line": 1
+ }
+]
