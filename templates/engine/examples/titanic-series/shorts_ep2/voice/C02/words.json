@@ -1,0 +1,116 @@
+[
+ {
+  "word": "Sunday,",
+  "start": 0.107,
+  "end": 0.507,
+  "line": 1
+ },
+ {
+  "word": "April",
+  "start": 0.607,
+  "end": 0.907,
+  "line": 1
+ },
+ {
+  "word": "14th,",
+  "start": 0.982,
+  "end": 1.532,
+  "line": 1
+ },
+ {
+  "word": "1912.",
+  "start": 1.607,
+  "end": 2.282,
+  "line": 1
+ },
+ {
+  "word": "A",
+  "start": 2.357,
+  "end": 3.007,
+  "line": 1
+ },
+ {
+  "word": "message",
+  "start": 3.182,
+  "end": 3.232,
+  "line": 1
+ },
+ {
+  "word": "arrives",
+  "start": 3.282,
+  "end": 3.607,
+  "line": 1
+ },
+ {
+  "word": "from",
+  "start": 3.657,
+  "end": 4.132,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 4.182,
+  "end": 4.332,
+  "line": 1
+ },
+ {
+  "word": "liner",
+  "start": 4.332,
+  "end": 4.407,
+  "line": 1
+ },
+ {
+  "word": "Baltic:",
+  "start": 4.457,
+  "end": 4.732,
+  "line": 1
+ },
+ {
+  "word": "icebergs,",
+  "start": 4.782,
+  "end": 5.257,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 5.357,
+  "end": 5.907,
+  "line": 1
+ },
+ {
+  "word": "large",
+  "start": 5.982,
+  "end": 6.057,
+  "line": 1
+ },
+ {
+  "word": "quantities",
+  "start": 6.107,
+  "end": 6.457,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 6.507,
+  "end": 6.932,
+  "line": 1
+ },
+ {
+  "word": "field",
+  "start": 6.957,
+  "end": 7.032,
+  "line": 1
+ },
+ {
+  "word": "ice,",
+  "start": 7.107,
+  "end": 7.332,
+  "line": 1
+ },
+ {
+  "word": "ahead.",
+  "start": 7.382,
+  "end": 7.682,
+  "line": 1
+ }
+]

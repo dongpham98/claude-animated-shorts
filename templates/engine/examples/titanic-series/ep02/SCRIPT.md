@@ -1,6 +1,6 @@
-# Episode 2 "Four days at sea": script v1 (8-9 Nov 2026)
+# Episode 2 "Four days at sea": script v2 (after independent fact check, 9 Nov 2026)
 
-16:9 chibi 2D with the style upgrade, ~9.5 min. Narrator am_puck 0.92. No film comparison (user). Real words are labelled; playful lines are labelled 'playful'.
+16:9 chibi 2D with the style upgrade, 8:48. Narrator am_puck 0.92. No film comparison (user, 8 Nov). Real words labelled; playful lines labelled 'playful'. Fact-check fixes: see FACTCHECK.md.
 
 | ID | Line |
 |---|---|
@@ -27,8 +27,8 @@
 | N20 | In second class, the Navratil boys play on deck. Their father is still travelling as Mr. Hoffman. |
 | N21 | In third class, the Sage family has the general room, with a piano, and in the evenings there's music and dancing. |
 | N22 | And Thomas Andrews walks the whole ship with a notebook, writing down everything that could be better. |
-| N22b | By Sunday, he'll tell a friend that Titanic is as nearly perfect as human brains can make her. |
-| N23 | But deep below, the firemen have a problem of their own. Since Southampton, the coal in one of the bunkers has been on fire. |
+| N22b | By Sunday evening, he said she was as perfect as brains could make her. |
+| N23 | But deep below, the firemen have a problem of their own. Since before she even left Southampton, the coal in one of the bunkers has been on fire. |
 | N24 | Not flames you can see. Coal, smouldering deep inside the pile. The only way to stop it is to dig all of that coal out, and shovel it into the furnaces. |
 | N25 | It takes them until Saturday. Leading fireman Frederick Barrett later said the steel wall behind the bunker was damaged by the heat. |
 | N26 | Coal fires were common on steamships back then. Whether this one mattered later is still debated. |
@@ -43,25 +43,25 @@
 | N33 | Sunday, April 14th. The sun is out, and the sea is calm. Captain Smith leads the morning service in the first-class dining saloon. |
 | N34 | 9 a.m. Warning number 1, from the Caronia: icebergs, growlers, and field ice, in a band right across the route. The captain replies: |
 | N35 | 1:42 p.m. Warning number 2, from the Baltic: icebergs, and large quantities of field ice. The captain takes it, and out on deck, he meets Bruce Ismay. |
-| N36 | At the inquiry, Ismay was asked why he kept a warning about navigation in his pocket. He said it was absent-mindedness. |
-| N37 | Minutes later, warning number 3, from the German liner Amerika: two large icebergs near the route. But it's addressed to an office in Washington, to be passed on through Cape Race. Phillips relays it. It never reaches the bridge. |
+| N36 | Ismay later said he read it casually, and put it in his pocket. |
+| N37 | Minutes later, warning number 3, from the German liner Amerika: two large icebergs near the route. But it's addressed to an office in Washington, to be passed on through Cape Race. It goes on the pile, and it never reaches the bridge. |
 | N38 | By late afternoon, the air turns cold. At 5:50, Titanic turns at the corner, the point in the ocean where ships for New York change course. |
 | N39 | Ten past seven. Captain Smith finally asks Ismay for the Baltic warning back. |
 | N40 | 7:30. Warning number 4. The Californian tells another ship: 3 large icebergs. Bride hears it, writes it down, and carries it up to the bridge. |
 | N41 | Captain Smith is at a dinner party in the first-class restaurant. On the bridge, the temperature drops 4 degrees in half an hour. |
 | N41b | In the first-class dining saloon, dinner is 10 courses: oysters, salmon, filet mignon, roast squab, and Waldorf pudding. A copy of that menu still survives. |
+| N45b | At half past eight, in the second-class dining saloon, Reverend Ernest Carter leads a hymn-singing evening for about 100 passengers. One of them, Lawrence Beesley, noticed how many people chose hymns about danger at sea. |
 | N42 | Around nine, Smith comes up to the bridge. Second Officer Charles Lightoller is on watch. They talk about the weather. |
 | N43 | You see, a flat calm sounds perfect. But at night, it hides icebergs. With no waves, there's no white foam breaking around the bottom of a berg. And tonight there is no moon. A dark iceberg on black water is very hard to see. |
-| N44 | The captain goes to bed, with one instruction: |
+| N44 | The captain goes to his cabin, just off the bridge, with one instruction: |
 | N45 | Lightoller sends a message up to the crow's nest: keep a sharp lookout for ice, especially small ice and growlers. |
-| N45b | Down in the second-class dining saloon, Reverend Ernest Carter leads a hymn-singing evening for about 100 passengers. One of them, Lawrence Beesley, noticed how many people chose hymns about danger at sea. |
-| N45c | Just after ten, Carter thanks everyone, and talks about how safe and happy the voyage has been. |
 | N46 | 9:40 p.m. Warning number 5, from the Mesaba: heavy pack ice, and a great number of large icebergs. The position is right in Titanic's path. |
 | N47 | Phillips acknowledges it, and keeps working. Bride is asleep. Titanic is finally in range of Cape Race, in Newfoundland, and the pile of messages has to go out. The Mesaba warning never leaves the radio room. |
+| N45c | Just after ten, Carter thanks everyone, and talks about how safe and happy the voyage has been. |
 | N48 | Almost 11 p.m. Warning number 6. The Californian has stopped for the night, not far away. Her operator, Cyril Evans, calls Titanic: we are stopped, and surrounded by ice. |
 | N49 | His signal is so loud, so close, that it drowns out Cape Race in Phillips' headphones. |
-| N50 | It sounds rude. But it was how busy operators talked, and Evans later said he understood. At 11:35, he takes off his headphones and goes to bed. |
-| N51 | So let's count. 6 warnings. The Caronia's reached the bridge. The Baltic's spent 5 hours in a pocket. The Amerika's went to Washington. The Californian's evening message reached the bridge. The Mesaba's never left the radio room. And the last one was cut off. |
+| N50 | It sounds rude. But it was how busy operators talked, and Evans later said operators didn't take it as an insult. At 11:35, he takes off his headphones and goes to bed. |
+| N51 | So let's count. 6 warnings. The Caronia's reached the bridge. The Baltic's spent 5 hours in a pocket. The Amerika's went to Washington. Bride said he took the Californian's evening message to the bridge. The Mesaba's never left the radio room. And the last one was cut off. |
 | N52 | On their own, each one looked routine. Ice in April was normal, and big liners kept their speed. |
 | N53 | So Titanic is still doing about 22 knots, into a calm, black, moonless sea. |
 | N54 | High up in the crow's nest, two lookouts, Frederick Fleet and Reginald Lee, stare into the dark. |
@@ -80,4 +80,4 @@
 | S1 | Thanks for message and information. | bm_george | real reply, as recorded |
 | L1 | It is a flat calm. | bm_daniel | real words, as Lightoller recalled them |
 | S2 | If it becomes at all doubtful, let me know at once. | bm_george | real words, as Lightoller recalled them |
-| P2 | Shut up, shut up, I am busy. I am working Cape Race. | bm_fable | real reply, as Evans recalled it |
+| P2 | Shut up, shut up, I am busy. I am working Cape Race. | bm_fable | real reply, as Evans recalled it (US inquiry) |

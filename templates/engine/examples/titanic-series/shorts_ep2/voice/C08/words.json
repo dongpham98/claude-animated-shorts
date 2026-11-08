@@ -1,0 +1,110 @@
+[
+ {
+  "word": "That",
+  "start": 0.024,
+  "end": 0.174,
+  "line": 1
+ },
+ {
+  "word": "day,",
+  "start": 0.224,
+  "end": 0.424,
+  "line": 1
+ },
+ {
+  "word": "Titanic",
+  "start": 0.499,
+  "end": 1.024,
+  "line": 1
+ },
+ {
+  "word": "received",
+  "start": 1.074,
+  "end": 1.474,
+  "line": 1
+ },
+ {
+  "word": "six",
+  "start": 1.549,
+  "end": 1.749,
+  "line": 1
+ },
+ {
+  "word": "warnings",
+  "start": 1.799,
+  "end": 2.174,
+  "line": 1
+ },
+ {
+  "word": "about",
+  "start": 2.199,
+  "end": 2.399,
+  "line": 1
+ },
+ {
+  "word": "ice.",
+  "start": 2.449,
+  "end": 2.899,
+  "line": 1
+ },
+ {
+  "word": "Some",
+  "start": 3.049,
+  "end": 3.249,
+  "line": 1
+ },
+ {
+  "word": "reached",
+  "start": 3.299,
+  "end": 3.574,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 3.599,
+  "end": 3.649,
+  "line": 1
+ },
+ {
+  "word": "bridge.",
+  "start": 3.699,
+  "end": 4.149,
+  "line": 1
+ },
+ {
+  "word": "Some",
+  "start": 4.274,
+  "end": 4.449,
+  "line": 1
+ },
+ {
+  "word": "never",
+  "start": 4.499,
+  "end": 4.724,
+  "line": 1
+ },
+ {
+  "word": "left",
+  "start": 4.774,
+  "end": 4.974,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 4.999,
+  "end": 5.049,
+  "line": 1
+ },
+ {
+  "word": "radio",
+  "start": 5.099,
+  "end": 5.524,
+  "line": 1
+ },
+ {
+  "word": "room.",
+  "start": 5.574,
+  "end": 5.875,
+  "line": 1
+ }
+]

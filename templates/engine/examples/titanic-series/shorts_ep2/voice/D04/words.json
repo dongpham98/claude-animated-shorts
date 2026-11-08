@@ -1,0 +1,110 @@
+[
+ {
+  "word": "And",
+  "start": 0.048,
+  "end": 0.123,
+  "line": 1
+ },
+ {
+  "word": "Titanic",
+  "start": 0.173,
+  "end": 0.673,
+  "line": 1
+ },
+ {
+  "word": "has",
+  "start": 0.723,
+  "end": 0.848,
+  "line": 1
+ },
+ {
+  "word": "just",
+  "start": 0.898,
+  "end": 1.098,
+  "line": 1
+ },
+ {
+  "word": "come",
+  "start": 1.148,
+  "end": 1.348,
+  "line": 1
+ },
+ {
+  "word": "within",
+  "start": 1.398,
+  "end": 1.623,
+  "line": 1
+ },
+ {
+  "word": "range",
+  "start": 1.673,
+  "end": 1.973,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 1.998,
+  "end": 2.073,
+  "line": 1
+ },
+ {
+  "word": "Cape",
+  "start": 2.123,
+  "end": 2.373,
+  "line": 1
+ },
+ {
+  "word": "Race,",
+  "start": 2.423,
+  "end": 2.748,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 2.823,
+  "end": 2.898,
+  "line": 1
+ },
+ {
+  "word": "Newfoundland.",
+  "start": 2.948,
+  "end": 3.698,
+  "line": 1
+ },
+ {
+  "word": "Finally,",
+  "start": 3.848,
+  "end": 4.398,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 4.498,
+  "end": 4.548,
+  "line": 1
+ },
+ {
+  "word": "pile",
+  "start": 4.598,
+  "end": 4.898,
+  "line": 1
+ },
+ {
+  "word": "can",
+  "start": 4.948,
+  "end": 5.048,
+  "line": 1
+ },
+ {
+  "word": "go",
+  "start": 5.098,
+  "end": 5.273,
+  "line": 1
+ },
+ {
+  "word": "out.",
+  "start": 5.323,
+  "end": 5.534,
+  "line": 1
+ }
+]

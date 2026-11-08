@@ -1,0 +1,134 @@
+[
+ {
+  "word": "Captain",
+  "start": 0.054,
+  "end": 0.404,
+  "line": 1
+ },
+ {
+  "word": "Smith",
+  "start": 0.454,
+  "end": 0.704,
+  "line": 1
+ },
+ {
+  "word": "takes",
+  "start": 0.754,
+  "end": 1.054,
+  "line": 1
+ },
+ {
+  "word": "it.",
+  "start": 1.104,
+  "end": 1.304,
+  "line": 1
+ },
+ {
+  "word": "Out",
+  "start": 1.429,
+  "end": 1.604,
+  "line": 1
+ },
+ {
+  "word": "on",
+  "start": 1.629,
+  "end": 1.779,
+  "line": 1
+ },
+ {
+  "word": "deck,",
+  "start": 1.829,
+  "end": 2.079,
+  "line": 1
+ },
+ {
+  "word": "he",
+  "start": 2.129,
+  "end": 2.204,
+  "line": 1
+ },
+ {
+  "word": "meets",
+  "start": 2.254,
+  "end": 2.479,
+  "line": 1
+ },
+ {
+  "word": "Bruce",
+  "start": 2.554,
+  "end": 2.829,
+  "line": 1
+ },
+ {
+  "word": "Ismay,",
+  "start": 2.879,
+  "end": 3.304,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 3.354,
+  "end": 3.404,
+  "line": 1
+ },
+ {
+  "word": "head",
+  "start": 3.454,
+  "end": 3.604,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 3.629,
+  "end": 3.704,
+  "line": 1
+ },
+ {
+  "word": "White",
+  "start": 3.754,
+  "end": 3.979,
+  "line": 1
+ },
+ {
+  "word": "Star",
+  "start": 4.029,
+  "end": 4.354,
+  "line": 1
+ },
+ {
+  "word": "Line,",
+  "start": 4.404,
+  "end": 4.704,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 4.754,
+  "end": 4.829,
+  "line": 1
+ },
+ {
+  "word": "hands",
+  "start": 4.879,
+  "end": 5.104,
+  "line": 1
+ },
+ {
+  "word": "it",
+  "start": 5.129,
+  "end": 5.204,
+  "line": 1
+ },
+ {
+  "word": "to",
+  "start": 5.254,
+  "end": 5.329,
+  "line": 1
+ },
+ {
+  "word": "him.",
+  "start": 5.379,
+  "end": 5.604,
+  "line": 1
+ }
+]

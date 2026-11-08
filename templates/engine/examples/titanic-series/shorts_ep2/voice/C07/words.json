@@ -1,0 +1,80 @@
+[
+ {
+  "word": "At",
+  "start": 0.048,
+  "end": 0.123,
+  "line": 1
+ },
+ {
+  "word": "ten",
+  "start": 0.173,
+  "end": 0.373,
+  "line": 1
+ },
+ {
+  "word": "past",
+  "start": 0.423,
+  "end": 0.648,
+  "line": 1
+ },
+ {
+  "word": "seven",
+  "start": 0.698,
+  "end": 0.948,
+  "line": 1
+ },
+ {
+  "word": "that",
+  "start": 0.998,
+  "end": 1.148,
+  "line": 1
+ },
+ {
+  "word": "evening,",
+  "start": 1.198,
+  "end": 1.598,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.648,
+  "end": 1.698,
+  "line": 1
+ },
+ {
+  "word": "captain",
+  "start": 1.748,
+  "end": 2.123,
+  "line": 1
+ },
+ {
+  "word": "finally",
+  "start": 2.198,
+  "end": 2.598,
+  "line": 1
+ },
+ {
+  "word": "asks",
+  "start": 2.648,
+  "end": 2.898,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 2.948,
+  "end": 3.048,
+  "line": 1
+ },
+ {
+  "word": "it",
+  "start": 3.073,
+  "end": 3.123,
+  "line": 1
+ },
+ {
+  "word": "back.",
+  "start": 3.173,
+  "end": 3.484,
+  "line": 1
+ }
+]

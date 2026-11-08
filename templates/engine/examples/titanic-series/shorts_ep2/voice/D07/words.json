@@ -1,0 +1,44 @@
+[
+ {
+  "word": "Five",
+  "start": 0.017,
+  "end": 0.267,
+  "line": 1
+ },
+ {
+  "word": "minutes",
+  "start": 0.292,
+  "end": 0.517,
+  "line": 1
+ },
+ {
+  "word": "later,",
+  "start": 0.542,
+  "end": 0.817,
+  "line": 1
+ },
+ {
+  "word": "Titanic",
+  "start": 0.892,
+  "end": 1.367,
+  "line": 1
+ },
+ {
+  "word": "hit",
+  "start": 1.417,
+  "end": 1.517,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.542,
+  "end": 1.617,
+  "line": 1
+ },
+ {
+  "word": "iceberg.",
+  "start": 1.667,
+  "end": 2.157,
+  "line": 1
+ }
+]

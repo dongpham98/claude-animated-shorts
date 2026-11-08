@@ -1,0 +1,74 @@
+[
+ {
+  "word": "And",
+  "start": 0.046,
+  "end": 0.121,
+  "line": 1
+ },
+ {
+  "word": "when",
+  "start": 0.146,
+  "end": 0.246,
+  "line": 1
+ },
+ {
+  "word": "Titanic",
+  "start": 0.296,
+  "end": 0.821,
+  "line": 1
+ },
+ {
+  "word": "called",
+  "start": 0.871,
+  "end": 1.121,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 1.171,
+  "end": 1.271,
+  "line": 1
+ },
+ {
+  "word": "help,",
+  "start": 1.321,
+  "end": 1.596,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.696,
+  "end": 1.746,
+  "line": 1
+ },
+ {
+  "word": "Californian's",
+  "start": 1.796,
+  "end": 2.521,
+  "line": 1
+ },
+ {
+  "word": "radio",
+  "start": 2.571,
+  "end": 3.021,
+  "line": 1
+ },
+ {
+  "word": "was",
+  "start": 3.071,
+  "end": 3.146,
+  "line": 1
+ },
+ {
+  "word": "switched",
+  "start": 3.196,
+  "end": 3.471,
+  "line": 1
+ },
+ {
+  "word": "off.",
+  "start": 3.521,
+  "end": 3.781,
+  "line": 1
+ }
+]

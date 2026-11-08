@@ -1,0 +1,122 @@
+[
+ {
+  "word": "The",
+  "start": 0.043,
+  "end": 0.118,
+  "line": 1
+ },
+ {
+  "word": "ship",
+  "start": 0.193,
+  "end": 0.393,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 0.443,
+  "end": 0.543,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 0.568,
+  "end": 0.618,
+  "line": 1
+ },
+ {
+  "word": "Californian,",
+  "start": 0.668,
+  "end": 1.418,
+  "line": 1
+ },
+ {
+  "word": "stopped",
+  "start": 1.493,
+  "end": 1.818,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 1.868,
+  "end": 1.968,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.968,
+  "end": 2.043,
+  "line": 1
+ },
+ {
+  "word": "night,",
+  "start": 2.093,
+  "end": 2.343,
+  "line": 1
+ },
+ {
+  "word": "not",
+  "start": 2.418,
+  "end": 2.643,
+  "line": 1
+ },
+ {
+  "word": "far",
+  "start": 2.693,
+  "end": 2.918,
+  "line": 1
+ },
+ {
+  "word": "away.",
+  "start": 2.968,
+  "end": 3.518,
+  "line": 1
+ },
+ {
+  "word": "Her",
+  "start": 3.643,
+  "end": 3.743,
+  "line": 1
+ },
+ {
+  "word": "only",
+  "start": 3.793,
+  "end": 4.068,
+  "line": 1
+ },
+ {
+  "word": "radio",
+  "start": 4.118,
+  "end": 4.543,
+  "line": 1
+ },
+ {
+  "word": "operator,",
+  "start": 4.593,
+  "end": 5.118,
+  "line": 1
+ },
+ {
+  "word": "Cyril",
+  "start": 5.243,
+  "end": 5.543,
+  "line": 1
+ },
+ {
+  "word": "Evans,",
+  "start": 5.593,
+  "end": 5.968,
+  "line": 1
+ },
+ {
+  "word": "calls",
+  "start": 6.043,
+  "end": 6.318,
+  "line": 1
+ },
+ {
+  "word": "Titanic.",
+  "start": 6.368,
+  "end": 6.975,
+  "line": 1
+ }
+]

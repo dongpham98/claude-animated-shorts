@@ -1,0 +1,74 @@
+[
+ {
+  "word": "The",
+  "start": 0.036,
+  "end": 0.086,
+  "line": 1
+ },
+ {
+  "word": "full",
+  "start": 0.136,
+  "end": 0.311,
+  "line": 1
+ },
+ {
+  "word": "story",
+  "start": 0.361,
+  "end": 0.711,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 0.736,
+  "end": 0.786,
+  "line": 1
+ },
+ {
+  "word": "that",
+  "start": 0.836,
+  "end": 0.986,
+  "line": 1
+ },
+ {
+  "word": "night's",
+  "start": 1.036,
+  "end": 1.261,
+  "line": 1
+ },
+ {
+  "word": "six",
+  "start": 1.311,
+  "end": 1.511,
+  "line": 1
+ },
+ {
+  "word": "warnings",
+  "start": 1.561,
+  "end": 2.036,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 2.111,
+  "end": 2.186,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 2.211,
+  "end": 2.261,
+  "line": 1
+ },
+ {
+  "word": "Episode",
+  "start": 2.286,
+  "end": 2.711,
+  "line": 1
+ },
+ {
+  "word": "2.",
+  "start": 2.786,
+  "end": 3.071,
+  "line": 1
+ }
+]

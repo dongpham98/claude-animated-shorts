@@ -1,0 +1,152 @@
+[
+ {
+  "word": "On",
+  "start": 0.044,
+  "end": 0.169,
+  "line": 1
+ },
+ {
+  "word": "Titanic,",
+  "start": 0.219,
+  "end": 0.769,
+  "line": 1
+ },
+ {
+  "word": "Jack",
+  "start": 0.844,
+  "end": 1.119,
+  "line": 1
+ },
+ {
+  "word": "Phillips",
+  "start": 1.169,
+  "end": 1.494,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 1.544,
+  "end": 1.644,
+  "line": 1
+ },
+ {
+  "word": "buried",
+  "start": 1.719,
+  "end": 2.094,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 2.144,
+  "end": 2.244,
+  "line": 1
+ },
+ {
+  "word": "work.",
+  "start": 2.294,
+  "end": 2.719,
+  "line": 1
+ },
+ {
+  "word": "Earlier,",
+  "start": 2.844,
+  "end": 3.219,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 3.294,
+  "end": 3.369,
+  "line": 1
+ },
+ {
+  "word": "radio",
+  "start": 3.419,
+  "end": 3.844,
+  "line": 1
+ },
+ {
+  "word": "broke",
+  "start": 3.894,
+  "end": 4.094,
+  "line": 1
+ },
+ {
+  "word": "down",
+  "start": 4.144,
+  "end": 4.444,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 4.494,
+  "end": 4.594,
+  "line": 1
+ },
+ {
+  "word": "about",
+  "start": 4.619,
+  "end": 4.869,
+  "line": 1
+ },
+ {
+  "word": "six",
+  "start": 4.944,
+  "end": 5.144,
+  "line": 1
+ },
+ {
+  "word": "hours,",
+  "start": 5.194,
+  "end": 5.594,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 5.644,
+  "end": 5.719,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 5.744,
+  "end": 5.769,
+  "line": 1
+ },
+ {
+  "word": "pile",
+  "start": 5.819,
+  "end": 6.119,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 6.144,
+  "end": 6.194,
+  "line": 1
+ },
+ {
+  "word": "passenger",
+  "start": 6.244,
+  "end": 6.669,
+  "line": 1
+ },
+ {
+  "word": "messages",
+  "start": 6.719,
+  "end": 7.194,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 7.244,
+  "end": 7.344,
+  "line": 1
+ },
+ {
+  "word": "waiting.",
+  "start": 7.394,
+  "end": 7.78,
+  "line": 1
+ }
+]

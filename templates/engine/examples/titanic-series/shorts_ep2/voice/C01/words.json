@@ -1,0 +1,92 @@
+[
+ {
+  "word": "The",
+  "start": 0.023,
+  "end": 0.073,
+  "line": 1
+ },
+ {
+  "word": "most",
+  "start": 0.123,
+  "end": 0.323,
+  "line": 1
+ },
+ {
+  "word": "important",
+  "start": 0.373,
+  "end": 0.798,
+  "line": 1
+ },
+ {
+  "word": "piece",
+  "start": 0.848,
+  "end": 1.073,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 1.098,
+  "end": 1.148,
+  "line": 1
+ },
+ {
+  "word": "paper",
+  "start": 1.198,
+  "end": 1.573,
+  "line": 1
+ },
+ {
+  "word": "on",
+  "start": 1.623,
+  "end": 1.723,
+  "line": 1
+ },
+ {
+  "word": "Titanic",
+  "start": 1.773,
+  "end": 2.348,
+  "line": 1
+ },
+ {
+  "word": "spent",
+  "start": 2.398,
+  "end": 2.648,
+  "line": 1
+ },
+ {
+  "word": "five",
+  "start": 2.723,
+  "end": 3.023,
+  "line": 1
+ },
+ {
+  "word": "hours",
+  "start": 3.073,
+  "end": 3.423,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 3.473,
+  "end": 3.523,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 3.548,
+  "end": 3.573,
+  "line": 1
+ },
+ {
+  "word": "man's",
+  "start": 3.623,
+  "end": 3.923,
+  "line": 1
+ },
+ {
+  "word": "pocket.",
+  "start": 3.973,
+  "end": 4.342,
+  "line": 1
+ }
+]

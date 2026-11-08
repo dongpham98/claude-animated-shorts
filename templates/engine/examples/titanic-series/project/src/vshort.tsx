@@ -267,3 +267,16 @@ export const Photo: React.FC<{ id: string; w?: number; caption?: string; childre
     </g>
   );
 };
+
+/** a whole 16:9 set shown as a framed panel inside the vertical frame (for maps and cut-aways) */
+export const Panel: React.FC<{ y?: number; w?: number; children: React.ReactNode; label?: string }> = ({ y = 860, w = 1000, children, label }) => {
+  const h = (w * 1080) / 1920;
+  return (
+    <g>
+      <rect x={540 - w / 2 - 14 + 8} y={y - h / 2 - 14 + 12} width={w + 28} height={h + 28} rx={26} fill="#000" opacity={0.3} />
+      <rect x={540 - w / 2 - 14} y={y - h / 2 - 14} width={w + 28} height={h + 28} rx={26} fill="#fbf4e4" stroke={INK} strokeWidth={8} />
+      <svg x={540 - w / 2} y={y - h / 2} width={w} height={h} viewBox="0 0 1920 1080">{children}</svg>
+      {label && <g transform={`translate(540 ${y - h / 2 - 14})`}><rect x={-200} y={-34} width={400} height={64} rx={32} fill="#ffd84a" stroke={INK} strokeWidth={6} /><text y={12} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={36} fill={INK}>{label}</text></g>}
+    </g>
+  );
+};
