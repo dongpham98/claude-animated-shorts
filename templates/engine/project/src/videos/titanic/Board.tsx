@@ -1,5 +1,6 @@
 // 2D "Clipboard's board" shots: title, 1912 front pages, the size chart, the seats grid, the verdict stamp.
 // Drawn on one 1920 x 1080 canvas per frame (no WebGL: these frames render fast on the laptop).
+import { VERT, bgArea, VBOARD } from "./vert";
 import React, { useLayoutEffect, useRef } from "react";
 import { AbsoluteFill } from "remotion";
 import { Pen, bodyFront, INK, Expr, Prop } from "./toon";
@@ -15,8 +16,8 @@ const text = (g: CanvasRenderingContext2D, s: string, x: number, y: number, size
   g.fillStyle = col; g.fillText(s, x, y);
 };
 const night = (g: CanvasRenderingContext2D) => {
-  const gr = g.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, "#0b1430"); gr.addColorStop(1, "#1f3166"); g.fillStyle = gr; g.fillRect(0, 0, W, H);
-  for (let i = 0; i < 220; i++) { g.fillStyle = `rgba(255,255,255,${0.25 + 0.6 * ((i * 37) % 10) / 10})`; const s = 1 + ((i * 13) % 3); g.fillRect((i * 733) % W, (i * 389) % H, s, s); }
+  const gr = g.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, "#0b1430"); gr.addColorStop(1, "#1f3166"); g.fillStyle = gr; const B = bgArea(W, H); g.fillRect(B.x, B.y, B.w, B.h);
+  for (let i = 0; i < (VERT.on ? 700 : 220); i++) { g.fillStyle = `rgba(255,255,255,${0.25 + 0.6 * ((i * 37) % 10) / 10})`; const s = 1 + ((i * 13) % 3); g.fillRect(B.x + (i * 733) % B.w, B.y + (i * 389) % B.h, s, s); }
 };
 const card = (p: Pen, x0: number, y0: number, x1: number, y1: number, col = PAPER) => {
   p.poly([[x0 + 10, y0 + 14], [x1 + 10, y0 + 14], [x1 + 10, y1 + 14], [x0 + 10, y1 + 14]], "rgba(0,0,0,0.35)", 0);
@@ -133,11 +134,12 @@ export const Board: React.FC<{ id: string; f: number; shot: number }> = ({ id, f
   const ref = useRef<HTMLCanvasElement>(null);
   useLayoutEffect(() => {
     const cv = ref.current!, g = cv.getContext("2d")!, k = kickAt(f);
-    g.setTransform(1, 0, 0, 1, 0, 0); g.clearRect(0, 0, W, H);
+    g.setTransform(1, 0, 0, 1, 0, 0); g.clearRect(0, 0, cv.width, cv.height);
+    if (VERT.on) { const v = VBOARD[id] ?? {}, s = v.s ?? 0.75; g.translate(540, 820); g.scale(s, s); g.translate(-(v.cx ?? 960), -(v.cy ?? 470)); }
     // every board creeps (a slow push toward the centre) so no frame ever holds still
     const u = clamp01((f - sh.a) / Math.max(1, sh.b - sh.a)), z = 1 + 0.025 * u + 0.012 * Math.abs(k);
     g.translate(W / 2, H / 2); g.rotate(0.004 * k); g.scale(z, z); g.translate(-W / 2, -H / 2 + 6 * k);
     if (BOARDS[id]) BOARDS[id](g, new Pen(g), f); else BOARDS2[id](g, new Pen(g), f, sh.a, sh.b);
   }, [id, f, sh]);
-  return <AbsoluteFill><canvas ref={ref} width={W} height={H} style={{ width: "100%", height: "100%" }} /></AbsoluteFill>;
+  return <AbsoluteFill><canvas ref={ref} width={VERT.on ? 1080 : W} height={VERT.on ? 1920 : H} style={{ width: "100%", height: "100%" }} /></AbsoluteFill>;
 };

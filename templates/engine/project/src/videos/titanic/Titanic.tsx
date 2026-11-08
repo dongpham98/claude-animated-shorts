@@ -17,6 +17,7 @@ import { LE } from "./timing";
 import { GRADE_OF } from "./lights";
 import { CAPTIONS } from "./captions";
 import { Board } from "./Board";
+import { VERT } from "./vert";
 
 export const TITANIC_PILOT_FRAMES = PILOT_END;
 export const TITANIC_FRAMES = TOTAL;
@@ -67,7 +68,7 @@ const Inner: React.FC<{ id: number; kit: Kit; f: number }> = ({ id, kit, f }) =>
 const dprOverride = () => (getInputProps() as { post?: { dpr?: number } }).post?.dpr;
 const ShotView: React.FC<{ id: number; kit: Kit; f: number }> = ({ id, kit, f }) => (
   <AbsoluteFill>
-    <ThreeCanvas width={1920} height={1080} {...(dprOverride() ? { dpr: dprOverride() } : {})} shadows gl={{ antialias: false, stencil: false, powerPreference: "high-performance", toneMappingExposure: 1.0 }}
+    <ThreeCanvas width={VERT.on ? 1080 : 1920} height={VERT.on ? 1920 : 1080} {...(dprOverride() ? { dpr: dprOverride() } : {})} shadows gl={{ antialias: false, stencil: false, powerPreference: "high-performance", toneMappingExposure: 1.0 }}
       camera={{ fov: 38, near: 0.2, far: 3000 }}>
       <Inner id={id} kit={kit} f={f} />
     </ThreeCanvas>
@@ -195,6 +196,65 @@ export const TitanicPilot: React.FC = () => {
       {watermarkOn() && <Watermark />}
       {captionsOn() && <Caption f={f} />}
       {noAudio ? null : <Audio src={staticFile("titanic_full_mix.m4a")} />}
+    </AbsoluteFill>
+  );
+};
+
+// ---------------- vertical Shorts (1080x1920) cut from the long video ----------------
+export type ShortProps = { from: number; to: number; audio: string; hook: [string, string]; };
+export const SHORTS: Record<string, ShortProps> = {
+  TitanicShortRules: { from: 8742, to: 10520, audio: "titanic_short_rules.m4a", hook: ["SAME SHIP. SAME ORDER.", "OPPOSITE RULES."] },
+  TitanicShortOneBack: { from: 14702, to: 16348, audio: "titanic_short_oneback.m4a", hook: ["18 BOATS LOWERED.", "ONLY ONE WENT BACK."] },
+  TitanicShortLaw: { from: 1049, to: 3328, audio: "titanic_short_law.m4a", hook: ["TITANIC FOLLOWED THE LAW.", "THAT WAS THE PROBLEM."] },
+};
+const VCaption: React.FC<{ f: number }> = ({ f }) => {
+  const cap = CAPTIONS.find(([, a, b]) => f >= a && f < b);
+  if (!cap) return null;
+  const [text, a] = cap, k = f - a, pop = k === 0 ? 1.14 : k === 1 ? 1.06 : 1.0, size = text.length > 9 ? 100 : 114;
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      <div style={{ position: "absolute", top: 1300 - size / 2, width: "100%", textAlign: "center", transform: `scale(${pop})`, transformOrigin: "50% 50%",
+        fontFamily: "CapBlack, sans-serif", fontWeight: 900, fontSize: size, lineHeight: 1, color: "#ffffff", letterSpacing: 1,
+        WebkitTextStroke: "14px #000000", paintOrder: "stroke fill", textShadow: "0 6px 0 rgba(0,0,0,0.55)" }}>{text}</div>
+    </AbsoluteFill>
+  );
+};
+const VWatermark: React.FC = () => (
+  <AbsoluteFill style={{ pointerEvents: "none" }}>
+    <div style={{ position: "absolute", top: 230 - 20, width: "100%", textAlign: "center", fontFamily: "WmBold, Montserrat, sans-serif", fontWeight: 700, fontSize: 40,
+      color: "rgba(255,255,255,0.68)", letterSpacing: 0.3, WebkitTextStroke: "1.5px rgba(10,8,20,0.55)", paintOrder: "stroke fill",
+      textShadow: "0 2px 4px rgba(0,0,0,0.85), 0 0 10px rgba(0,0,0,0.55), 0 0 2px rgba(0,0,0,0.9)" }}>{HANDLE}</div>
+  </AbsoluteFill>
+);
+/** big two-line card: hook at the start, link to the full video at the end */
+const VCard: React.FC<{ k: number; l1: string; l2: string; top: number; small?: boolean }> = ({ k, l1, l2, top, small }) => (
+  <div style={{ position: "absolute", top, left: 0, width: "100%", display: "flex", justifyContent: "center", pointerEvents: "none" }}>
+    <div style={{ transform: `scale(${k < 1 ? 0.6 + 0.4 * k + 0.08 * Math.sin(k * Math.PI) : 1})`, opacity: Math.min(1, k * 1.5), background: "#f4ecd6", border: "9px solid #241726",
+      borderRadius: 14, padding: small ? "16px 34px" : "22px 40px", boxShadow: "10px 12px 0 rgba(0,0,0,0.4)", textAlign: "center", fontFamily: "CapBlack, sans-serif", fontWeight: 900, maxWidth: 960 }}>
+      <div style={{ fontSize: small ? 40 : 62, lineHeight: 1.08, color: "#241726" }}>{l1}</div>
+      <div style={{ fontSize: small ? 46 : 70, lineHeight: 1.08, color: "#c0353a", marginTop: 6 }}>{l2}</div>
+    </div>
+  </div>
+);
+export const TitanicShort: React.FC<ShortProps> = ({ from, to, audio, hook }) => {
+  VERT.on = true;
+  const f0 = useCurrentFrame(), f = f0 + from, n = to - from;
+  const kit = useKit();
+  const fontOk = useFont();
+  if (!kit || !fontOk) return null;
+  const pilot = f < PILOT_NEW, lf = pilot ? warpOld(f) : f;
+  const s = shotAt(lf, pilot), flash = flashAt(lf), noAudio = (getInputProps() as { audio?: boolean }).audio === false;
+  const hookK = f0 < 84 ? Math.min(1, f0 / 6) * Math.min(1, (84 - f0) / 6) : 0, endK = f0 >= n - 60 ? Math.min(1, (f0 - (n - 60)) / 6) : 0;
+  return (
+    <AbsoluteFill style={{ background: "#0b1430" }}>
+      {s.kind === "board" ? <Board id={s.board!} f={lf} shot={s.id} /> : <ShotView key={s.id} id={s.id} kit={kit} f={lf} />}
+      {flash > 0 && <AbsoluteFill style={{ background: "#ffffff", opacity: flash }} />}
+      {hookK === 0 && <AbsoluteFill style={{ transform: "scale(0.8)", transformOrigin: "0 0", top: 290, left: 0 }}><Tags f={lf} pilot={pilot} /></AbsoluteFill>}
+      {hookK > 0 && <VCard k={hookK} l1={hook[0]} l2={hook[1]} top={330} />}
+      {endK > 0 && <VCard k={endK} l1="FULL STORY: 7 TITANIC" l2="LIFEBOAT MYTHS ▶" top={330} small />}
+      <VWatermark />
+      {captionsOn() && <VCaption f={f} />}
+      {noAudio ? null : <Audio src={staticFile(audio)} />}
     </AbsoluteFill>
   );
 };

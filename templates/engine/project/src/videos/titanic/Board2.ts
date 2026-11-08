@@ -1,4 +1,5 @@
 // 2D board shots of chapters 2-10 (same style as Board.tsx): myth cards, diagrams, counters, verdict stamps.
+import { VERT, bgArea, VBOARD } from "./vert";
 import { Pen, bodyFront, INK, Expr, Prop, Outfit } from "./toon";
 import { CAST } from "./castdefs";
 import { A, ramp, clamp01, STAMPS, SHOTS } from "./story";
@@ -13,8 +14,8 @@ export const text = (g: G, s: string, x: number, y: number, size: number, col = 
   g.fillStyle = col; g.fillText(s, x, y);
 };
 const night = (g: G, f: number, dim = 1) => {
-  const gr = g.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, dim < 1 ? "#070b1a" : "#0b1430"); gr.addColorStop(1, dim < 1 ? "#141c3a" : "#1f3166"); g.fillStyle = gr; g.fillRect(0, 0, W, H);
-  for (let i = 0; i < 220; i++) { const tw = 0.6 + 0.4 * Math.sin(f * 0.07 + i); g.fillStyle = `rgba(255,255,255,${(0.2 + 0.5 * ((i * 37) % 10) / 10) * tw * dim})`; const s = 1 + ((i * 13) % 3); g.fillRect((i * 733 + f * 0.15) % W, (i * 389) % H, s, s); }
+  const gr = g.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, dim < 1 ? "#070b1a" : "#0b1430"); gr.addColorStop(1, dim < 1 ? "#141c3a" : "#1f3166"); g.fillStyle = gr; const B = bgArea(W, H); g.fillRect(B.x, B.y, B.w, B.h);
+  for (let i = 0; i < (VERT.on ? 700 : 220); i++) { const tw = 0.6 + 0.4 * Math.sin(f * 0.07 + i); g.fillStyle = `rgba(255,255,255,${(0.2 + 0.5 * ((i * 37) % 10) / 10) * tw * dim})`; const s = 1 + ((i * 13) % 3); g.fillRect(B.x + (i * 733 + f * 0.15) % B.w, B.y + (i * 389) % B.h, s, s); }
 };
 const card = (p: Pen, x0: number, y0: number, x1: number, y1: number, col = PAPER) => {
   p.poly([[x0 + 10, y0 + 14], [x1 + 10, y0 + 14], [x1 + 10, y1 + 14], [x0 + 10, y1 + 14]], "rgba(0,0,0,0.35)", 0);

@@ -1,6 +1,7 @@
 // The Titanic video as one three.js scene posed per frame: night sky with stars, the North Atlantic, the ship
 // (ship.ts), boat 1 lowering / afloat, the boats of shot 6, and an interior room far away with three dressings
 // (London 1894 office, the 1912 inquiry hall, the Belfast drawing office). Light rig and sky as the molasses short.
+import { VERT, VCAM, vfov } from "./vert";
 import * as THREE from "three";
 import { Batch, boxGeo, V, lam, Kit } from "../bridge/build";
 import { ctex, planksHD, beamHD, waterNear, waterFar } from "../bridge/paint";
@@ -175,7 +176,8 @@ export class World {
     const t = f / FPS, s = SHOTS[id - 1], L = LIGHTS_T[s.light], K = LOOK_T[s.light];
     const c = camAt(id, f);
     cam.position.set(...c.pos); cam.up.set(0, 1, 0); cam.lookAt(...c.look); cam.rotateZ(c.roll);
-    cam.fov = c.fov; cam.near = s.set === "ship" || s.set === "sea" ? 1.0 : 0.15; cam.far = 3000; cam.updateProjectionMatrix(); cam.updateMatrixWorld();
+    if (VERT.on) { const o = VCAM[id] ?? {}; if (o.yaw) cam.rotateY(o.yaw); if (o.pitch) cam.rotateX(o.pitch); }
+    cam.fov = VERT.on ? vfov(c.fov, id) : c.fov; cam.near = s.set === "ship" || s.set === "sea" ? 1.0 : 0.15; cam.far = 3000; cam.updateProjectionMatrix(); cam.updateMatrixWorld();
     const focus = V(...c.look), dist = cam.position.distanceTo(focus);
     cam.layers.enable(NOINK);
     // ---- light: key direction camera-relative, frozen per shot (az from the camera's forward axis) ----
