@@ -174,7 +174,7 @@ export const TelegramForm: React.FC<{ f: number; to: string; lines: string[]; ty
       {from && <text x={-400} y={-104} fontFamily={FONT2} fontWeight={700} fontSize={34} fill="#6b4a36">From: {from}</text>}
       {[0, 1, 2, 3].map((i) => <line key={i} x1={-400} x2={400} y1={-30 + i * 80} y2={-30 + i * 80} stroke="#d9cdb3" strokeWidth={4} />)}
       {lines.map((l, i) => { const n = Math.max(0, Math.min(l.length, left)); left -= l.length; return <text key={i} x={-400} y={-44 + i * 80} fontFamily="Courier New, monospace" fontWeight={900} fontSize={50} fill="#2a2a3a">{l.slice(0, n)}{n > 0 && n < l.length && Math.floor(f / 4) % 2 ? "▌" : ""}</text>; })}
-      {s > 0 && <g transform={`translate(0 190) rotate(-5) scale(${s})`}><rect x={-420} y={-70} width={840} height={140} rx={18} fill="#fbf4e4" opacity={0.6} stroke="#c0473f" strokeWidth={13} /><text x={0} y={14} textAnchor="middle" fontFamily="Courier New, monospace" fontWeight={900} fontSize={70} fill="#c0473f">{stampText}</text>{stampSub && <text x={250} y={58} textAnchor="middle" fontFamily="Courier New, monospace" fontWeight={900} fontSize={34} fill="#c0473f">{stampSub}</text>}</g>}
+      {s > 0 && stampText && <g transform={`translate(0 190) rotate(-5) scale(${s})`}><rect x={-420} y={-70} width={840} height={140} rx={18} fill="#fbf4e4" opacity={0.6} stroke="#c0473f" strokeWidth={13} /><text x={0} y={14} textAnchor="middle" fontFamily="Courier New, monospace" fontWeight={900} fontSize={70} fill="#c0473f">{stampText}</text>{stampSub && <text x={250} y={58} textAnchor="middle" fontFamily="Courier New, monospace" fontWeight={900} fontSize={34} fill="#c0473f">{stampSub}</text>}</g>}
     </g>
   );
 };
