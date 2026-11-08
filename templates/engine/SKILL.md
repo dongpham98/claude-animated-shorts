@@ -256,3 +256,39 @@ Deliver:
 - Save SCRIPT.md, SHOTPLAN.md, words.json to project docs `shorts/<nn>-<slug>/` (or `long/<nn>-<slug>/`) and to
   `templates/engine/examples/<slug>/` in the repo; update `claude/channel-plan.md` (status, lessons). Package code as
   `<slug>-code-vN.zip` and send it.
+
+## 19. 2D chibi engine (SVG puppets) — Titanic series, 2026-11-08
+Use it for character-driven stories and recaps (many people, faces, talking, quick cuts); keep the 3D toon engine for
+spaces and physical spectacle. Code: branch `titanic-series`, `templates/engine/examples/titanic-series/project/`.
+- **Files:** `style.ts` (palette, ink #2a1b16, easing), `chibi.tsx` (puppet: walk, arms, head tilt/nod/look, blink,
+  eyes normal/happy/squint/wide, brows, mouth smile/grin/o/flat/talk, props plans/notebook/violin, headphones,
+  outfits captain/officer/suit/band/marconi/crew/dress, hats captain/sailor/bighat), `cast.ts` (real people from period
+  photos), `fx.tsx` (sunburst, sparkles, smoke puff, speed lines, sweat drop, shock lines, speech bubble, name tag,
+  quote card), `ship.tsx` (liner side view day/night, steamers, iceberg, sea/sky, water line), `scenes.tsx` (sets,
+  countdown cards, map, boards), `Recap.tsx` (timeline-driven scene switcher + captions with written numbers),
+  `stills.mjs` (bundle once, many stills), `recap/timeline.py` (line starts + scenes from voice durations ->
+  `src/timeline.json`), `sound3.py` (per-section score + SFX + mix).
+- **Renders in the cloud:** ~0.16-0.4 s/frame with `--concurrency=2 --browser-executable=/usr/bin/google-chrome`
+  (3-min video ≈ 15 min). No laptop needed; copy the MP4 to `C:\YouTube\<project>\out\`.
+- **Puppet traps:** arms raised > 95° are drawn after the head (waves), lower arms before it; inward arms use negative
+  raise (hands meet at the chest for notebook writing); lying down = wrap the puppet in `rotate(-90)` and draw pillow
+  before, blanket after; bubbles and tags must not overlap in time or place (shift the line, shorten the tag).
+- **Voices:** narrator am_puck (1.2 for Shorts and ~3-min recaps, 0.9 for 10-15 min); British character voices
+  bm_george, bm_lewis, bm_daniel, bm_fable (lang en-gb), American af_heart/af_bella. Mouth flaps from the line's RMS
+  envelope per frame. Real quotes only when sourced and labelled; other lines clearly playful.
+- **Captions:** 2-5 word phrases; merge spoken numbers to written forms; hide captions on countdown/quote cards.
+- **Recap structure that holds viewers:** 10-s cold open with stakes + open loop, title card, intro of the people with
+  name tags, numbered countdown cards (one plot point every 2-5 s), a planted callback paid off later, deaths played
+  straight (music drops, no jokes), what changed, comment question. Analysis of reference recaps:
+  project doc `long/03-titanic-series/REFERENCE_ANALYSIS.md`.
+- **QA:** freezedetect n=0.002 d=1.0; give every information board a slow camera creep (1.05-1.1 zoom) so no span
+  is still for 1 s+.
+- **Rights:** film recaps are commentary only; never draw a film's fictional characters or recreate its scenes, in any
+  style; animate the real people.
+- **Upload:** set "not made for kids" (cute style gets auto-flagged).
+
+## Lessons from the Titanic long video (2026-11-08)
+- Laptop render of a long 3D video: ~1,000-frame parts, `--concurrency=2`, `--timeout=600000`, 3 retries per part,
+  progress log, render watcher (`C:\YouTube\queue\<name>.run`). ~0.76 s/frame on the UHD 620.
+- Music in long videos: about -10 dB vs the voice per 30-s window (not "50 % over the whole track").
+- Vertical Shorts from a long video: native vertical composition reusing the timeline, not crops.
