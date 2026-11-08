@@ -1,0 +1,128 @@
+[
+ {
+  "word": "April",
+  "start": 0.045,
+  "end": 0.395,
+  "line": 1
+ },
+ {
+  "word": "1912.",
+  "start": 0.445,
+  "end": 1.245,
+  "line": 1
+ },
+ {
+  "word": "Francis",
+  "start": 1.32,
+  "end": 1.895,
+  "line": 1
+ },
+ {
+  "word": "Browne,",
+  "start": 2.02,
+  "end": 2.345,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 2.42,
+  "end": 2.795,
+  "line": 1
+ },
+ {
+  "word": "young",
+  "start": 2.87,
+  "end": 2.92,
+  "line": 1
+ },
+ {
+  "word": "Jesuit",
+  "start": 2.97,
+  "end": 3.22,
+  "line": 1
+ },
+ {
+  "word": "with",
+  "start": 3.27,
+  "end": 3.845,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 3.87,
+  "end": 3.97,
+  "line": 1
+ },
+ {
+  "word": "camera,",
+  "start": 3.995,
+  "end": 4.045,
+  "line": 1
+ },
+ {
+  "word": "gets",
+  "start": 4.12,
+  "end": 4.47,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 4.545,
+  "end": 4.72,
+  "line": 1
+ },
+ {
+  "word": "gift",
+  "start": 4.745,
+  "end": 4.795,
+  "line": 1
+ },
+ {
+  "word": "from",
+  "start": 4.87,
+  "end": 5.12,
+  "line": 1
+ },
+ {
+  "word": "his",
+  "start": 5.17,
+  "end": 5.27,
+  "line": 1
+ },
+ {
+  "word": "uncle:",
+  "start": 5.295,
+  "end": 5.42,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 5.47,
+  "end": 5.92,
+  "line": 1
+ },
+ {
+  "word": "first-class",
+  "start": 6.02,
+  "end": 6.07,
+  "line": 1
+ },
+ {
+  "word": "ticket",
+  "start": 6.145,
+  "end": 6.77,
+  "line": 1
+ },
+ {
+  "word": "on",
+  "start": 6.845,
+  "end": 7.17,
+  "line": 1
+ },
+ {
+  "word": "Titanic.",
+  "start": 7.22,
+  "end": 7.345,
+  "line": 1
+ }
+]

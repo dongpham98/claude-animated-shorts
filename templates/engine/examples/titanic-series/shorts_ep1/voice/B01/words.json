@@ -1,0 +1,104 @@
+[
+ {
+  "word": "Titanic",
+  "start": 0.05,
+  "end": 0.575,
+  "line": 1
+ },
+ {
+  "word": "almost",
+  "start": 0.625,
+  "end": 1.0,
+  "line": 1
+ },
+ {
+  "word": "crashed",
+  "start": 1.075,
+  "end": 1.45,
+  "line": 1
+ },
+ {
+  "word": "before",
+  "start": 1.5,
+  "end": 1.7,
+  "line": 1
+ },
+ {
+  "word": "her",
+  "start": 1.725,
+  "end": 1.825,
+  "line": 1
+ },
+ {
+  "word": "first",
+  "start": 1.9,
+  "end": 2.15,
+  "line": 1
+ },
+ {
+  "word": "voyage",
+  "start": 2.2,
+  "end": 2.55,
+  "line": 1
+ },
+ {
+  "word": "had",
+  "start": 2.575,
+  "end": 2.65,
+  "line": 1
+ },
+ {
+  "word": "even",
+  "start": 2.675,
+  "end": 2.925,
+  "line": 1
+ },
+ {
+  "word": "begun.",
+  "start": 2.975,
+  "end": 3.5,
+  "line": 1
+ },
+ {
+  "word": "Not",
+  "start": 3.675,
+  "end": 3.85,
+  "line": 1
+ },
+ {
+  "word": "into",
+  "start": 3.875,
+  "end": 4.075,
+  "line": 1
+ },
+ {
+  "word": "an",
+  "start": 4.125,
+  "end": 4.175,
+  "line": 1
+ },
+ {
+  "word": "iceberg.",
+  "start": 4.225,
+  "end": 4.775,
+  "line": 1
+ },
+ {
+  "word": "Into",
+  "start": 4.875,
+  "end": 5.075,
+  "line": 1
+ },
+ {
+  "word": "another",
+  "start": 5.125,
+  "end": 5.4,
+  "line": 1
+ },
+ {
+  "word": "ship.",
+  "start": 5.475,
+  "end": 5.784,
+  "line": 1
+ }
+]

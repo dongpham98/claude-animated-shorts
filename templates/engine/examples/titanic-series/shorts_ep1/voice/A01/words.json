@@ -1,0 +1,98 @@
+[
+ {
+  "word": "Five",
+  "start": 0.021,
+  "end": 0.321,
+  "line": 1
+ },
+ {
+  "word": "words",
+  "start": 0.371,
+  "end": 0.646,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 0.671,
+  "end": 0.721,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 0.746,
+  "end": 0.771,
+  "line": 1
+ },
+ {
+  "word": "telegram",
+  "start": 0.821,
+  "end": 1.446,
+  "line": 1
+ },
+ {
+  "word": "are",
+  "start": 1.521,
+  "end": 1.596,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.621,
+  "end": 1.671,
+  "line": 1
+ },
+ {
+  "word": "reason",
+  "start": 1.721,
+  "end": 1.996,
+  "line": 1
+ },
+ {
+  "word": "we",
+  "start": 2.021,
+  "end": 2.096,
+  "line": 1
+ },
+ {
+  "word": "can",
+  "start": 2.146,
+  "end": 2.246,
+  "line": 1
+ },
+ {
+  "word": "still",
+  "start": 2.296,
+  "end": 2.521,
+  "line": 1
+ },
+ {
+  "word": "see",
+  "start": 2.596,
+  "end": 2.771,
+  "line": 1
+ },
+ {
+  "word": "life",
+  "start": 2.821,
+  "end": 3.096,
+  "line": 1
+ },
+ {
+  "word": "on",
+  "start": 3.146,
+  "end": 3.296,
+  "line": 1
+ },
+ {
+  "word": "board",
+  "start": 3.346,
+  "end": 3.621,
+  "line": 1
+ },
+ {
+  "word": "Titanic.",
+  "start": 3.671,
+  "end": 4.277,
+  "line": 1
+ }
+]

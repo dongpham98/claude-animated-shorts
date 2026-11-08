@@ -1,0 +1,80 @@
+[
+ {
+  "word": "But",
+  "start": 0.02,
+  "end": 0.12,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 0.145,
+  "end": 0.17,
+  "line": 1
+ },
+ {
+  "word": "Jesuit",
+  "start": 0.245,
+  "end": 0.795,
+  "line": 1
+ },
+ {
+  "word": "needs",
+  "start": 0.845,
+  "end": 1.07,
+  "line": 1
+ },
+ {
+  "word": "permission.",
+  "start": 1.12,
+  "end": 1.695,
+  "line": 1
+ },
+ {
+  "word": "So",
+  "start": 1.795,
+  "end": 1.895,
+  "line": 1
+ },
+ {
+  "word": "he",
+  "start": 1.92,
+  "end": 1.995,
+  "line": 1
+ },
+ {
+  "word": "sends",
+  "start": 2.045,
+  "end": 2.27,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 2.295,
+  "end": 2.32,
+  "line": 1
+ },
+ {
+  "word": "telegram",
+  "start": 2.37,
+  "end": 2.895,
+  "line": 1
+ },
+ {
+  "word": "to",
+  "start": 2.945,
+  "end": 2.995,
+  "line": 1
+ },
+ {
+  "word": "his",
+  "start": 3.02,
+  "end": 3.145,
+  "line": 1
+ },
+ {
+  "word": "boss.",
+  "start": 3.195,
+  "end": 3.599,
+  "line": 1
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "word": "But",
+  "start": 0.011,
+  "end": 0.111,
+  "line": 1
+ },
+ {
+  "word": "only",
+  "start": 0.136,
+  "end": 0.311,
+  "line": 1
+ },
+ {
+  "word": "as",
+  "start": 0.336,
+  "end": 0.411,
+  "line": 1
+ },
+ {
+  "word": "far",
+  "start": 0.461,
+  "end": 0.611,
+  "line": 1
+ },
+ {
+  "word": "as",
+  "start": 0.636,
+  "end": 0.686,
+  "line": 1
+ },
+ {
+  "word": "Ireland.",
+  "start": 0.736,
+  "end": 1.2,
+  "line": 1
+ }
+]

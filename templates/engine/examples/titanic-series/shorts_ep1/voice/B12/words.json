@@ -1,0 +1,62 @@
+[
+ {
+  "word": "Four",
+  "start": 0.019,
+  "end": 0.169,
+  "line": 1
+ },
+ {
+  "word": "days",
+  "start": 0.194,
+  "end": 0.394,
+  "line": 1
+ },
+ {
+  "word": "after",
+  "start": 0.419,
+  "end": 0.619,
+  "line": 1
+ },
+ {
+  "word": "this",
+  "start": 0.644,
+  "end": 0.794,
+  "line": 1
+ },
+ {
+  "word": "near",
+  "start": 0.844,
+  "end": 1.019,
+  "line": 1
+ },
+ {
+  "word": "miss,",
+  "start": 1.069,
+  "end": 1.319,
+  "line": 1
+ },
+ {
+  "word": "she",
+  "start": 1.419,
+  "end": 1.494,
+  "line": 1
+ },
+ {
+  "word": "met",
+  "start": 1.519,
+  "end": 1.619,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.644,
+  "end": 1.719,
+  "line": 1
+ },
+ {
+  "word": "iceberg.",
+  "start": 1.769,
+  "end": 2.3,
+  "line": 1
+ }
+]

@@ -1,0 +1,92 @@
+[
+ {
+  "word": "Southampton,",
+  "start": 0.064,
+  "end": 0.764,
+  "line": 1
+ },
+ {
+  "word": "April",
+  "start": 0.839,
+  "end": 1.164,
+  "line": 1
+ },
+ {
+  "word": "tenth,",
+  "start": 1.239,
+  "end": 1.539,
+  "line": 1
+ },
+ {
+  "word": "1912.",
+  "start": 1.639,
+  "end": 2.289,
+  "line": 1
+ },
+ {
+  "word": "Noon.",
+  "start": 2.364,
+  "end": 2.939,
+  "line": 1
+ },
+ {
+  "word": "Titanic",
+  "start": 3.089,
+  "end": 3.514,
+  "line": 1
+ },
+ {
+  "word": "glides",
+  "start": 3.639,
+  "end": 4.139,
+  "line": 1
+ },
+ {
+  "word": "past",
+  "start": 4.189,
+  "end": 4.589,
+  "line": 1
+ },
+ {
+  "word": "two",
+  "start": 4.639,
+  "end": 4.889,
+  "line": 1
+ },
+ {
+  "word": "liners",
+  "start": 4.964,
+  "end": 5.114,
+  "line": 1
+ },
+ {
+  "word": "tied",
+  "start": 5.164,
+  "end": 5.539,
+  "line": 1
+ },
+ {
+  "word": "up",
+  "start": 5.589,
+  "end": 5.839,
+  "line": 1
+ },
+ {
+  "word": "at",
+  "start": 5.864,
+  "end": 5.989,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 6.014,
+  "end": 6.064,
+  "line": 1
+ },
+ {
+  "word": "dock.",
+  "start": 6.089,
+  "end": 6.139,
+  "line": 1
+ }
+]
