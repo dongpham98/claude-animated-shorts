@@ -102,7 +102,7 @@ const Bench: React.FC = () => (
 
 export const DECK_FLOOR = 830;
 
-export const Deck: React.FC<{ f: number; camX: number; zoom: number; stage: React.ReactNode }> = ({ f, camX, zoom, stage }) => {
+export const Deck: React.FC<{ f: number; camX: number; zoom: number; stage: React.ReactNode; focusY?: number; dim?: number; overlay?: React.ReactNode }> = ({ f, camX, zoom, stage, focusY = 540, dim = 0, overlay }) => {
   // deck planks with perspective spacing
   const planks: React.ReactNode[] = [];
   let y = DECK_FLOOR, h = 14, i = 0;
@@ -128,7 +128,7 @@ export const Deck: React.FC<{ f: number; camX: number; zoom: number; stage: Reac
         <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#e7dccb" /><stop offset="0.18" stopColor={PAL.wall} /><stop offset="1" stopColor="#eadfcd" /></linearGradient>
         <filter id="fgblur"><feGaussianBlur stdDeviation="3.5" /></filter>
       </defs>
-      <g transform={`translate(960 540) scale(${zoom}) translate(-960 -540)`}>
+      <g transform={`translate(960 540) scale(${zoom}) translate(-960 ${-focusY})`}>
         {/* sky */}
         <rect x={-200} y={-200} width={2400} height={1300} fill="url(#sky)" />
         {L(camX, 0.06, <g>
@@ -169,6 +169,8 @@ export const Deck: React.FC<{ f: number; camX: number; zoom: number; stage: Reac
         <rect x={-200} y={-200} width={2400} height={1400} fill="url(#glow)" />
       </g>
       <rect x={0} y={0} width={1920} height={1080} fill="url(#vig)" />
+      {dim > 0 && <rect x={0} y={0} width={1920} height={1080} fill="#1b1424" opacity={dim} />}
+      {overlay}
     </svg>
   );
 };

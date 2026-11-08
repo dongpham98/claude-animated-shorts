@@ -26,4 +26,6 @@ export const BROWN: Spec = {
   id: "brown", name: "Margaret \"Molly\" Brown", skin: PAL.skinLight, hair: PAL.hairAuburn, hairStyle: "updo",
   outfit: "dress", main: PAL.dressPlum, mainDark: "#5b3168", hat: "bighat", hatColor: "#4e3a63", female: true, scale: 0.96,
 };
+/** Andrews on the maiden voyage: notebook of improvements (steward Henry Etches, US inquiry: "making notes of improvements") */
+export const ANDREWS_NB: Spec = { ...ANDREWS, prop: "notebook" };
 export const CAST = [SMITH, ANDREWS, HARTLEY, BROWN];

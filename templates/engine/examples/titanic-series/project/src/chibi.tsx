@@ -11,7 +11,7 @@ export type Spec = {
   outfit: "captain" | "suit" | "band" | "dress";
   main: string; mainDark: string; trim?: string;
   hat?: "captain" | "bighat"; hatColor?: string;
-  prop?: "violin" | "plans";
+  prop?: "violin" | "plans" | "notebook";
   female?: boolean; scale?: number;
 };
 export type Pose = {
@@ -22,6 +22,8 @@ export type Pose = {
   blink?: number;                        // 0 open .. 1 closed
   mouth?: "smile" | "grin" | "o" | "flat"; talk?: number; // talk 0..1 = open amount
   brow?: number;                         // 0 normal, 1 raised, -1 frown
+  eyes?: "normal" | "happy" | "squint" | "wide"; // eye shape
+  write?: number;                        // pen stroke phase (notebook prop)
   bow?: number;                          // violin bow stroke -1..1
   sway?: number;                         // idle sway (deg)
   breathe?: number;                      // 0..1 breathing phase value
@@ -187,11 +189,14 @@ const Face: React.FC<{ spec: Spec; pose: Pose }> = ({ spec, pose }) => {
   const eyeRy = 10 * (1 - blink);
   const talk = clamp(pose.talk ?? 0);
   const my = -116;
+  const ev = pose.eyes ?? "normal";
   const eye = (cx: number) => (
     <g key={cx}>
-      {blink < 0.85 ? (
+      {ev === "happy" ? <path d={`M ${cx - 7} -133 Q ${cx} -143 ${cx + 7} -133`} fill="none" stroke={INK} strokeWidth={3} strokeLinecap="round" />
+      : ev === "squint" && blink < 0.85 ? <g><path d={`M ${cx - 8} -139 L ${cx + 8} -137`} stroke={INK} strokeWidth={3} strokeLinecap="round" /><ellipse cx={cx} cy={-134} rx={6} ry={3.2} fill={INK} /></g>
+      : blink < 0.85 ? (
         <g>
-          <ellipse cx={cx} cy={-136} rx={7.6} ry={Math.max(eyeRy, 1)} fill={INK} />
+          <ellipse cx={cx} cy={-136} rx={ev === "wide" ? 9.5 : 7.6} ry={Math.max(eyeRy * (ev === "wide" ? 1.25 : 1), 1)} fill={INK} />
           {eyeRy > 4 && <circle cx={cx + 2.2} cy={-140} r={3} fill="#fff" />}
           {eyeRy > 6 && <circle cx={cx - 2.4} cy={-132} r={1.4} fill="#fff" />}
         </g>
@@ -255,6 +260,19 @@ const Bow: React.FC<{ bow: number; hand: [number, number] }> = ({ bow, hand }) =
   return <g><line x1={hx} y1={hy} x2={ex} y2={ey} stroke={INK} strokeWidth={4.4} strokeLinecap="round" /><line x1={hx} y1={hy} x2={ex} y2={ey} stroke="#8a5a32" strokeWidth={2.2} strokeLinecap="round" /></g>;
 };
 
+const Book: React.FC = () => (
+  <g transform={`translate(4 ${ARM_LEN - 2}) rotate(14)`}>
+    <rect x={-15} y={-12} width={30} height={24} rx={3} fill="#7b4a2c" stroke={INK} strokeWidth={2.4} />
+    <rect x={-12} y={-10} width={24} height={20} rx={2} fill="#fbf4e4" stroke={INK} strokeWidth={1.4} />
+    <path d="M -8 -5 L 8 -5 M -8 0 L 6 0 M -8 5 L 4 5" stroke="#9aa6b8" strokeWidth={1.4} />
+  </g>
+);
+const Pen: React.FC = () => (
+  <g transform={`translate(0 ${ARM_LEN}) rotate(-35)`}>
+    <rect x={-2.2} y={-22} width={4.4} height={20} rx={1.5} fill="#2b2b38" stroke={INK} strokeWidth={1.4} />
+    <path d="M -2.2 -2 L 0 3 L 2.2 -2 Z" fill={PAL.gold} stroke={INK} strokeWidth={1} />
+  </g>
+);
 const Plans: React.FC = () => (
   <g transform={`translate(0 ${ARM_LEN}) rotate(90)`}>
     <rect x={-6} y={-22} width={12} height={44} rx={5} fill="#7fa6c9" stroke={INK} strokeWidth={2.4} />
@@ -271,8 +289,8 @@ export const Chibi: React.FC<{ spec: Spec; pose: Pose; x: number; y: number; siz
   const liftL = Math.max(0, Math.sin(ph)) * 3 * walk, liftR = Math.max(0, -Math.sin(ph)) * 3 * walk;
   const breathe = (pose.breathe ?? 0) * 0.012;
   const sway = (pose.sway ?? 0) + Math.sin(ph) * 2.5 * walk;
-  const armL = (pose.armL ?? 0) + (spec.prop === "violin" ? 0 : Math.sin(ph) * 12 * walk);
-  const armR = (pose.armR ?? 0) - (spec.prop === "violin" ? 0 : Math.sin(ph) * 12 * walk);
+  const armL = (pose.armL ?? 0) + (spec.prop === "violin" || spec.prop === "notebook" ? 0 : Math.sin(ph) * 12 * walk);
+  const armR = (pose.armR ?? 0) - (spec.prop === "violin" || spec.prop === "notebook" ? 0 : Math.sin(ph) * 12 * walk);
   const nod = pose.nod ?? 0;
   const female = spec.outfit === "dress";
   const hand = handPos(-1, armL);
@@ -292,8 +310,8 @@ export const Chibi: React.FC<{ spec: Spec; pose: Pose; x: number; y: number; siz
           <Torso spec={spec} />
           {/* neck */}
           <rect x={-8} y={-102} width={16} height={12} fill={spec.skin} {...st} strokeWidth={LINE * 0.8} />
-          {armL <= 95 && <Arm spec={spec} side={-1} raise={armL} />}
-          {armR <= 95 && <Arm spec={spec} side={1} raise={armR}>{spec.prop === "plans" && <Plans />}</Arm>}
+          {armL <= 95 && <Arm spec={spec} side={-1} raise={armL}>{spec.prop === "notebook" && <Book />}</Arm>}
+          {armR <= 95 && <Arm spec={spec} side={1} raise={armR}>{spec.prop === "plans" && <Plans />}{spec.prop === "notebook" && <Pen />}</Arm>}
           <g transform={`translate(0 ${nod * 6}) rotate(${(pose.head ?? 0)} 0 -100)`}>
             {spec.hairStyle !== "none" && <HairBack spec={spec} />}
             <ellipse cx={-49 - (pose.look ?? 0) * 3} cy={-130} rx={8} ry={10} fill={spec.skin} {...st} />
@@ -304,8 +322,8 @@ export const Chibi: React.FC<{ spec: Spec; pose: Pose; x: number; y: number; siz
             <HairFront spec={spec} look={pose.look ?? 0} />
             <Hat spec={spec} look={pose.look ?? 0} />
           </g>
-          {armL > 95 && <Arm spec={spec} side={-1} raise={armL} />}
-          {armR > 95 && <Arm spec={spec} side={1} raise={armR}>{spec.prop === "plans" && <Plans />}</Arm>}
+          {armL > 95 && <Arm spec={spec} side={-1} raise={armL}>{spec.prop === "notebook" && <Book />}</Arm>}
+          {armR > 95 && <Arm spec={spec} side={1} raise={armR}>{spec.prop === "plans" && <Plans />}{spec.prop === "notebook" && <Pen />}</Arm>}
           {spec.prop === "violin" && (() => {
             const [nx, ny] = handPos(1, armR);
             return <g><ViolinBody /><circle cx={nx} cy={ny} r={8} fill={spec.skin} {...st} /><Bow bow={pose.bow ?? 0} hand={hand} /><circle cx={hand[0]} cy={hand[1]} r={8} fill={spec.skin} {...st} /></g>;
