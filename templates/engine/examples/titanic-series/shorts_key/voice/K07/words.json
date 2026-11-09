@@ -1,0 +1,92 @@
+[
+ {
+  "word": "How",
+  "start": 0.012,
+  "end": 0.112,
+  "line": 1
+ },
+ {
+  "word": "much",
+  "start": 0.137,
+  "end": 0.287,
+  "line": 1
+ },
+ {
+  "word": "sooner",
+  "start": 0.337,
+  "end": 0.562,
+  "line": 1
+ },
+ {
+  "word": "with",
+  "start": 0.587,
+  "end": 0.687,
+  "line": 1
+ },
+ {
+  "word": "binoculars?",
+  "start": 0.737,
+  "end": 1.412,
+  "line": 1
+ },
+ {
+  "word": "His",
+  "start": 1.487,
+  "end": 1.612,
+  "line": 1
+ },
+ {
+  "word": "answer:",
+  "start": 1.662,
+  "end": 2.112,
+  "line": 1
+ },
+ {
+  "word": "well,",
+  "start": 2.237,
+  "end": 2.412,
+  "line": 1
+ },
+ {
+  "word": "enough",
+  "start": 2.462,
+  "end": 2.712,
+  "line": 1
+ },
+ {
+  "word": "to",
+  "start": 2.762,
+  "end": 2.812,
+  "line": 1
+ },
+ {
+  "word": "get",
+  "start": 2.862,
+  "end": 2.962,
+  "line": 1
+ },
+ {
+  "word": "out",
+  "start": 2.987,
+  "end": 3.062,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 3.062,
+  "end": 3.137,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 3.162,
+  "end": 3.212,
+  "line": 1
+ },
+ {
+  "word": "way.",
+  "start": 3.262,
+  "end": 3.469,
+  "line": 1
+ }
+]

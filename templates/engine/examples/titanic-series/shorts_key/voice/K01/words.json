@@ -1,0 +1,92 @@
+[
+ {
+  "word": "This",
+  "start": 0.029,
+  "end": 0.179,
+  "line": 1
+ },
+ {
+  "word": "little",
+  "start": 0.204,
+  "end": 0.379,
+  "line": 1
+ },
+ {
+  "word": "key",
+  "start": 0.429,
+  "end": 0.629,
+  "line": 1
+ },
+ {
+  "word": "sold",
+  "start": 0.704,
+  "end": 0.979,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 1.029,
+  "end": 1.129,
+  "line": 1
+ },
+ {
+  "word": "ninety",
+  "start": 1.179,
+  "end": 1.479,
+  "line": 1
+ },
+ {
+  "word": "thousand",
+  "start": 1.529,
+  "end": 1.854,
+  "line": 1
+ },
+ {
+  "word": "pounds.",
+  "start": 1.904,
+  "end": 2.404,
+  "line": 1
+ },
+ {
+  "word": "Some",
+  "start": 2.504,
+  "end": 2.629,
+  "line": 1
+ },
+ {
+  "word": "people",
+  "start": 2.679,
+  "end": 2.979,
+  "line": 1
+ },
+ {
+  "word": "say",
+  "start": 3.029,
+  "end": 3.179,
+  "line": 1
+ },
+ {
+  "word": "it",
+  "start": 3.204,
+  "end": 3.254,
+  "line": 1
+ },
+ {
+  "word": "could",
+  "start": 3.279,
+  "end": 3.454,
+  "line": 1
+ },
+ {
+  "word": "have",
+  "start": 3.504,
+  "end": 3.779,
+  "line": 1
+ },
+ {
+  "word": "saved",
+  "start": 3.829,
+  "end": 4.373,
+  "line": 1
+ }
+]

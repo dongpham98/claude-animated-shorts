@@ -1,0 +1,80 @@
+[
+ {
+  "word": "In",
+  "start": 0.012,
+  "end": 0.112,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 0.112,
+  "end": 0.162,
+  "line": 1
+ },
+ {
+  "word": "rush,",
+  "start": 0.212,
+  "end": 0.487,
+  "line": 1
+ },
+ {
+  "word": "he",
+  "start": 0.537,
+  "end": 0.612,
+  "line": 1
+ },
+ {
+  "word": "walks",
+  "start": 0.662,
+  "end": 0.887,
+  "line": 1
+ },
+ {
+  "word": "off",
+  "start": 0.912,
+  "end": 1.037,
+  "line": 1
+ },
+ {
+  "word": "with",
+  "start": 1.062,
+  "end": 1.137,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 1.162,
+  "end": 1.187,
+  "line": 1
+ },
+ {
+  "word": "key",
+  "start": 1.237,
+  "end": 1.437,
+  "line": 1
+ },
+ {
+  "word": "still",
+  "start": 1.487,
+  "end": 1.687,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 1.712,
+  "end": 1.762,
+  "line": 1
+ },
+ {
+  "word": "his",
+  "start": 1.787,
+  "end": 1.887,
+  "line": 1
+ },
+ {
+  "word": "pocket.",
+  "start": 1.937,
+  "end": 2.286,
+  "line": 1
+ }
+]

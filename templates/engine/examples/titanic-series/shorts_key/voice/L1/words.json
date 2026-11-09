@@ -1,0 +1,32 @@
+[
+ {
+  "word": "There",
+  "start": 0.061,
+  "end": 0.286,
+  "line": 1
+ },
+ {
+  "word": "are",
+  "start": 0.336,
+  "end": 0.536,
+  "line": 1
+ },
+ {
+  "word": "no",
+  "start": 0.611,
+  "end": 1.086,
+  "line": 1
+ },
+ {
+  "word": "glasses",
+  "start": 1.136,
+  "end": 1.261,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 1.336,
+  "end": 1.663,
+  "line": 1
+ }
+]

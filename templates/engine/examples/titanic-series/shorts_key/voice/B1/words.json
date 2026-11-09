@@ -1,0 +1,26 @@
+[
+ {
+  "word": "I",
+  "start": 0.067,
+  "end": 0.167,
+  "line": 1
+ },
+ {
+  "word": "feel",
+  "start": 0.242,
+  "end": 0.592,
+  "line": 1
+ },
+ {
+  "word": "very",
+  "start": 0.692,
+  "end": 1.042,
+  "line": 1
+ },
+ {
+  "word": "disappointed.",
+  "start": 1.117,
+  "end": 1.822,
+  "line": 1
+ }
+]

@@ -1,0 +1,62 @@
+[
+ {
+  "word": "April",
+  "start": 0.012,
+  "end": 0.337,
+  "line": 1
+ },
+ {
+  "word": "1912.",
+  "start": 0.387,
+  "end": 1.062,
+  "line": 1
+ },
+ {
+  "word": "Second",
+  "start": 1.112,
+  "end": 1.562,
+  "line": 1
+ },
+ {
+  "word": "Officer",
+  "start": 1.662,
+  "end": 1.937,
+  "line": 1
+ },
+ {
+  "word": "David",
+  "start": 1.987,
+  "end": 2.337,
+  "line": 1
+ },
+ {
+  "word": "Blair",
+  "start": 2.387,
+  "end": 2.712,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 2.762,
+  "end": 3.062,
+  "line": 1
+ },
+ {
+  "word": "packing",
+  "start": 3.112,
+  "end": 3.212,
+  "line": 1
+ },
+ {
+  "word": "his",
+  "start": 3.262,
+  "end": 3.537,
+  "line": 1
+ },
+ {
+  "word": "bags.",
+  "start": 3.562,
+  "end": 3.687,
+  "line": 1
+ }
+]

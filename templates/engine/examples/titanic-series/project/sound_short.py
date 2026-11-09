@@ -8,8 +8,8 @@ from dsp import SR, rng, lp, hp, bp, colored, fades, integrated
 from instruments import pluck, glock, snare, brush, triangle, pad, m2f, timpani, cymbal, brass
 from sfx_gen import whoosh, clink, creak, applause, breeze, water_bed
 WHO = sys.argv[1]
-TL = json.load(open(f"src/sh{WHO}_timeline.json")); VD = "../shorts_ep1/voice" if WHO in "AB" else "../shorts_ep2/voice"
-FPS = 30; N = int(TL["total"] / FPS * SR) + SR; r = rng({"A": 33, "B": 44, "C": 55, "D": 66}[WHO])
+TL = json.load(open(f"src/sh{WHO}_timeline.json")); VD = "../shorts_ep1/voice" if WHO in "AB" else ("../shorts_key/voice" if WHO == "E" else "../shorts_ep2/voice")
+FPS = 30; N = int(TL["total"] / FPS * SR) + SR; r = rng({"A": 33, "B": 44, "C": 55, "D": 66, "E": 77}[WHO])
 L = {k: v["start"] / FPS for k, v in TL["lines"].items()}
 SC = {s["name"]: (s["a"] / FPS, s["b"] / FPS) for s in TL["scenes"]}
 def Wt(k, i): return L[k] + TL["words"][k][min(i, len(TL["words"][k]) - 1)]["s"]
@@ -22,7 +22,7 @@ def put(buf, x, t, g=1.0):
 def load(p):
     a, sr = sf.read(p); a = mono(a); return resample_poly(a, SR, sr) if sr != SR else a
 voice = np.zeros(N)
-for k, t in L.items(): put(voice, load(f"{VD}/{k}/voice.wav" if len(k) == 3 and k[0] in "ABCD" and k[1:].isdigit() else f"{VD}/{k}.wav"), t)
+for k, t in L.items(): put(voice, load(f"{VD}/{k}/voice.wav" if WHO == "E" or (len(k) == 3 and k[0] in "ABCD" and k[1:].isdigit()) else f"{VD}/{k}.wav"), t)
 sections = {}
 def sec(n): sections[n] = np.zeros(N); return sections[n]
 def bouncy(buf, t0, t1, bpm=112, root=60, minor=False, glk=True, vel=1.0):
@@ -132,6 +132,27 @@ elif WHO == "D":
     rumble(L["D07"] + 0.3, 1.6, 0.55)
     for i in range(4): pop(Wt("D08", 2) + i * 0.4, 400, 0.15)
     put(fx, water_bed(SC["end"][1] - SC["cali"][0], r, close=0.2), SC["cali"][0], 0.1)
+elif WHO == "E":
+    a, b = SC["hook"]; tension(sec("hook"), a, b + 0.2, root=45, tick=True, step=0.4)
+    a, b = SC["cabin"][0], SC["pocket"][1]; bouncy(sec("dock"), a, b, bpm=108, root=60, vel=0.8)
+    a, b = SC["nest"][0], SC["reply"][1]; tension(sec("nest"), a, b, root=43, tick=False)
+    sting("sting_berg", SC["berg"][0] + 0.1, minor=True)
+    a, b = SC["berg"][0] + 1.0, SC["quote"][1]; tension(sec("berg"), a, b, root=41, tick=True, step=0.5)
+    a, b = SC["tag"][0], SC["mech"][1]; bouncy(sec("mech"), a, b, bpm=100, root=57, minor=True, vel=0.75)
+    a, b = SC["charity"][0], SC["end"][1]; softpad(sec("end"), a, b, [[48, 55, 60, 64], [53, 57, 60, 65], [55, 59, 62, 67], [48, 55, 60, 64]], 0.32)
+    REL = {"end": -11, "nest": -11}
+    for i in range(8): put(fx, clink(r, f0=2200 + i * 60, dur=0.05, bright=0.7), 0.15 + i * 0.32, 0.18)
+    a, b = SC["shuffle"]; put(fx, water_bed(b - a, r, close=0.4), a, 0.18); horn(a + 0.3, 1.6, 0.3)
+    put(fx, whoosh(0.5, r, peak=0.2), SC["postcard"][0], 0.3); scribble(SC["postcard"][0] + 0.2, 1.2, 0.1)
+    put(fx, clink(r, f0=2600, dur=0.08, bright=0.8), Wt("K04", 7), 0.5); sparkle(Wt("K04", 7))
+    a, b = SC["nest"][0], SC["berg"][1]; put(fx, breeze(b - a, r, level=0.35), a, 0.12)
+    for k in range(3): put(fx, clink(r, f0=1500, dur=0.3, bright=0.4), Wt("K06", 13) + k * 0.35, 0.45)
+    rumble(SC["berg"][1] - 0.8, 1.2, 0.4)
+    pop(SC["tag"][0] + 0.2, 600, 0.3); pop(Wt("K08", 12), 700, 0.35)
+    put(fx, creak(1.0, r, rate0=40, rate1=80, scale=1.0), SC["locked"][0] + 0.3, 0.25); put(fx, clink(r, f0=1200, dur=0.1, bright=0.5), Wt("K09", 8), 0.5)
+    pop(Wt("K10", 9), 500, 0.3); pop(Wt("K10", 14), 700, 0.3)
+    bang(Wt("K11", 13), 0.3); sparkle(Wt("K11", 15))
+    put(fx, applause(2.0, r, people=20), Wt("K11", 13) + 0.2, 0.08)
 else:
     a, b = SC["hook"]; tension(sec("hook"), a, b + 0.2, root=45, tick=True, step=0.4)
     a, b = SC["dock"]; bouncy(sec("dock"), a, b, bpm=112, root=60, vel=0.85)

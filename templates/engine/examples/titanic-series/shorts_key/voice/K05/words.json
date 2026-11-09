@@ -1,0 +1,110 @@
+[
+ {
+  "word": "Up",
+  "start": 0.015,
+  "end": 0.14,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 0.165,
+  "end": 0.265,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 0.265,
+  "end": 0.315,
+  "line": 1
+ },
+ {
+  "word": "crow's",
+  "start": 0.365,
+  "end": 0.665,
+  "line": 1
+ },
+ {
+  "word": "nest,",
+  "start": 0.715,
+  "end": 0.965,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.015,
+  "end": 1.065,
+  "line": 1
+ },
+ {
+  "word": "lookouts",
+  "start": 1.115,
+  "end": 1.465,
+  "line": 1
+ },
+ {
+  "word": "had",
+  "start": 1.49,
+  "end": 1.565,
+  "line": 1
+ },
+ {
+  "word": "binoculars",
+  "start": 1.615,
+  "end": 2.24,
+  "line": 1
+ },
+ {
+  "word": "all",
+  "start": 2.315,
+  "end": 2.465,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 2.49,
+  "end": 2.54,
+  "line": 1
+ },
+ {
+  "word": "way",
+  "start": 2.59,
+  "end": 2.765,
+  "line": 1
+ },
+ {
+  "word": "from",
+  "start": 2.815,
+  "end": 2.915,
+  "line": 1
+ },
+ {
+  "word": "Belfast.",
+  "start": 2.965,
+  "end": 3.64,
+  "line": 1
+ },
+ {
+  "word": "Now",
+  "start": 3.765,
+  "end": 3.99,
+  "line": 1
+ },
+ {
+  "word": "they",
+  "start": 4.015,
+  "end": 4.09,
+  "line": 1
+ },
+ {
+  "word": "have",
+  "start": 4.14,
+  "end": 4.315,
+  "line": 1
+ },
+ {
+  "word": "none.",
+  "start": 4.365,
+  "end": 4.636,
+  "line": 1
+ }
+]
