@@ -1,0 +1,74 @@
+[
+ {
+  "word": "Some",
+  "start": 0.08,
+  "end": 0.28,
+  "line": 1
+ },
+ {
+  "word": "passengers",
+  "start": 0.33,
+  "end": 0.93,
+  "line": 1
+ },
+ {
+  "word": "picked",
+  "start": 0.98,
+  "end": 1.18,
+  "line": 1
+ },
+ {
+  "word": "up",
+  "start": 1.205,
+  "end": 1.305,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.33,
+  "end": 1.43,
+  "line": 1
+ },
+ {
+  "word": "ice,",
+  "start": 1.48,
+  "end": 1.855,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 1.955,
+  "end": 2.03,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 2.055,
+  "end": 2.08,
+  "line": 1
+ },
+ {
+  "word": "few",
+  "start": 2.13,
+  "end": 2.305,
+  "line": 1
+ },
+ {
+  "word": "played",
+  "start": 2.355,
+  "end": 2.605,
+  "line": 1
+ },
+ {
+  "word": "with",
+  "start": 2.63,
+  "end": 2.78,
+  "line": 1
+ },
+ {
+  "word": "it.",
+  "start": 2.855,
+  "end": 3.039,
+  "line": 1
+ }
+]

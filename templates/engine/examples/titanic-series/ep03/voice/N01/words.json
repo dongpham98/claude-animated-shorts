@@ -1,0 +1,38 @@
+[
+ {
+  "word": "Three",
+  "start": 0.057,
+  "end": 0.232,
+  "line": 1
+ },
+ {
+  "word": "strokes",
+  "start": 0.257,
+  "end": 0.582,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 0.607,
+  "end": 0.732,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 0.782,
+  "end": 1.007,
+  "line": 1
+ },
+ {
+  "word": "small",
+  "start": 1.057,
+  "end": 1.332,
+  "line": 1
+ },
+ {
+  "word": "brass",
+  "start": 1.382,
+  "end": 1.718,
+  "line": 1
+ }
+]

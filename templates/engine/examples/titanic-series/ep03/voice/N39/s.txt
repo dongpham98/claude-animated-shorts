@@ -1,0 +1,1 @@
+Boxhall works out the ship's position, and they send it to every ship in range. Forty-one forty-six north. Fifty fourteen west.

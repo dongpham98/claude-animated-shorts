@@ -1,0 +1,26 @@
+[
+ {
+  "word": "The",
+  "start": 0.037,
+  "end": 0.137,
+  "line": 1
+ },
+ {
+  "word": "iceberg",
+  "start": 0.187,
+  "end": 0.537,
+  "line": 1
+ },
+ {
+  "word": "opened",
+  "start": 0.562,
+  "end": 0.837,
+  "line": 1
+ },
+ {
+  "word": "six.",
+  "start": 0.912,
+  "end": 1.308,
+  "line": 1
+ }
+]

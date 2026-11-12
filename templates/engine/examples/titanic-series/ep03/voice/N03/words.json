@@ -1,0 +1,80 @@
+[
+ {
+  "word": "The",
+  "start": 0.063,
+  "end": 0.113,
+  "line": 1
+ },
+ {
+  "word": "most",
+  "start": 0.138,
+  "end": 0.363,
+  "line": 1
+ },
+ {
+  "word": "famous",
+  "start": 0.438,
+  "end": 0.813,
+  "line": 1
+ },
+ {
+  "word": "warning",
+  "start": 0.888,
+  "end": 1.213,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 1.263,
+  "end": 1.313,
+  "line": 1
+ },
+ {
+  "word": "history.",
+  "start": 1.363,
+  "end": 1.963,
+  "line": 1
+ },
+ {
+  "word": "And",
+  "start": 2.113,
+  "end": 2.188,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 2.213,
+  "end": 2.288,
+  "line": 1
+ },
+ {
+  "word": "answer",
+  "start": 2.363,
+  "end": 2.688,
+  "line": 1
+ },
+ {
+  "word": "was",
+  "start": 2.738,
+  "end": 2.863,
+  "line": 1
+ },
+ {
+  "word": "two",
+  "start": 2.938,
+  "end": 3.138,
+  "line": 1
+ },
+ {
+  "word": "polite",
+  "start": 3.188,
+  "end": 3.563,
+  "line": 1
+ },
+ {
+  "word": "words.",
+  "start": 3.613,
+  "end": 4.109,
+  "line": 1
+ }
+]

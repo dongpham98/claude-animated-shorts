@@ -1,0 +1,164 @@
+[
+ {
+  "word": "Captain",
+  "start": 0.076,
+  "end": 0.451,
+  "line": 1
+ },
+ {
+  "word": "Smith",
+  "start": 0.526,
+  "end": 0.876,
+  "line": 1
+ },
+ {
+  "word": "orders",
+  "start": 0.951,
+  "end": 1.301,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.351,
+  "end": 1.426,
+  "line": 1
+ },
+ {
+  "word": "lifeboats",
+  "start": 1.476,
+  "end": 2.126,
+  "line": 1
+ },
+ {
+  "word": "uncovered.",
+  "start": 2.226,
+  "end": 3.076,
+  "line": 1
+ },
+ {
+  "word": "Then",
+  "start": 3.251,
+  "end": 3.426,
+  "line": 1
+ },
+ {
+  "word": "he",
+  "start": 3.476,
+  "end": 3.551,
+  "line": 1
+ },
+ {
+  "word": "goes",
+  "start": 3.601,
+  "end": 3.901,
+  "line": 1
+ },
+ {
+  "word": "to",
+  "start": 3.951,
+  "end": 4.001,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 4.051,
+  "end": 4.126,
+  "line": 1
+ },
+ {
+  "word": "wireless",
+  "start": 4.201,
+  "end": 4.676,
+  "line": 1
+ },
+ {
+  "word": "room,",
+  "start": 4.751,
+  "end": 5.126,
+  "line": 1
+ },
+ {
+  "word": "where",
+  "start": 5.226,
+  "end": 5.376,
+  "line": 1
+ },
+ {
+  "word": "Jack",
+  "start": 5.426,
+  "end": 5.751,
+  "line": 1
+ },
+ {
+  "word": "Phillips",
+  "start": 5.826,
+  "end": 6.176,
+  "line": 1
+ },
+ {
+  "word": "has",
+  "start": 6.201,
+  "end": 6.326,
+  "line": 1
+ },
+ {
+  "word": "just",
+  "start": 6.376,
+  "end": 6.601,
+  "line": 1
+ },
+ {
+  "word": "finished",
+  "start": 6.651,
+  "end": 6.951,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 7.001,
+  "end": 7.051,
+  "line": 1
+ },
+ {
+  "word": "long",
+  "start": 7.126,
+  "end": 7.451,
+  "line": 1
+ },
+ {
+  "word": "batch",
+  "start": 7.501,
+  "end": 7.776,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 7.801,
+  "end": 7.876,
+  "line": 1
+ },
+ {
+  "word": "messages",
+  "start": 7.926,
+  "end": 8.476,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 8.526,
+  "end": 8.651,
+  "line": 1
+ },
+ {
+  "word": "Cape",
+  "start": 8.701,
+  "end": 8.951,
+  "line": 1
+ },
+ {
+  "word": "Race.",
+  "start": 9.001,
+  "end": 9.432,
+  "line": 1
+ }
+]

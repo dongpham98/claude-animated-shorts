@@ -1,0 +1,134 @@
+[
+ {
+  "word": "In",
+  "start": 0.108,
+  "end": 0.208,
+  "line": 1
+ },
+ {
+  "word": "boiler",
+  "start": 0.258,
+  "end": 0.608,
+  "line": 1
+ },
+ {
+  "word": "room",
+  "start": 0.658,
+  "end": 0.883,
+  "line": 1
+ },
+ {
+  "word": "number",
+  "start": 0.908,
+  "end": 1.158,
+  "line": 1
+ },
+ {
+  "word": "six,",
+  "start": 1.258,
+  "end": 1.583,
+  "line": 1
+ },
+ {
+  "word": "about",
+  "start": 1.658,
+  "end": 2.008,
+  "line": 1
+ },
+ {
+  "word": "ten",
+  "start": 2.083,
+  "end": 2.283,
+  "line": 1
+ },
+ {
+  "word": "minutes",
+  "start": 2.333,
+  "end": 2.608,
+  "line": 1
+ },
+ {
+  "word": "after",
+  "start": 2.658,
+  "end": 2.908,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 2.933,
+  "end": 3.033,
+  "line": 1
+ },
+ {
+  "word": "impact,",
+  "start": 3.083,
+  "end": 3.658,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 3.758,
+  "end": 3.833,
+  "line": 1
+ },
+ {
+  "word": "water",
+  "start": 3.908,
+  "end": 4.308,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 4.358,
+  "end": 4.458,
+  "line": 1
+ },
+ {
+  "word": "already",
+  "start": 4.558,
+  "end": 4.908,
+  "line": 1
+ },
+ {
+  "word": "eight",
+  "start": 4.983,
+  "end": 5.208,
+  "line": 1
+ },
+ {
+  "word": "feet",
+  "start": 5.283,
+  "end": 5.508,
+  "line": 1
+ },
+ {
+  "word": "deep.",
+  "start": 5.583,
+  "end": 6.058,
+  "line": 1
+ },
+ {
+  "word": "The",
+  "start": 6.208,
+  "end": 6.283,
+  "line": 1
+ },
+ {
+  "word": "firemen",
+  "start": 6.358,
+  "end": 6.858,
+  "line": 1
+ },
+ {
+  "word": "climb",
+  "start": 6.908,
+  "end": 7.183,
+  "line": 1
+ },
+ {
+  "word": "out.",
+  "start": 7.233,
+  "end": 7.579,
+  "line": 1
+ }
+]

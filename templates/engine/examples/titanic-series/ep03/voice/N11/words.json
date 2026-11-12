@@ -1,0 +1,26 @@
+[
+ {
+  "word": "Murdoch",
+  "start": 0.068,
+  "end": 0.418,
+  "line": 1
+ },
+ {
+  "word": "gives",
+  "start": 0.468,
+  "end": 0.618,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 0.643,
+  "end": 0.718,
+  "line": 1
+ },
+ {
+  "word": "order.",
+  "start": 0.768,
+  "end": 1.201,
+  "line": 1
+ }
+]

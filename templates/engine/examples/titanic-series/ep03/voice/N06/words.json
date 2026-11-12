@@ -1,0 +1,98 @@
+[
+ {
+  "word": "Titanic",
+  "start": 0.066,
+  "end": 0.591,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 0.641,
+  "end": 0.741,
+  "line": 1
+ },
+ {
+  "word": "doing",
+  "start": 0.816,
+  "end": 1.116,
+  "line": 1
+ },
+ {
+  "word": "about",
+  "start": 1.166,
+  "end": 1.441,
+  "line": 1
+ },
+ {
+  "word": "twenty-two",
+  "start": 1.491,
+  "end": 1.991,
+  "line": 1
+ },
+ {
+  "word": "knots.",
+  "start": 2.041,
+  "end": 2.616,
+  "line": 1
+ },
+ {
+  "word": "The",
+  "start": 2.741,
+  "end": 2.816,
+  "line": 1
+ },
+ {
+  "word": "sea",
+  "start": 2.891,
+  "end": 3.091,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 3.141,
+  "end": 3.241,
+  "line": 1
+ },
+ {
+  "word": "flat",
+  "start": 3.316,
+  "end": 3.591,
+  "line": 1
+ },
+ {
+  "word": "calm,",
+  "start": 3.666,
+  "end": 4.016,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 4.091,
+  "end": 4.166,
+  "line": 1
+ },
+ {
+  "word": "there",
+  "start": 4.191,
+  "end": 4.291,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 4.341,
+  "end": 4.441,
+  "line": 1
+ },
+ {
+  "word": "no",
+  "start": 4.491,
+  "end": 4.666,
+  "line": 1
+ },
+ {
+  "word": "moon.",
+  "start": 4.716,
+  "end": 5.12,
+  "line": 1
+ }
+]

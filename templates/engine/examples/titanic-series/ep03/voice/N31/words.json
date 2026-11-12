@@ -1,0 +1,152 @@
+[
+ {
+  "word": "You",
+  "start": 0.136,
+  "end": 0.261,
+  "line": 1
+ },
+ {
+  "word": "see,",
+  "start": 0.336,
+  "end": 0.611,
+  "line": 1
+ },
+ {
+  "word": "Titanic's",
+  "start": 0.711,
+  "end": 1.311,
+  "line": 1
+ },
+ {
+  "word": "hull",
+  "start": 1.361,
+  "end": 1.636,
+  "line": 1
+ },
+ {
+  "word": "is",
+  "start": 1.711,
+  "end": 1.811,
+  "line": 1
+ },
+ {
+  "word": "divided",
+  "start": 1.861,
+  "end": 2.361,
+  "line": 1
+ },
+ {
+  "word": "by",
+  "start": 2.411,
+  "end": 2.561,
+  "line": 1
+ },
+ {
+  "word": "steel",
+  "start": 2.661,
+  "end": 3.011,
+  "line": 1
+ },
+ {
+  "word": "walls",
+  "start": 3.086,
+  "end": 3.486,
+  "line": 1
+ },
+ {
+  "word": "into",
+  "start": 3.536,
+  "end": 3.736,
+  "line": 1
+ },
+ {
+  "word": "watertight",
+  "start": 3.811,
+  "end": 4.411,
+  "line": 1
+ },
+ {
+  "word": "compartments.",
+  "start": 4.461,
+  "end": 5.561,
+  "line": 1
+ },
+ {
+  "word": "She",
+  "start": 5.761,
+  "end": 5.836,
+  "line": 1
+ },
+ {
+  "word": "could",
+  "start": 5.886,
+  "end": 6.011,
+  "line": 1
+ },
+ {
+  "word": "stay",
+  "start": 6.061,
+  "end": 6.286,
+  "line": 1
+ },
+ {
+  "word": "afloat",
+  "start": 6.336,
+  "end": 6.761,
+  "line": 1
+ },
+ {
+  "word": "with",
+  "start": 6.811,
+  "end": 6.911,
+  "line": 1
+ },
+ {
+  "word": "up",
+  "start": 6.936,
+  "end": 7.086,
+  "line": 1
+ },
+ {
+  "word": "to",
+  "start": 7.136,
+  "end": 7.211,
+  "line": 1
+ },
+ {
+  "word": "four",
+  "start": 7.286,
+  "end": 7.561,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 7.611,
+  "end": 7.661,
+  "line": 1
+ },
+ {
+  "word": "her",
+  "start": 7.686,
+  "end": 7.786,
+  "line": 1
+ },
+ {
+  "word": "front",
+  "start": 7.861,
+  "end": 8.136,
+  "line": 1
+ },
+ {
+  "word": "compartments",
+  "start": 8.186,
+  "end": 8.836,
+  "line": 1
+ },
+ {
+  "word": "flooded.",
+  "start": 8.911,
+  "end": 9.32,
+  "line": 1
+ }
+]

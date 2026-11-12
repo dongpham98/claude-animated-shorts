@@ -1,0 +1,62 @@
+[
+ {
+  "word": "Titanic",
+  "start": 0.065,
+  "end": 0.59,
+  "line": 1
+ },
+ {
+  "word": "was",
+  "start": 0.64,
+  "end": 0.74,
+  "line": 1
+ },
+ {
+  "word": "going",
+  "start": 0.79,
+  "end": 1.015,
+  "line": 1
+ },
+ {
+  "word": "to",
+  "start": 1.04,
+  "end": 1.115,
+  "line": 1
+ },
+ {
+  "word": "sink.",
+  "start": 1.19,
+  "end": 1.54,
+  "line": 1
+ },
+ {
+  "word": "The",
+  "start": 1.64,
+  "end": 1.74,
+  "line": 1
+ },
+ {
+  "word": "only",
+  "start": 1.79,
+  "end": 2.09,
+  "line": 1
+ },
+ {
+  "word": "question",
+  "start": 2.14,
+  "end": 2.59,
+  "line": 1
+ },
+ {
+  "word": "was",
+  "start": 2.64,
+  "end": 2.765,
+  "line": 1
+ },
+ {
+  "word": "when.",
+  "start": 2.84,
+  "end": 3.192,
+  "line": 1
+ }
+]

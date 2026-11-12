@@ -1,0 +1,1 @@
+Boxhall works out the ship's position, and they send it to every ship in range. 41°46' north. 50°14' west.

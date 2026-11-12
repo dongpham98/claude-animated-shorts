@@ -1,0 +1,98 @@
+[
+ {
+  "word": "Soon",
+  "start": 0.123,
+  "end": 0.298,
+  "line": 1
+ },
+ {
+  "word": "after",
+  "start": 0.323,
+  "end": 0.573,
+  "line": 1
+ },
+ {
+  "word": "midnight,",
+  "start": 0.623,
+  "end": 1.073,
+  "line": 1
+ },
+ {
+  "word": "Phillips",
+  "start": 1.148,
+  "end": 1.423,
+  "line": 1
+ },
+ {
+  "word": "starts",
+  "start": 1.473,
+  "end": 1.773,
+  "line": 1
+ },
+ {
+  "word": "tapping",
+  "start": 1.823,
+  "end": 2.148,
+  "line": 1
+ },
+ {
+  "word": "out",
+  "start": 2.198,
+  "end": 2.373,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 2.398,
+  "end": 2.448,
+  "line": 1
+ },
+ {
+  "word": "distress",
+  "start": 2.498,
+  "end": 2.923,
+  "line": 1
+ },
+ {
+  "word": "call",
+  "start": 2.973,
+  "end": 3.223,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 3.248,
+  "end": 3.348,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 3.348,
+  "end": 3.398,
+  "line": 1
+ },
+ {
+  "word": "day:",
+  "start": 3.448,
+  "end": 3.898,
+  "line": 1
+ },
+ {
+  "word": "C",
+  "start": 4.073,
+  "end": 4.248,
+  "line": 1
+ },
+ {
+  "word": "Q",
+  "start": 4.323,
+  "end": 4.548,
+  "line": 1
+ },
+ {
+  "word": "D.",
+  "start": 4.598,
+  "end": 4.961,
+  "line": 1
+ }
+]

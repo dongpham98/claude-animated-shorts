@@ -1,0 +1,110 @@
+[
+ {
+  "word": "On",
+  "start": 0.115,
+  "end": 0.24,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 0.24,
+  "end": 0.315,
+  "line": 1
+ },
+ {
+  "word": "bridge,",
+  "start": 0.365,
+  "end": 0.765,
+  "line": 1
+ },
+ {
+  "word": "Murdoch",
+  "start": 0.84,
+  "end": 1.215,
+  "line": 1
+ },
+ {
+  "word": "pulls",
+  "start": 1.29,
+  "end": 1.565,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.615,
+  "end": 1.69,
+  "line": 1
+ },
+ {
+  "word": "lever",
+  "start": 1.74,
+  "end": 2.04,
+  "line": 1
+ },
+ {
+  "word": "that",
+  "start": 2.09,
+  "end": 2.215,
+  "line": 1
+ },
+ {
+  "word": "closes",
+  "start": 2.29,
+  "end": 2.74,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 2.79,
+  "end": 2.865,
+  "line": 1
+ },
+ {
+  "word": "watertight",
+  "start": 2.94,
+  "end": 3.44,
+  "line": 1
+ },
+ {
+  "word": "doors",
+  "start": 3.49,
+  "end": 3.865,
+  "line": 1
+ },
+ {
+  "word": "deep",
+  "start": 3.94,
+  "end": 4.165,
+  "line": 1
+ },
+ {
+  "word": "below.",
+  "start": 4.215,
+  "end": 4.84,
+  "line": 1
+ },
+ {
+  "word": "Captain",
+  "start": 5.015,
+  "end": 5.365,
+  "line": 1
+ },
+ {
+  "word": "Smith",
+  "start": 5.44,
+  "end": 5.765,
+  "line": 1
+ },
+ {
+  "word": "runs",
+  "start": 5.84,
+  "end": 6.14,
+  "line": 1
+ },
+ {
+  "word": "in.",
+  "start": 6.19,
+  "end": 6.473,
+  "line": 1
+ }
+]

@@ -1,0 +1,62 @@
+[
+ {
+  "word": "The",
+  "start": 0.065,
+  "end": 0.165,
+  "line": 1
+ },
+ {
+  "word": "iceberg",
+  "start": 0.215,
+  "end": 0.64,
+  "line": 1
+ },
+ {
+  "word": "scrapes",
+  "start": 0.69,
+  "end": 1.065,
+  "line": 1
+ },
+ {
+  "word": "along",
+  "start": 1.115,
+  "end": 1.365,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.39,
+  "end": 1.44,
+  "line": 1
+ },
+ {
+  "word": "right",
+  "start": 1.49,
+  "end": 1.74,
+  "line": 1
+ },
+ {
+  "word": "side",
+  "start": 1.79,
+  "end": 1.99,
+  "line": 1
+ },
+ {
+  "word": "of",
+  "start": 2.015,
+  "end": 2.09,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 2.09,
+  "end": 2.14,
+  "line": 1
+ },
+ {
+  "word": "bow.",
+  "start": 2.19,
+  "end": 2.551,
+  "line": 1
+ }
+]

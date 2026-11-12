@@ -1,0 +1,110 @@
+[
+ {
+  "word": "Captain",
+  "start": 0.079,
+  "end": 0.454,
+  "line": 1
+ },
+ {
+  "word": "Smith",
+  "start": 0.529,
+  "end": 0.854,
+  "line": 1
+ },
+ {
+  "word": "sends",
+  "start": 0.929,
+  "end": 1.229,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 1.279,
+  "end": 1.379,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 1.379,
+  "end": 1.454,
+  "line": 1
+ },
+ {
+  "word": "one",
+  "start": 1.504,
+  "end": 1.704,
+  "line": 1
+ },
+ {
+  "word": "man",
+  "start": 1.754,
+  "end": 2.054,
+  "line": 1
+ },
+ {
+  "word": "who",
+  "start": 2.104,
+  "end": 2.229,
+  "line": 1
+ },
+ {
+  "word": "knows",
+  "start": 2.304,
+  "end": 2.604,
+  "line": 1
+ },
+ {
+  "word": "this",
+  "start": 2.654,
+  "end": 2.804,
+  "line": 1
+ },
+ {
+  "word": "ship",
+  "start": 2.904,
+  "end": 3.104,
+  "line": 1
+ },
+ {
+  "word": "better",
+  "start": 3.154,
+  "end": 3.379,
+  "line": 1
+ },
+ {
+  "word": "than",
+  "start": 3.429,
+  "end": 3.554,
+  "line": 1
+ },
+ {
+  "word": "anyone:",
+  "start": 3.629,
+  "end": 4.254,
+  "line": 1
+ },
+ {
+  "word": "her",
+  "start": 4.379,
+  "end": 4.504,
+  "line": 1
+ },
+ {
+  "word": "designer,",
+  "start": 4.554,
+  "end": 5.179,
+  "line": 1
+ },
+ {
+  "word": "Thomas",
+  "start": 5.304,
+  "end": 5.629,
+  "line": 1
+ },
+ {
+  "word": "Andrews.",
+  "start": 5.679,
+  "end": 6.25,
+  "line": 1
+ }
+]

@@ -12,6 +12,7 @@ import { Ep2, EP2_FRAMES } from "./Ep2";
 import { ShortC, SHC_FRAMES } from "./ShortC";
 import { ShortD, SHD_FRAMES } from "./ShortD";
 import { ShortE, SHE_FRAMES } from "./ShortE";
+import { Ep3, EP3_FRAMES } from "./Ep3";
 export const Root: React.FC = () => (
   <>
     <Composition id="Lineup" component={Lineup} durationInFrames={60} fps={30} width={1920} height={1080} />
@@ -26,5 +27,6 @@ export const Root: React.FC = () => (
     <Composition id="ShortC" component={ShortC} durationInFrames={SHC_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="ShortD" component={ShortD} durationInFrames={SHD_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="ShortE" component={ShortE} durationInFrames={SHE_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="Ep3" component={Ep3} durationInFrames={EP3_FRAMES} fps={30} width={1920} height={1080} />
   </>
 );
