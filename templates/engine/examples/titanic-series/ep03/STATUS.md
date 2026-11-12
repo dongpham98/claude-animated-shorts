@@ -4,7 +4,11 @@
 - Research: RESEARCH.md (9 Nov, 38 sources). Script v2 after independent fact check: SCRIPT.md, FACTCHECK.md (2 FIX + 11 SOFTEN applied). Upload pack: UPLOAD.md.
 - Built in the cloud: Remotion composition `Ep3` (src/Ep3.tsx, ep3sets.tsx), timeline ep03/timeline.py, voices ep03/voice, mix sound_ep3.py (music ≈ -10 dB under voice, -14 LUFS, TP ≤ -1.3 dB before AAC).
 - Stills of all 59 scenes checked on contact sheets; layout fixes applied (labels above bubbles, bottom pills moved away from captions, FILM vs REAL layout, lifebelt shapes removed).
-- Render: cloud, 13 parts × 1,000 frames, muted; audio muxed once at the end (AAC + limiter).
+- Render: cloud, 13 parts × 1,000 frames, muted (~3 min per part); audio muxed once at the end (AAC 256k + limiter).
+- **FINISHED 12 Nov ~08:05 Paris, sent to the user for the final watch** (SendUserFile + UPLOAD.md + draft thumbnail). Laptop: C:\YouTube\titanic-series\out\shorts\08_Wed18-1900_EPISODE-3_The-Iceberg.mp4 (206 MB, transfer worked), UPLOAD_ep3.md, ..\thumb_ep3.jpg.
+- QA: 7:06.6, 1920x1080, 12,797 frames, -14.1 LUFS, true peak -2.2 dBFS, no black frames ≥0.5 s, no freezes ≥3 s.
+- Independent quality review (agent): flagged label/bubble overlaps, captions over quote cards, missing Lee/Smith tags, cut-off radio clock, Carpathia label contrast, stopwatch pill, E-deck header, stray Boxhall tag on map, possible holds on FILM vs REAL cards → all fixed, 10 of 13 parts re-rendered. Its "hook" note was a sampling artefact (its first tile was at ~3 s; frame 1 is the swinging bell with the spoken hook).
+- **Waiting:** the user's OK (checkpoint 2) by Wed 18 Nov 17:00 → user file step → Claude fills the pack + schedules Wed 18 Nov 19:00.
 
 ## Story spine
 Paradox hook from a small object: three strokes of a bell, and the answer "Thank you." Protagonists Fleet (lookout) → Andrews (verdict). Clock: "less than a minute" (37 s myth debunked), then Andrews' "hour and a half" dial, half gone when boat 7 is lowered. "You see" #1 tiller orders (hard-a-starboard turns LEFT); #2 ice-cube tray (bulkheads open at the top; 4 survivable, 6 opened). Callback ending: quiet, half-empty boat 7 under a fully lit ship. Ends asking whether to make Episode 4 (episodes 4-7 are paused by the 11 Nov plan).
